@@ -3,339 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids German Classes - SebGabriel.com</title>
-    <link rel="stylesheet" href="style.css?v=2024">
+    <title>German Classes for Kids - DEUTSCH</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="newsletter-popup.js?v=2024"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
+                <a href="index.html">
                     <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">LEARN GERMAN</div>
+                    <div class="logo-subtitle">Learn German</div>
                 </a>
             </div>
             <div class="nav-menu">
-                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
-                <a href="group-courses.html" class="nav-link">Group Courses</a>
-                <a href="kids-classes.html" class="nav-link active">Kids Classes</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#courses" class="nav-link">Courses</a>
+                <a href="index.html#teachers" class="nav-link">Teachers</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
-                    <i class="fas fa-calendar"></i>
-                    30-Minuten-Probelektion
-                </a>
+                <a href="index.html#trial" class="nav-cta-button">Free Trial</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <a href="index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i>
-                Back to Home
-            </a>
-            <h1>Kids German Classes</h1>
-            <p>Fun, engaging German classes designed specifically for children ages 6-17. Learn German through games, songs, and interactive activities.</p>
-        </div>
-    </section>
-
-    <!-- Kids Classes Overview -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Why Choose Our Kids Classes?</h2>
-                <p>Our kids German classes are designed by certified children's language teachers who understand how children learn best. We use age-appropriate methods, interactive games, songs, and stories to make German learning fun and effective.</p>
-                <p>Children naturally absorb languages more easily than adults, and our immersive approach helps them develop native-like pronunciation and natural language patterns from an early age.</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>German Classes for Kids</h1>
+                    <p>Fun and engaging German lessons designed specifically for children and teenagers. Interactive and age-appropriate content that makes learning German enjoyable and effective.</p>
+                    <div class="hero-buttons">
+                        <a href="#trial" class="cta-button primary">Book Free Trial</a>
+                        <a href="#ages" class="cta-button secondary">See Age Groups</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Kids Learning German">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Age Groups -->
-    <section class="features">
+    <!-- Age Groups Section -->
+    <section class="features" id="ages">
         <div class="container">
-            <h2 class="section-title">Age-Appropriate Classes</h2>
+            <h2 class="section-title">Perfect for Every Age</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-child"></i>
                     </div>
                     <h3>Ages 6-8</h3>
-                    <p>Fun introduction to German through games, songs, and stories. Focus on basic vocabulary and simple phrases.</p>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>Colors, numbers, and animals</li>
-                        <li>Simple greetings and introductions</li>
-                        <li>German songs and nursery rhymes</li>
-                        <li>Interactive games and activities</li>
-                    </ul>
+                    <p>Fun games, songs, and stories to introduce German in a playful way. Basic vocabulary and simple phrases.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-user-friends"></i>
                     </div>
                     <h3>Ages 9-12</h3>
-                    <p>Structured learning with more complex vocabulary and basic grammar. Perfect for elementary school students.</p>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>Family, school, and hobbies vocabulary</li>
-                        <li>Basic present tense</li>
-                        <li>Simple conversations</li>
-                        <li>German culture and traditions</li>
-                    </ul>
+                    <p>Interactive activities and conversation practice. Building confidence with grammar and everyday German.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Ages 13-17</h3>
-                    <p>Advanced German for teenagers. Focus on practical communication and preparation for academic or travel goals.</p>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>Complex grammar structures</li>
-                        <li>Academic and social vocabulary</li>
-                        <li>German literature and media</li>
-                        <li>Exam preparation (if needed)</li>
+                    <h3>Ages 13-16</h3>
+                    <p>More structured learning with real-world topics. Preparation for school German classes and exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Kids Learn Section -->
+    <section class="courses">
+        <div class="container">
+            <h2 class="section-title">What Your Child Will Learn</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-level">Vocabulary</div>
+                    <h3>Essential Words & Phrases</h3>
+                    <p>Age-appropriate German vocabulary through games, stories, and interactive activities.</p>
+                    <ul>
+                        <li>Family and friends</li>
+                        <li>Colors, numbers, animals</li>
+                        <li>Food and daily activities</li>
+                        <li>School and hobbies</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card featured">
+                    <div class="course-level">Conversation</div>
+                    <h3>Speaking & Listening</h3>
+                    <p>Build confidence in German conversation through fun, interactive exercises.</p>
+                    <ul>
+                        <li>Basic greetings and introductions</li>
+                        <li>Asking and answering questions</li>
+                        <li>Describing things and people</li>
+                        <li>Pronunciation practice</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-level">Culture</div>
+                    <h3>German Culture & Traditions</h3>
+                    <p>Learn about German-speaking countries through stories, festivals, and traditions.</p>
+                    <ul>
+                        <li>German holidays and celebrations</li>
+                        <li>Famous German stories and fairy tales</li>
+                        <li>German food and traditions</li>
+                        <li>Geography and landmarks</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Teaching Methods -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Our Teaching Methods</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🎮</div>
-                    <h3>Game-Based Learning</h3>
-                    <p>Children learn best through play. We use interactive games, puzzles, and competitions to make German learning exciting and memorable.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🎵</div>
-                    <h3>Music & Songs</h3>
-                    <p>German songs and rhymes help children remember vocabulary and pronunciation naturally. Music makes learning fun and engaging.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">📚</div>
-                    <h3>Stories & Books</h3>
-                    <p>Age-appropriate German stories and books help children develop reading skills and cultural understanding in an enjoyable way.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🎨</div>
-                    <h3>Creative Activities</h3>
-                    <p>Art projects, crafts, and creative activities reinforce German vocabulary while allowing children to express themselves.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">💬</div>
-                    <h3>Interactive Speaking</h3>
-                    <p>Regular speaking practice through role-plays, conversations, and presentations builds confidence and fluency.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🏆</div>
-                    <h3>Positive Reinforcement</h3>
-                    <p>We celebrate every achievement with praise, certificates, and rewards to keep children motivated and engaged.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Class Types -->
+    <!-- Teaching Approach Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Class Types Available</h2>
+            <h2 class="section-title">Our Teaching Approach</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-gamepad"></i>
                     </div>
-                    <h3>Private Lessons</h3>
-                    <p>One-on-one instruction tailored to your child's specific needs, interests, and learning pace.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">30-60 minutes • Flexible schedule</p>
+                    <h3>Interactive Games</h3>
+                    <p>Learning through play with German word games, puzzles, and interactive activities that keep kids engaged.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-music"></i>
                     </div>
-                    <h3>Small Groups</h3>
-                    <p>Interactive group classes with 3-5 children of similar age and level. Perfect for social learning.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">45-60 minutes • Weekly classes</p>
+                    <h3>Songs & Stories</h3>
+                    <p>German children's songs and fairy tales to make learning memorable and fun for young learners.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Family Classes</h3>
-                    <p>Learn German together as a family! Parents and children learn side by side in a fun, supportive environment.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">60 minutes • Weekend sessions</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-campground"></i>
-                    </div>
-                    <h3>Summer Camps</h3>
-                    <p>Intensive German immersion camps during school holidays. Fun activities, games, and cultural experiences.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">1-2 weeks • Full day programs</p>
+                    <h3>Progress Tracking</h3>
+                    <p>Regular updates for parents on their child's progress and achievements in learning German.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Specialized Kids Programs -->
-    <section class="how-it-works">
+    <!-- Pricing Section -->
+    <section class="courses">
         <div class="container">
-            <h2 class="section-title">Specialized Programs</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🎭</div>
-                    <h3>German Theater</h3>
-                    <p>Act out German stories and plays. Develop speaking confidence while having fun with drama and performance.</p>
+            <h2 class="section-title">Pricing & Packages</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-level">Single Lesson</div>
+                    <h3>Try It Out</h3>
+                    <p>Perfect for getting started or occasional lessons.</p>
+                    <ul>
+                        <li>30-minute lesson</li>
+                        <li>Age-appropriate materials</li>
+                        <li>Progress report</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <div class="course-price">€20/hour</div>
+                    <a href="#trial" class="course-button">Book Lesson</a>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">🍳</div>
-                    <h3>Cooking Classes</h3>
-                    <p>Learn German through cooking traditional German dishes. Practice vocabulary while making delicious food.</p>
+                
+                <div class="course-card featured">
+                    <div class="course-level">Monthly Package</div>
+                    <h3>Most Popular</h3>
+                    <p>Regular weekly lessons for consistent progress.</p>
+                    <ul>
+                        <li>4 lessons per month</li>
+                        <li>Weekly progress reports</li>
+                        <li>Homework assignments</li>
+                        <li>Parent consultation</li>
+                    </ul>
+                    <div class="course-price">€70/month</div>
+                    <a href="#trial" class="course-button">Start Package</a>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">🎨</div>
-                    <h3>Art & Culture</h3>
-                    <p>Explore German art, history, and traditions through creative projects and cultural activities.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">⚽</div>
-                    <h3>Sports German</h3>
-                    <p>Learn German vocabulary related to sports and physical activities while staying active and healthy.</p>
+                
+                <div class="course-card">
+                    <div class="course-level">Sibling Discount</div>
+                    <h3>Family Package</h3>
+                    <p>Special rates for families with multiple children.</p>
+                    <ul>
+                        <li>15% discount per child</li>
+                        <li>Flexible scheduling</li>
+                        <li>Family progress tracking</li>
+                        <li>Group activities available</li>
+                    </ul>
+                    <div class="course-price">From €59/month</div>
+                    <a href="#trial" class="course-button">Family Package</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Kids Teachers -->
-    <section class="tutors">
+    <!-- Trial Section -->
+    <section class="trial" id="trial">
         <div class="container">
-            <h2 class="section-title">Meet Our Kids Teachers</h2>
-            <div class="tutors-grid">
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Sebastian">
-                    </div>
-                    <h3>Sebastian</h3>
-                    <p class="tutor-title">Kids Specialist (Ages 6-12)</p>
-                    <p class="tutor-bio">Native German speaker with 8 years of experience teaching children. Specializes in making German learning fun through games and interactive activities.</p>
-                </div>
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Tobias">
-                    </div>
-                    <h3>Tobias</h3>
-                    <p class="tutor-title">Teen Specialist (Ages 13-17)</p>
-                    <p class="tutor-bio">Experienced teacher specializing in teenage learners. Uses modern teaching methods and relevant topics to keep teens engaged and motivated.</p>
-                </div>
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Anna">
-                    </div>
-                    <h3>Anna</h3>
-                    <p class="tutor-title">Family Classes Specialist</p>
-                    <p class="tutor-bio">Expert in family language learning. Creates inclusive environments where parents and children learn German together effectively.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits for Parents -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Benefits for Your Child</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Cognitive Development</h3>
-                    <p>Learning a second language enhances memory, problem-solving skills, and overall cognitive development in children.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Cultural Awareness</h3>
-                    <p>Children develop appreciation for different cultures and become more open-minded global citizens.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Academic Advantage</h3>
-                    <p>Bilingual children often perform better academically and have improved focus and multitasking abilities.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Confidence Building</h3>
-                    <p>Mastering a new language builds self-confidence and gives children a sense of achievement and pride.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Preview -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Kids Class Pricing</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Private Lessons</h3>
-                    <p>One-on-one instruction tailored to your child's needs and schedule.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$30/lesson</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Group Classes</h3>
-                    <p>Small group classes with interactive activities and peer learning.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$20/class</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Family Classes</h3>
-                    <p>Learn together as a family with special family pricing.</p>
-                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$35/family</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="pricing.html" class="cta-button">
-                    <i class="fas fa-calculator"></i>
-                    View Detailed Pricing
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="newsletter-signup-section">
-        <div class="container">
-            <div class="newsletter-signup-content">
+            <div class="trial-content">
                 <h2>Ready to Start Your Child's German Journey?</h2>
-                <p>Book a trial lesson today and see how much fun learning German can be for your child.</p>
-                <div style="margin-top: 30px;">
-                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
-                        <i class="fas fa-play"></i>
-                        Book Trial Lesson - $10
-                    </a>
+                <p>Book a free 30-minute trial lesson and see how much fun learning German can be!</p>
+                <div class="trial-features">
+                    <div class="trial-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Meet the teacher</span>
+                    </div>
+                    <div class="trial-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Age assessment</span>
+                    </div>
+                    <div class="trial-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Fun learning plan</span>
+                    </div>
                 </div>
-                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your child's level • No commitment required</p>
+                <a href="mailto:contact@sebgabriel.com?subject=Kids German Trial Lesson" class="cta-button primary large">Book Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Questions About Kids Classes?</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions about our kids' German classes? We're here to help!</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@sebgabriel.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Monday-Friday, 9AM-6PM CET</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:contact@sebgabriel.com?subject=Kids German Classes Inquiry" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Parent's Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="child-age" placeholder="Child's Age" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell us about your child's German learning goals" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -344,77 +270,33 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SebGabriel.com</h3>
-                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                <div class="footer-brand">
+                    <h3>DEUTSCH</h3>
+                    <p>Learn German with native speakers</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#tutors">Tutors</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Kids Classes</h4>
+                        <ul>
+                            <li><a href="#ages">Age Groups</a></li>
+                            <li><a href="#trial">Free Trial</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>All Courses</h4>
+                        <ul>
+                            <li><a href="index.html">All Courses</a></li>
+                            <li><a href="index.html#courses">Private Sessions</a></li>
+                            <li><a href="index.html#courses">Group Classes</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+                <p>&copy; 2024 DEUTSCH - Learn German. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Function to open Stripe payment in popup
-        function openStripePopup(url) {
-            const width = 600;
-            const height = 700;
-            const left = (screen.width - width) / 2;
-            const top = (screen.height - height) / 2;
-            
-            const popup = window.open(
-                url,
-                'stripe-payment',
-                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-            );
-            
-            if (popup) {
-                popup.focus();
-            }
-        }
-
-        // Initialize newsletter popup
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof NewsletterPopup !== 'undefined') {
-                const newsletterPopup = new NewsletterPopup();
-                newsletterPopup.init();
-            }
-        });
-    </script>
 </body>
 </html>

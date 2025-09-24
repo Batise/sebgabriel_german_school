@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private German Lessons - SebGabriel.com</title>
+    <link rel="stylesheet" href="style.css?v=2024">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="newsletter-popup.js?v=2024"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-text">DEUTSCH</div>
+                    <div class="logo-subtitle">LEARN GERMAN</div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="private-lessons.html" class="nav-link active">Private Lessons</a>
+                <a href="group-courses.html" class="nav-link">Group Courses</a>
+                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
+                    <i class="fas fa-calendar"></i>
+                    30-Minuten-Probelektion
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <h1>Private German Lessons</h1>
+            <p>Personalized one-on-one German instruction tailored to your specific needs, schedule, and learning goals.</p>
+        </div>
+    </section>
+
+    <!-- Private Lessons Overview -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Why Choose Private Lessons?</h2>
+                <p>Private German lessons offer the most personalized and effective way to learn German. With undivided attention from your native German teacher, you'll progress faster and develop confidence in speaking, listening, reading, and writing.</p>
+                <p>Whether you're a complete beginner or looking to perfect your advanced German skills, our private lessons are designed to meet you exactly where you are and take you where you want to go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Personalized Curriculum</h3>
+                    <p>Lessons designed specifically for your learning style, goals, and interests. No generic content - everything is tailored to you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Choose your own schedule. Morning, afternoon, evening, or weekend lessons - whatever works best for your lifestyle.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3>Focused Attention</h3>
+                    <p>100% of your teacher's attention is on you. No waiting for other students or competing for speaking time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Faster Progress</h3>
+                    <p>Learn at your own pace without being held back or rushed. Private lessons typically show 3x faster progress than group classes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Speaking Practice</h3>
+                    <p>Maximum speaking time in every lesson. Build confidence through constant practice and immediate feedback.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Custom Materials</h3>
+                    <p>Learning materials chosen specifically for your interests and goals. Business German, travel German, academic German - whatever you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Levels -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Course Levels</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">A1</div>
+                    <h3>Beginner</h3>
+                    <p>Learn basic German vocabulary, simple sentences, and essential grammar. Perfect for complete beginners or those with minimal German knowledge.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Basic greetings and introductions</li>
+                        <li>Numbers, colors, and everyday objects</li>
+                        <li>Simple present tense</li>
+                        <li>Basic conversation skills</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">A2</div>
+                    <h3>Elementary</h3>
+                    <p>Build on your foundation with more complex grammar and expanded vocabulary. Start having real conversations in German.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Past and future tenses</li>
+                        <li>More complex sentence structures</li>
+                        <li>Everyday situations and topics</li>
+                        <li>Basic reading and writing</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">B1</div>
+                    <h3>Intermediate</h3>
+                    <p>Develop fluency in everyday German. Handle most situations you'll encounter in German-speaking countries.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Complex grammar structures</li>
+                        <li>Expanded vocabulary</li>
+                        <li>Confident conversation skills</li>
+                        <li>Reading German texts</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">B2</div>
+                    <h3>Upper Intermediate</h3>
+                    <p>Express yourself clearly and understand complex German texts. Handle professional and academic situations.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Advanced grammar mastery</li>
+                        <li>Professional vocabulary</li>
+                        <li>Complex discussions</li>
+                        <li>German literature and media</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">C1</div>
+                    <h3>Advanced</h3>
+                    <p>Near-native fluency. Express yourself spontaneously and fluently without much obvious searching for expressions.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Nuanced language use</li>
+                        <li>Complex professional communication</li>
+                        <li>Cultural understanding</li>
+                        <li>Academic German</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">C2</div>
+                    <h3>Proficiency</h3>
+                    <p>Mastery level German. Understand virtually everything and express yourself spontaneously with precision.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Native-like fluency</li>
+                        <li>Complex professional writing</li>
+                        <li>Cultural nuances</li>
+                        <li>Translation and interpretation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Courses -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Specialized Private Courses</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business German</h3>
+                    <p>Professional German for meetings, presentations, emails, and business communication. Perfect for professionals working with German companies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic German</h3>
+                    <p>German for university studies, research, and academic writing. Ideal for students planning to study in Germany.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Travel German</h3>
+                    <p>Essential German for travelers. Learn to navigate, order food, ask for directions, and handle travel situations confidently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Exam Preparation</h3>
+                    <p>Prepare for Goethe, TestDaF, DSH, or other German language exams with targeted practice and test strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How Private Lessons Work</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Book Your Trial</h3>
+                    <p>Start with a 30-minute trial lesson for just $10. Meet your teacher, discuss your goals, and experience our teaching method.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Level Assessment</h3>
+                    <p>We'll assess your current German level and create a personalized learning plan based on your goals and timeline.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Start Learning</h3>
+                    <p>Begin your personalized German journey with regular lessons scheduled at your convenience. Track your progress with detailed feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Flexible Pricing Options</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Single Lessons</h3>
+                    <p>Pay as you go with individual 60-minute lessons. Perfect for flexible learning or trying out different teachers.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">Starting at $35/lesson</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3>Lesson Packages</h3>
+                    <p>Save money with lesson packages. Choose from 5, 10, or 20 lesson packages with significant discounts.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">Save up to 20%</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Monthly Plans</h3>
+                    <p>Unlimited monthly access with regular lessons and additional practice materials. Best value for intensive learners.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">From $199/month</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="pricing.html" class="cta-button">
+                    <i class="fas fa-calculator"></i>
+                    View Detailed Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Ready to Start Your German Journey?</h2>
+                <p>Book your trial lesson today and experience the difference personalized German instruction can make.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
+                        <i class="fas fa-play"></i>
+                        Book Your Trial Lesson - $10
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your level • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SebGabriel.com</h3>
+                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#tutors">Tutors</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open Stripe payment in popup
+        function openStripePopup(url) {
+            const width = 600;
+            const height = 700;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const popup = window.open(
+                url,
+                'stripe-payment',
+                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+
+        // Initialize newsletter popup
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof NewsletterPopup !== 'undefined') {
+                const newsletterPopup = new NewsletterPopup();
+                newsletterPopup.init();
+            }
+        });
+    </script>
+</body>
+</html>

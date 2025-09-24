@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SebGabriel.com</title>
+    <link rel="stylesheet" href="style.css?v=2024">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="newsletter-popup.js?v=2024"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-text">DEUTSCH</div>
+                    <div class="logo-subtitle">LEARN GERMAN</div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
+                <a href="group-courses.html" class="nav-link">Group Courses</a>
+                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
+                    <i class="fas fa-calendar"></i>
+                    30-Minuten-Probelektion
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <h1>About SebGabriel.com</h1>
+            <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Our Story</h2>
+                <p>SebGabriel.com was founded by Sebastian Gabriel, a native German speaker with a passion for teaching and a vision to make German language learning accessible, effective, and enjoyable for students worldwide.</p>
+                <p>Growing up in Germany, Sebastian developed a deep appreciation for the German language and culture. After moving abroad and experiencing the challenges of learning new languages, he recognized the need for personalized, flexible learning solutions that could adapt to individual learning styles and goals.</p>
+                <p>What started as a personal mission to help friends and colleagues learn German has grown into a comprehensive platform that connects students with qualified native German teachers, providing high-quality education for learners of all ages and levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3>Personalized Learning</h3>
+                    <p>Every student is unique. We create customized learning experiences that adapt to individual needs, goals, and learning styles.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Quality Education</h3>
+                    <p>We maintain the highest standards of German language education with native speakers and experienced teachers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cultural Understanding</h3>
+                    <p>Language learning goes beyond grammar and vocabulary. We help students understand German culture and context.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Student Success</h3>
+                    <p>Your success is our priority. We're committed to helping every student achieve their German learning goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Sebastian -->
+    <section class="tutors">
+        <div class="container">
+            <h2 class="section-title">Meet Sebastian Gabriel</h2>
+            <div class="tutors-grid">
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Sebastian Gabriel">
+                    </div>
+                    <h3>Sebastian Gabriel</h3>
+                    <p class="tutor-title">Founder & Lead Teacher</p>
+                    <p class="tutor-bio">Native German speaker from Munich with over 8 years of experience in language education. Sebastian holds a Master's degree in German Literature and has taught German to students from over 30 countries. He specializes in making German learning fun and accessible for learners of all ages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Teachers -->
+    <section class="tutors">
+        <div class="container">
+            <h2 class="section-title">Our Teaching Team</h2>
+            <div class="tutors-grid">
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Tobias">
+                    </div>
+                    <h3>Tobias Weber</h3>
+                    <p class="tutor-title">Kids Specialist</p>
+                    <p class="tutor-bio">Specialized in teaching German to children with engaging, age-appropriate methods. Tobias has a background in early childhood education and uses games, songs, and interactive activities to make German learning fun for kids.</p>
+                </div>
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Anna">
+                    </div>
+                    <h3>Anna Müller</h3>
+                    <p class="tutor-title">Adult Specialist</p>
+                    <p class="tutor-bio">Experienced in helping adult learners achieve conversational fluency and professional German skills. Anna has worked with business professionals and students preparing for German language exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Our Teaching Approach</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">🎯</div>
+                    <h3>Goal-Oriented</h3>
+                    <p>We start by understanding your specific goals, whether it's travel, work, academic study, or personal interest.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">📚</div>
+                    <h3>Structured Learning</h3>
+                    <p>Our curriculum follows proven language learning methodologies while remaining flexible to individual needs.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">💬</div>
+                    <h3>Communication Focus</h3>
+                    <p>We prioritize practical communication skills, ensuring you can use German in real-world situations.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🌍</div>
+                    <h3>Cultural Integration</h3>
+                    <p>Language learning includes cultural understanding, helping you connect with German-speaking communities.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">📈</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Regular assessments and feedback ensure you're making steady progress toward your goals.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🎉</div>
+                    <h3>Fun & Engaging</h3>
+                    <p>Learning should be enjoyable! We use interactive methods and relevant content to keep you motivated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose SebGabriel.com?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Native German Teachers</h3>
+                    <p>All our teachers are native German speakers with professional teaching qualifications and experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Learn at your own pace with flexible scheduling that fits your lifestyle and commitments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Online Convenience</h3>
+                    <p>High-quality German lessons from anywhere in the world with our state-of-the-art online platform.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Quality German education at competitive prices with flexible payment options for every budget.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Satisfaction Guarantee</h3>
+                    <p>100% satisfaction guarantee on your first lesson. We're committed to your success.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous support between lessons with email assistance and additional learning resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Success -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Student Success Stories</h2>
+                <p>Over the years, we've helped hundreds of students achieve their German learning goals. From complete beginners to advanced learners, our students have gone on to:</p>
+                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <li>Successfully relocate to Germany for work or study</li>
+                    <li>Communicate confidently with German-speaking colleagues and clients</li>
+                    <li>Pass German language exams (Goethe, TestDaF, DSH)</li>
+                    <li>Travel confidently in German-speaking countries</li>
+                    <li>Advance their careers with German language skills</li>
+                    <li>Connect with German culture and heritage</li>
+                </ul>
+                <p style="margin-top: 30px;">Your success story could be next! Join our community of successful German learners today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">🤝</div>
+                    <h3>Respect</h3>
+                    <p>We respect every student's unique background, learning style, and goals. Everyone deserves quality education.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🎓</div>
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in teaching quality, curriculum design, and student support.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">💡</div>
+                    <h3>Innovation</h3>
+                    <p>We continuously improve our teaching methods and embrace new technologies to enhance learning.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🌱</div>
+                    <h3>Growth</h3>
+                    <p>We believe in lifelong learning and support both our students' and teachers' continuous development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Ready to Start Your German Journey?</h2>
+                <p>Join our community of successful German learners and discover how we can help you achieve your language goals.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
+                        <i class="fas fa-play"></i>
+                        Book Your Trial Lesson - $10
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your level • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SebGabriel.com</h3>
+                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#tutors">Tutors</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open Stripe payment in popup
+        function openStripePopup(url) {
+            const width = 600;
+            const height = 700;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const popup = window.open(
+                url,
+                'stripe-payment',
+                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+
+        // Initialize newsletter popup
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof NewsletterPopup !== 'undefined') {
+                const newsletterPopup = new NewsletterPopup();
+                newsletterPopup.init();
+            }
+        });
+    </script>
+</body>
+</html>

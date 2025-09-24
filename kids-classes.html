@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids German Classes - SebGabriel.com</title>
+    <link rel="stylesheet" href="style.css?v=2024">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="newsletter-popup.js?v=2024"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-text">DEUTSCH</div>
+                    <div class="logo-subtitle">LEARN GERMAN</div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
+                <a href="group-courses.html" class="nav-link">Group Courses</a>
+                <a href="kids-classes.html" class="nav-link active">Kids Classes</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
+                    <i class="fas fa-calendar"></i>
+                    30-Minuten-Probelektion
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <h1>Kids German Classes</h1>
+            <p>Fun, engaging German classes designed specifically for children ages 6-17. Learn German through games, songs, and interactive activities.</p>
+        </div>
+    </section>
+
+    <!-- Kids Classes Overview -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Why Choose Our Kids Classes?</h2>
+                <p>Our kids German classes are designed by certified children's language teachers who understand how children learn best. We use age-appropriate methods, interactive games, songs, and stories to make German learning fun and effective.</p>
+                <p>Children naturally absorb languages more easily than adults, and our immersive approach helps them develop native-like pronunciation and natural language patterns from an early age.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Groups -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Age-Appropriate Classes</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Ages 6-8</h3>
+                    <p>Fun introduction to German through games, songs, and stories. Focus on basic vocabulary and simple phrases.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Colors, numbers, and animals</li>
+                        <li>Simple greetings and introductions</li>
+                        <li>German songs and nursery rhymes</li>
+                        <li>Interactive games and activities</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Ages 9-12</h3>
+                    <p>Structured learning with more complex vocabulary and basic grammar. Perfect for elementary school students.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Family, school, and hobbies vocabulary</li>
+                        <li>Basic present tense</li>
+                        <li>Simple conversations</li>
+                        <li>German culture and traditions</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Ages 13-17</h3>
+                    <p>Advanced German for teenagers. Focus on practical communication and preparation for academic or travel goals.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Complex grammar structures</li>
+                        <li>Academic and social vocabulary</li>
+                        <li>German literature and media</li>
+                        <li>Exam preparation (if needed)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Methods -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Our Teaching Methods</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">🎮</div>
+                    <h3>Game-Based Learning</h3>
+                    <p>Children learn best through play. We use interactive games, puzzles, and competitions to make German learning exciting and memorable.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🎵</div>
+                    <h3>Music & Songs</h3>
+                    <p>German songs and rhymes help children remember vocabulary and pronunciation naturally. Music makes learning fun and engaging.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">📚</div>
+                    <h3>Stories & Books</h3>
+                    <p>Age-appropriate German stories and books help children develop reading skills and cultural understanding in an enjoyable way.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🎨</div>
+                    <h3>Creative Activities</h3>
+                    <p>Art projects, crafts, and creative activities reinforce German vocabulary while allowing children to express themselves.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">💬</div>
+                    <h3>Interactive Speaking</h3>
+                    <p>Regular speaking practice through role-plays, conversations, and presentations builds confidence and fluency.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🏆</div>
+                    <h3>Positive Reinforcement</h3>
+                    <p>We celebrate every achievement with praise, certificates, and rewards to keep children motivated and engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Types -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Class Types Available</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Private Lessons</h3>
+                    <p>One-on-one instruction tailored to your child's specific needs, interests, and learning pace.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">30-60 minutes • Flexible schedule</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Small Groups</h3>
+                    <p>Interactive group classes with 3-5 children of similar age and level. Perfect for social learning.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">45-60 minutes • Weekly classes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Family Classes</h3>
+                    <p>Learn German together as a family! Parents and children learn side by side in a fun, supportive environment.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">60 minutes • Weekend sessions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>Summer Camps</h3>
+                    <p>Intensive German immersion camps during school holidays. Fun activities, games, and cultural experiences.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">1-2 weeks • Full day programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Kids Programs -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Specialized Programs</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">🎭</div>
+                    <h3>German Theater</h3>
+                    <p>Act out German stories and plays. Develop speaking confidence while having fun with drama and performance.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🍳</div>
+                    <h3>Cooking Classes</h3>
+                    <p>Learn German through cooking traditional German dishes. Practice vocabulary while making delicious food.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">🎨</div>
+                    <h3>Art & Culture</h3>
+                    <p>Explore German art, history, and traditions through creative projects and cultural activities.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">⚽</div>
+                    <h3>Sports German</h3>
+                    <p>Learn German vocabulary related to sports and physical activities while staying active and healthy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Kids Teachers -->
+    <section class="tutors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Kids Teachers</h2>
+            <div class="tutors-grid">
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Sebastian">
+                    </div>
+                    <h3>Sebastian</h3>
+                    <p class="tutor-title">Kids Specialist (Ages 6-12)</p>
+                    <p class="tutor-bio">Native German speaker with 8 years of experience teaching children. Specializes in making German learning fun through games and interactive activities.</p>
+                </div>
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Tobias">
+                    </div>
+                    <h3>Tobias</h3>
+                    <p class="tutor-title">Teen Specialist (Ages 13-17)</p>
+                    <p class="tutor-bio">Experienced teacher specializing in teenage learners. Uses modern teaching methods and relevant topics to keep teens engaged and motivated.</p>
+                </div>
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Anna">
+                    </div>
+                    <h3>Anna</h3>
+                    <p class="tutor-title">Family Classes Specialist</p>
+                    <p class="tutor-bio">Expert in family language learning. Creates inclusive environments where parents and children learn German together effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Parents -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Benefits for Your Child</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Cognitive Development</h3>
+                    <p>Learning a second language enhances memory, problem-solving skills, and overall cognitive development in children.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cultural Awareness</h3>
+                    <p>Children develop appreciation for different cultures and become more open-minded global citizens.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Advantage</h3>
+                    <p>Bilingual children often perform better academically and have improved focus and multitasking abilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Confidence Building</h3>
+                    <p>Mastering a new language builds self-confidence and gives children a sense of achievement and pride.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Kids Class Pricing</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Private Lessons</h3>
+                    <p>One-on-one instruction tailored to your child's needs and schedule.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$30/lesson</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Classes</h3>
+                    <p>Small group classes with interactive activities and peer learning.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$20/class</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Family Classes</h3>
+                    <p>Learn together as a family with special family pricing.</p>
+                    <p style="font-weight: 600; color: var(--accent-color); margin-top: 15px;">$35/family</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="pricing.html" class="cta-button">
+                    <i class="fas fa-calculator"></i>
+                    View Detailed Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Ready to Start Your Child's German Journey?</h2>
+                <p>Book a trial lesson today and see how much fun learning German can be for your child.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
+                        <i class="fas fa-play"></i>
+                        Book Trial Lesson - $10
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your child's level • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SebGabriel.com</h3>
+                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#tutors">Tutors</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open Stripe payment in popup
+        function openStripePopup(url) {
+            const width = 600;
+            const height = 700;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const popup = window.open(
+                url,
+                'stripe-payment',
+                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+
+        // Initialize newsletter popup
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof NewsletterPopup !== 'undefined') {
+                const newsletterPopup = new NewsletterPopup();
+                newsletterPopup.init();
+            }
+        });
+    </script>
+</body>
+</html>

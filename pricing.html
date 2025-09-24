@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - SebGabriel.com</title>
+    <link rel="stylesheet" href="style.css?v=2024">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="newsletter-popup.js?v=2024"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-text">DEUTSCH</div>
+                    <div class="logo-subtitle">LEARN GERMAN</div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
+                <a href="group-courses.html" class="nav-link">Group Courses</a>
+                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
+                    <i class="fas fa-calendar"></i>
+                    30-Minuten-Probelektion
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <h1>Pricing & Packages</h1>
+            <p>Flexible pricing options for every budget and learning style. Choose the plan that works best for you.</p>
+        </div>
+    </section>
+
+    <!-- Trial Lesson -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Start with a Trial Lesson</h2>
+                <p>Experience our teaching quality with a 30-minute trial lesson for just $10. No commitment required.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
+                        <i class="fas fa-play"></i>
+                        Book Trial Lesson - $10
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">Meet your teacher • Assess your level • Experience our method • Amount credited to first course</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Lessons Pricing -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Private Lessons</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Single Lesson</h3>
+                    <p>Pay as you go with individual 60-minute lessons. Perfect for flexible learning or trying out different teachers.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$35</span>
+                        <span style="color: var(--dark-gray);">/lesson</span>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>60-minute one-on-one lesson</li>
+                        <li>Personalized curriculum</li>
+                        <li>Flexible scheduling</li>
+                        <li>Custom learning materials</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_private_single" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Single Lesson
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3>5-Lesson Package</h3>
+                    <p>Save money with our 5-lesson package. Perfect for regular learners who want consistency.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$160</span>
+                        <span style="color: var(--dark-gray);">/package</span>
+                        <div style="color: var(--success-color); font-weight: 600; margin-top: 5px;">Save $15 (8% off)</div>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>5 x 60-minute lessons</li>
+                        <li>Progress tracking</li>
+                        <li>Homework assignments</li>
+                        <li>Email support between lessons</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_private_5" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book 5 Lessons
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>10-Lesson Package</h3>
+                    <p>Our most popular package. Great value for committed learners who want to make steady progress.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$300</span>
+                        <span style="color: var(--dark-gray);">/package</span>
+                        <div style="color: var(--success-color); font-weight: 600; margin-top: 5px;">Save $50 (14% off)</div>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>10 x 60-minute lessons</li>
+                        <li>Detailed progress reports</li>
+                        <li>Custom study plan</li>
+                        <li>Priority scheduling</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_private_10" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book 10 Lessons
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Monthly Plan</h3>
+                    <p>Unlimited monthly access with regular lessons and additional practice materials. Best value for intensive learners.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$199</span>
+                        <span style="color: var(--dark-gray);">/month</span>
+                        <div style="color: var(--success-color); font-weight: 600; margin-top: 5px;">Up to 8 lessons/month</div>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Up to 8 lessons per month</li>
+                        <li>Practice materials included</li>
+                        <li>24/7 email support</li>
+                        <li>Monthly progress assessment</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_private_monthly" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Start Monthly Plan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Courses Pricing -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Group Courses</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">$25</div>
+                    <h3>Single Class</h3>
+                    <p>Pay weekly for group classes. Perfect for flexible learning or trying out different courses.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>60-minute group lesson</li>
+                        <li>Maximum 6 students</li>
+                        <li>Interactive activities</li>
+                        <li>Group materials included</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_group_single" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Single Class
+                    </a>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">$89</div>
+                    <h3>Monthly Plan</h3>
+                    <p>Save money with monthly group course packages. Includes all materials and additional practice resources.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>4 group classes per month</li>
+                        <li>All course materials</li>
+                        <li>Practice exercises</li>
+                        <li>Group chat support</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_group_monthly" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Start Monthly Plan
+                    </a>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">$199</div>
+                    <h3>Complete Course</h3>
+                    <p>Pay for the entire course upfront and save even more. Includes all materials, assessments, and certificates.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>8-14 weeks (depending on level)</li>
+                        <li>All course materials</li>
+                        <li>Progress assessments</li>
+                        <li>Completion certificate</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_group_complete" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Complete Course
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Classes Pricing -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Kids Classes</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Private Lessons</h3>
+                    <p>One-on-one instruction tailored to your child's specific needs, interests, and learning pace.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$30</span>
+                        <span style="color: var(--dark-gray);">/lesson</span>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>30-60 minute lessons</li>
+                        <li>Age-appropriate materials</li>
+                        <li>Fun, interactive activities</li>
+                        <li>Progress reports for parents</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_kids_private" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Kids Private Lesson
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Classes</h3>
+                    <p>Small group classes with interactive activities and peer learning. Perfect for social children.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$20</span>
+                        <span style="color: var(--dark-gray);">/class</span>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>45-60 minute group lessons</li>
+                        <li>Maximum 5 children</li>
+                        <li>Games and activities</li>
+                        <li>Age-appropriate curriculum</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_kids_group" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Kids Group Class
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Family Classes</h3>
+                    <p>Learn together as a family with special family pricing. Parents and children learn side by side.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$35</span>
+                        <span style="color: var(--dark-gray);">/family</span>
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>60-minute family sessions</li>
+                        <li>Up to 4 family members</li>
+                        <li>Family-friendly activities</li>
+                        <li>Weekend scheduling available</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_kids_family" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Family Class
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business German Pricing -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Business German</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">$45</div>
+                    <h3>Individual Training</h3>
+                    <p>One-on-one business German training tailored to your professional needs and industry.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>60-minute professional sessions</li>
+                        <li>Industry-specific vocabulary</li>
+                        <li>Business communication skills</li>
+                        <li>Email and presentation training</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_business_individual" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Individual Training
+                    </a>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">$299</div>
+                    <h3>Team Training</h3>
+                    <p>Group business German training for teams and departments. Specialized corporate programs.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Up to 8 team members</li>
+                        <li>Corporate curriculum</li>
+                        <li>Team building activities</li>
+                        <li>Progress reports for management</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_business_team" class="cta-button" onclick="openStripePopup(this.href); return false;" style="margin-top: 20px;">
+                        Book Team Training
+                    </a>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">Custom</div>
+                    <h3>Corporate Packages</h3>
+                    <p>Customized German training programs for large organizations. Contact us for a personalized quote.</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Customized curriculum</li>
+                        <li>Flexible scheduling</li>
+                        <li>Multiple instructors</li>
+                        <li>Comprehensive reporting</li>
+                    </ul>
+                    <a href="index.html#contact" class="cta-button" style="margin-top: 20px;">
+                        Contact for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Payment Methods</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Credit Cards</h3>
+                    <p>Secure payment processing through Stripe. Accepts all major credit cards worldwide.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank Transfer</h3>
+                    <p>Direct bank transfers available for larger packages and corporate clients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paypal"></i>
+                    </div>
+                    <h3>PayPal</h3>
+                    <p>Pay securely with PayPal for added convenience and buyer protection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Safe</h3>
+                    <p>All payments are processed securely with SSL encryption and fraud protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Money Back Guarantee -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">100% Satisfaction Guarantee</h2>
+                <p>We're confident in the quality of our German lessons. If you're not completely satisfied with your first lesson, we'll refund your money, no questions asked.</p>
+                <p>Your success is our priority, and we're committed to providing the best German learning experience possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Can I change my package later?</h3>
+                    <p>Yes! You can upgrade or downgrade your package at any time. We'll prorate any differences in pricing.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>What if I need to cancel?</h3>
+                    <p>We offer flexible cancellation policies. Single lessons can be cancelled up to 24 hours in advance. Package lessons can be rescheduled.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Do you offer refunds?</h3>
+                    <p>Yes, we offer a 100% satisfaction guarantee for your first lesson. Package refunds are handled on a case-by-case basis.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can I try different teachers?</h3>
+                    <p>Absolutely! We encourage you to try different teachers to find the best match for your learning style and goals.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="faq.html" class="cta-button secondary">
+                    <i class="fas fa-question-circle"></i>
+                    View All FAQs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Ready to Start Learning German?</h2>
+                <p>Choose the plan that works best for you and begin your German learning journey today.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
+                        <i class="fas fa-play"></i>
+                        Start with Trial Lesson - $10
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your level • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SebGabriel.com</h3>
+                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#tutors">Tutors</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open Stripe payment in popup
+        function openStripePopup(url) {
+            const width = 600;
+            const height = 700;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const popup = window.open(
+                url,
+                'stripe-payment',
+                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+
+        // Initialize newsletter popup
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof NewsletterPopup !== 'undefined') {
+                const newsletterPopup = new NewsletterPopup();
+                newsletterPopup.init();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - SebGabriel.com</title>
+    <link rel="stylesheet" href="style.css?v=2024">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="newsletter-popup.js?v=2024"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-text">DEUTSCH</div>
+                    <div class="logo-subtitle">LEARN GERMAN</div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
+                <a href="group-courses.html" class="nav-link">Group Courses</a>
+                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
+                    <i class="fas fa-calendar"></i>
+                    30-Minuten-Probelektion
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our German language courses, pricing, and policies.</p>
+        </div>
+    </section>
+
+    <!-- General Questions -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">General Questions</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>What makes SebGabriel.com different?</h3>
+                    <p>We offer personalized German learning with native speakers, flexible scheduling, and a focus on practical communication skills. Our teachers are experienced professionals who adapt their teaching to your specific needs and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Do I need any prior German knowledge?</h3>
+                    <p>No! We welcome complete beginners. Our teachers will assess your level during the trial lesson and create a personalized learning plan that starts exactly where you are.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>How quickly will I learn German?</h3>
+                    <p>Learning speed varies by individual, but most students see significant progress within 3-6 months of regular lessons. With our personalized approach, you'll typically progress faster than in traditional group classes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can I learn German for specific purposes?</h3>
+                    <p>Absolutely! We offer specialized courses for business German, travel, academic study, exam preparation, and more. Just let us know your specific goals during your trial lesson.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Questions -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Course Questions</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h3>What's included in the trial lesson?</h3>
+                    <p>The 30-minute trial lesson includes a level assessment, discussion of your goals, and a sample lesson to experience our teaching method. The $10 fee is credited toward your first course.</p>
+                </div>
+                <div class="step-item">
+                    <h3>How long are the regular lessons?</h3>
+                    <p>Private lessons are typically 60 minutes, group courses are 60-90 minutes, and kids classes are 30-60 minutes depending on age. We can adjust lesson length based on your preferences.</p>
+                </div>
+                <div class="step-item">
+                    <h3>What materials do I need?</h3>
+                    <p>We provide all learning materials digitally. You'll need a computer or tablet with internet connection, microphone, and camera for online lessons. No additional textbooks required!</p>
+                </div>
+                <div class="step-item">
+                    <h3>Can I change teachers if needed?</h3>
+                    <p>Yes! We encourage you to try different teachers to find the best match for your learning style. You can request a different teacher at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Questions -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Scheduling & Flexibility</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>How flexible is the scheduling?</h3>
+                    <p>Very flexible! You can schedule lessons at times that work for you, including evenings and weekends. We accommodate different time zones and can adjust schedules as needed.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>What if I need to cancel a lesson?</h3>
+                    <p>You can cancel or reschedule lessons up to 24 hours in advance at no charge. Last-minute cancellations may be subject to a fee. We understand that life happens!</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can I pause my course?</h3>
+                    <p>Yes, you can pause your course for up to 30 days. For longer breaks, we can discuss options to maintain your progress and learning momentum.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Do you offer weekend classes?</h3>
+                    <p>Absolutely! We offer classes seven days a week, including weekends. Many of our students prefer weekend lessons to fit their busy schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Questions -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Pricing & Payment</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through Stripe with SSL encryption.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Are there any hidden fees?</h3>
+                    <p>No hidden fees! The price you see is what you pay. All learning materials and support are included in the course price.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Do you offer refunds?</h3>
+                    <p>We offer a 100% satisfaction guarantee for your first lesson. For package courses, refunds are handled on a case-by-case basis with prorated amounts.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Can I upgrade or downgrade my package?</h3>
+                    <p>Yes! You can change your package at any time. We'll prorate any differences in pricing to ensure you get fair value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Questions -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Technical Requirements</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>What technical requirements do I need?</h3>
+                    <p>You need a computer, tablet, or smartphone with internet connection, microphone, and camera. We recommend a stable internet connection for the best experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>What platform do you use for online lessons?</h3>
+                    <p>We use Zoom for online lessons, which works on all devices and browsers. We'll send you a link before each lesson - no software installation required!</p>
+                </div>
+                <div class="feature-card">
+                    <h3>What if I have technical issues?</h3>
+                    <p>Our support team is here to help! We provide technical support before and during lessons to ensure everything runs smoothly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can I record my lessons?</h3>
+                    <p>Yes, you can record your lessons for review purposes. We'll provide you with the recording after each lesson to help you practice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Classes Questions -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Kids Classes</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h3>What age groups do you teach?</h3>
+                    <p>We teach children ages 6-17, with age-appropriate groups: 6-8, 9-12, and 13-17. Each group uses different teaching methods and materials.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Are your kids teachers certified?</h3>
+                    <p>Yes! All our kids teachers are certified in child education and have experience teaching German to children. They use fun, interactive methods.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Can parents observe the lessons?</h3>
+                    <p>Parents are welcome to observe lessons, especially for younger children. We also provide regular progress reports to keep parents informed.</p>
+                </div>
+                <div class="step-item">
+                    <h3>Do you offer family classes?</h3>
+                    <p>Yes! We offer family classes where parents and children learn German together. It's a great way to practice as a family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business German Questions -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Business German</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Do you offer corporate training?</h3>
+                    <p>Yes! We provide corporate German training for teams and departments. We can customize programs for your specific industry and needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can you help with German business etiquette?</h3>
+                    <p>Absolutely! Our business German courses include cultural training, business etiquette, and professional communication skills.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Do you prepare students for German exams?</h3>
+                    <p>Yes! We offer exam preparation for Goethe, TestDaF, DSH, and other German language exams with targeted practice and strategies.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Can you help with German job interviews?</h3>
+                    <p>Yes! We provide specialized training for German job interviews, including common questions, professional vocabulary, and cultural tips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions? -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <h2>Still Have Questions?</h2>
+                <p>Can't find the answer you're looking for? Contact us directly and we'll be happy to help!</p>
+                <div style="margin-top: 30px;">
+                    <a href="index.html#contact" class="cta-button primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                </div>
+                <p style="margin-top: 20px; opacity: 0.9;">We typically respond within 24 hours • Free consultation available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SebGabriel.com</h3>
+                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#tutors">Tutors</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open Stripe payment in popup
+        function openStripePopup(url) {
+            const width = 600;
+            const height = 700;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const popup = window.open(
+                url,
+                'stripe-payment',
+                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+
+        // Initialize newsletter popup
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof NewsletterPopup !== 'undefined') {
+                const newsletterPopup = new NewsletterPopup();
+                newsletterPopup.init();
+            }
+        });
+    </script>
+</body>
+</html>

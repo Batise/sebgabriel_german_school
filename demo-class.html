@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Class - DEUTSCH German Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .hero-image {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 12px;
+        }
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #ff6b35;
+        }
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">D</span>
+                </div>
+                <a href="index.html" class="text-xl font-bold text-green-600">DEUTSCH.COM</a>
+            </div>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-6">
+                    <h1 class="text-5xl font-bold text-blue-400 leading-tight">
+                        TRY OUR<br>DEMO CLASS
+                    </h1>
+                    
+                    <h2 class="text-2xl font-bold text-gray-700">
+                        Experience German Learning - $10
+                    </h2>
+                    
+                    <div class="space-y-4 text-gray-600">
+                        <p>
+                            Get a taste of our teaching method with a 30-minute demo class. No commitment required - just pure German learning experience to see if we're the right fit for you.
+                        </p>
+                        
+                        <ul class="space-y-2">
+                            <li>• 30-minute personalized session</li>
+                            <li>• Level assessment and goal discussion</li>
+                            <li>• Experience our teaching style firsthand</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xl font-bold text-orange-500">READY?</span>
+                        <a href="#booking" class="cta-button px-8 py-4 rounded-lg font-semibold">
+                            Book Demo Class
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="hero-image p-8">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="German Demo Class" class="w-full h-80 object-cover rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- What Happens in Demo Class -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What Happens in Your Demo Class?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A structured 30-minute session designed to give you the full DEUTSCH experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="step-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-orange-500 font-bold text-lg">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Warm Welcome</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        We start with introductions and get to know your background, interests, and why you want to learn German. This helps us personalize your learning experience.
+                    </p>
+                </div>
+                
+                <div class="step-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-orange-500 font-bold text-lg">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Level Assessment</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Through conversation and simple exercises, we assess your current German level (A1-C2) and identify your strengths and areas for improvement.
+                    </p>
+                </div>
+                
+                <div class="step-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-orange-500 font-bold text-lg">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Mini Lesson</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Experience our teaching method with a short, focused lesson on a practical German topic. You'll see how we make learning engaging and effective.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Class Structure -->
+        <section class="py-20 bg-white">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Demo Class Structure</h2>
+                <p class="text-xl text-gray-600">Exactly what you can expect during your 30-minute session</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">5</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Minutes - Introduction & Goals</h3>
+                            <p class="text-gray-600">We discuss your German learning goals, experience, and what you hope to achieve.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">10</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Minutes - Level Assessment</h3>
+                            <p class="text-gray-600">Quick conversation and exercises to determine your current German level and learning needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">12</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Minutes - Mini German Lesson</h3>
+                            <p class="text-gray-600">Experience our teaching style with a focused lesson on practical German vocabulary or grammar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Minutes - Next Steps & Questions</h3>
+                            <p class="text-gray-600">We discuss your learning path and answer any questions about our courses and teaching approach.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits of Demo Class -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why Book a Demo Class?</h2>
+                <p class="text-xl text-gray-600">Discover the benefits of trying before you commit</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="benefit-card p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">No Commitment</h3>
+                    <p class="text-gray-600">Try our teaching style without any obligation. Only $10 to experience our full approach.</p>
+                </div>
+                
+                <div class="benefit-card p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Instant Feedback</h3>
+                    <p class="text-gray-600">Get immediate assessment of your German level and personalized recommendations for your learning path.</p>
+                </div>
+                
+                <div class="benefit-card p-8">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Meet Your Teacher</h3>
+                    <p class="text-gray-600">Connect with your potential German teacher and see if their teaching style matches your learning preferences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="py-20 bg-white">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Ready to Book Your Demo Class?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose your preferred time slot and start your German learning journey</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Demo Class - $10</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium">Duration:</span>
+                            <span>30 minutes</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium">Format:</span>
+                            <span>Online via Zoom/Google Meet</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium">What's Included:</span>
+                            <span>Level assessment + Mini lesson</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="font-medium">Price:</span>
+                            <span class="text-2xl font-bold text-green-600">$10</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="openPaymentPopup()" class="cta-button px-12 py-4 rounded-lg font-semibold text-lg inline-block">
+                            Book Demo Class Now
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">Secure payment via Stripe - instant confirmation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Everything you need to know about our demo classes</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold mb-3">What if I'm a complete beginner?</h3>
+                    <p class="text-gray-600">Perfect! Our demo class is designed for all levels, including absolute beginners. We'll start from the basics and show you how we make German learning accessible and fun.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold mb-3">Do I need any special software?</h3>
+                    <p class="text-gray-600">Just a computer or smartphone with internet connection. We'll send you a simple link to join the online session - no downloads required.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold mb-3">What happens after the demo class?</h3>
+                    <p class="text-gray-600">We'll discuss your learning goals and recommend the best course option for you. There's no pressure to continue - only if you feel we're the right fit.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold mb-3">Can I reschedule if needed?</h3>
+                    <p class="text-gray-600">Absolutely! We understand life happens. Just let us know at least 24 hours in advance and we'll find a new time that works for you.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 text-sm">
+        <div class="container mx-auto px-6">
+            <p>Copyright &copy; 2025 DEUTSCH. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span>|</span>
+                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openPaymentPopup() {
+            const paymentUrl = 'https://buy.stripe.com/fZu4gA8G7gj22oE8qY2Ji03';
+            const popup = window.open(
+                paymentUrl,
+                'stripe-payment',
+                'width=600,height=700,scrollbars=yes,resizable=yes,top=100,left=' + (window.innerWidth/2 - 300)
+            );
+            
+            // Focus the popup window
+            if (popup) {
+                popup.focus();
+            }
+            
+            // Optional: Check if popup was closed and show confirmation
+            const checkClosed = setInterval(() => {
+                if (popup.closed) {
+                    clearInterval(checkClosed);
+                    // You could add a success message here if needed
+                    console.log('Payment popup closed');
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>

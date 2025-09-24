@@ -1,225 +1,1034 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEUTSCH - Learn German</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Hallo Deutsch - Your German Journey Begins Here</title>
+    <meta name="description" content="Learn German online with native speakers! Private lessons, group courses, and kids classes. Flexible scheduling for all time zones. Free placement test, all materials included. Start your German journey today with Hallo Deutsch.">
+    <meta name="keywords" content="learn German online, German lessons, German courses, German classes, German teacher, native German speaker, German for beginners, German for kids, online German learning, German language school, flexible scheduling, time zone friendly">
+    <meta name="author" content="Sebastian Gabriel - Hallo Deutsch">
+    <meta property="og:title" content="Hallo Deutsch - Learn German Online with Native Speakers">
+    <meta property="og:description" content="Master German with personalized lessons from native speakers. Private sessions, group courses, and specialized kids classes. Start learning today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deutsch.sebgabriel.com">
+    <meta property="og:site_name" content="Hallo Deutsch">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hallo Deutsch - Learn German Online">
+    <meta name="twitter:description" content="Learn German with native speakers through personalized online lessons. Free placement test available!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .hero-image {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 12px;
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .testimonial-section {
+            border-top: 2px dotted #e5e5e5;
+            padding-top: 40px;
+        }
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        
+        /* Newsletter Popup Styles */
+        .newsletter-popup {
+            position: fixed;
+            top: 50%;
+            right: -400px;
+            transform: translateY(-50%);
+            width: 350px;
+            max-width: calc(100vw - 40px);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: right 0.4s ease;
+        }
+        
+        .newsletter-popup.show {
+            right: 20px;
+        }
+        
+        @media (max-width: 640px) {
+            .newsletter-popup {
+                width: calc(100vw - 20px);
+                right: -100vw;
+            }
+            
+            .newsletter-popup.show {
+                right: 10px;
+            }
+        }
+        
+        .newsletter-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .newsletter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">Learn German</div>
-                </a>
+<body class="antialiased">
+
+    <header class="p-4 sm:p-6 bg-white shadow-sm">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm sm:text-lg">SG</span>
+                </div>
+                <a href="index.html" class="text-lg sm:text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
             </div>
-            <div class="nav-menu">
-                <a href="#courses" class="nav-link">Courses</a>
-                <a href="#teachers" class="nav-link">Teachers</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#trial" class="nav-cta-button">Free Trial</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="space-x-6 font-light text-gray-600 hidden lg:flex">
+                <a href="#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="teachers.html" class="hover:text-gray-800 transition-colors">Teachers</a>
+                <span class="text-gray-300">|</span>
+                <a href="#testimonials" class="hover:text-gray-800 transition-colors">Reviews</a>
+                <span class="text-gray-300">|</span>
+                <a href="blog.html" class="hover:text-gray-800 transition-colors">Blog</a>
+                <span class="text-gray-300">|</span>
+                <a href="#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="#courses" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Courses</a>
+                <a href="#pricing" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Pricing</a>
+                <a href="teachers.html" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Teachers</a>
+                <a href="#testimonials" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Reviews</a>
+                <a href="blog.html" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Blog</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors">Contact</a>
             </div>
         </div>
-    </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Master German with Native Speakers</h1>
-                    <p>Professional German language instruction designed for your success. Learn from anywhere, at your own pace, with experienced native German teachers.</p>
-                    <div class="hero-buttons">
-                        <a href="#trial" class="cta-button primary">Start Free Trial</a>
-                        <a href="#courses" class="cta-button secondary">View Courses</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="German Learning">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose DEUTSCH?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Native German Teachers</h3>
-                    <p>Learn from qualified native speakers with years of teaching experience</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Flexible Scheduling</h3>
-                    <p>Book lessons that fit your schedule, available 7 days a week</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Personalized Learning</h3>
-                    <p>Customized lessons tailored to your goals and learning style</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section class="courses" id="courses">
-        <div class="container">
-            <h2 class="section-title">Choose Your Learning Style</h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-level">1-on-1</div>
-                    <h3>Private Sessions</h3>
-                    <p>Personalized German lessons tailored to your specific needs and learning pace. Perfect for focused learning and rapid progress.</p>
-                    <ul>
-                        <li>Personalized curriculum</li>
-                        <li>Flexible scheduling</li>
-                        <li>Individual attention</li>
-                        <li>Custom learning materials</li>
-                    </ul>
-                    <div class="course-price">From €35/hour</div>
-                    <a href="#trial" class="course-button">Book Session</a>
+        <section class="py-12 sm:py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left: Image -->
+                <div class="hero-image p-4 sm:p-8 order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="German Learning Online" class="w-full h-64 sm:h-80 object-cover rounded-lg">
                 </div>
                 
-                <div class="course-card featured">
-                    <div class="course-level">2-4 people</div>
-                    <h3>Group Classes</h3>
-                    <p>Learn German in a small group setting. Great for practicing conversation and learning with peers at similar levels.</p>
-                    <ul>
-                        <li>Small group size (2-4 people)</li>
-                        <li>Interactive conversations</li>
-                        <li>Peer learning</li>
-                        <li>Cost-effective option</li>
-                    </ul>
-                    <div class="course-price">From €25/hour</div>
-                    <a href="#trial" class="course-button">Join Group</a>
+                <!-- Right: Content -->
+                <div class="space-y-4 sm:space-y-6 order-1 lg:order-2">
+                      <h1 class="text-3xl sm:text-4xl lg:text-5xl playful-brand text-orange-500 leading-tight">
+                          HALLO DEUTSCH
+                      </h1>
+                    
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-700">
+                        Your German Journey Begins Here
+                    </h2>
+                    
+                    <div class="space-y-3 sm:space-y-4 text-gray-600">
+                        <p class="text-sm sm:text-base">
+                            Master German with native speakers through personalized one-on-one lessons and small group classes. Achieve fluency faster with our proven teaching methods and flexible scheduling that works with your time zone.
+                        </p>
+                        
+                        <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+                            <li>• Native German teachers with years of experience</li>
+                            <li>• Flexible scheduling - learn when it suits you</li>
+                            <li>• Real-world conversation practice from day one</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                        <span class="text-lg sm:text-xl font-bold text-orange-500">START TODAY!</span>
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                            <a href="placement-test.html" class="cta-button px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold inline-block text-center text-sm sm:text-base">
+                                Free Placement Test
+                            </a>
+                            <a href="beginner-course.html" class="px-6 sm:px-8 py-3 sm:py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center text-sm sm:text-base">
+                                A1.1 Course - $375
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Below the Fold Section -->
+        <section class="testimonial-section">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Left: Testimonial -->
+                <div class="info-card p-8">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="German Learning" class="w-16 h-16 rounded-full object-cover">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-4">STUDENT SUCCESS!</h3>
+                            <p class="text-gray-600 mb-4">
+                                "I went from beginner to conversational German in just 3 months with Start Deutsch. The personalized approach and native teachers made all the difference. Now I can confidently speak German at work!"
+                            </p>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-orange-500 font-semibold">SECURE</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="course-card">
-                    <div class="course-level">Ages 6-16</div>
-                    <h3>Online for Kids</h3>
-                    <p>Fun and engaging German lessons designed specifically for children and teenagers. Interactive and age-appropriate content.</p>
-                    <ul>
-                        <li>Age-appropriate materials</li>
-                        <li>Interactive games & activities</li>
-                        <li>Progress tracking for parents</li>
-                        <li>Flexible scheduling</li>
+                <!-- Right: More Information -->
+                <div class="info-card p-8">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="German Learning" class="w-16 h-16 rounded-full object-cover">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-4">WHY CHOOSE US</h3>
+                            <p class="text-gray-600">
+                                Our proven teaching methods combine structured learning with real-world conversation practice. Small class sizes ensure personalized attention, while flexible scheduling fits your busy lifestyle. Join thousands of successful German learners who've achieved their goals with Start Deutsch.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Choose Your Learning Path</h2>
+            
+            <!-- Private Sessions -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8">Private Sessions</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">Single Session</h4>
+                        <p class="text-gray-500 mb-4">Trial Class</p>
+                        <div class="text-3xl font-bold mb-4">$50</div>
+                        <p class="text-sm text-gray-400 mb-6">per hour</p>
+                        <a href="trial-class.html" class="w-full py-3 border border-gray-300 hover:bg-gray-50 transition-colors rounded-lg inline-block text-center">Book Session</a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">5-Class Package</h4>
+                        <p class="text-gray-500 mb-4">Save 20%</p>
+                        <div class="text-3xl font-bold mb-4">$200</div>
+                        <p class="text-sm text-gray-400 mb-6">$40 per hour</p>
+                        <a href="5-class-package.html" class="w-full py-3 border border-gray-300 hover:bg-gray-50 transition-colors rounded-lg inline-block text-center">Buy Package</a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">10-Class Package</h4>
+                        <p class="text-gray-500 mb-4">Save 30%</p>
+                        <div class="text-3xl font-bold mb-4">$350</div>
+                        <p class="text-sm text-gray-400 mb-6">$35 per hour</p>
+                        <a href="10-class-package.html" class="w-full py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg inline-block text-center">Buy Now</a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">50-Class Package</h4>
+                        <p class="text-gray-500 mb-4">Save 40%</p>
+                        <div class="text-3xl font-bold mb-4">$1500</div>
+                        <p class="text-sm text-gray-400 mb-6">$30 per hour</p>
+                        <a href="50-class-package.html" class="w-full py-3 border border-gray-300 hover:bg-gray-50 transition-colors rounded-lg inline-block text-center">Buy Package</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Group Courses -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8">Group Courses</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">A1.1 Beginner Course</h4>
+                        <p class="text-gray-500 mb-4">Perfect for Beginners</p>
+                        <div class="text-3xl font-bold mb-4">$375</div>
+                        <p class="text-sm text-gray-400 mb-6">30 hours • All materials included</p>
+                        <a href="beginner-course.html" class="w-full py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg inline-block text-center">Enroll Now - $375</a>
+        </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="text-lg font-medium mb-2">Advanced Group Classes</h4>
+                        <p class="text-gray-500 mb-4">Coming Soon</p>
+                        <div class="text-3xl font-bold mb-4">TBD</div>
+                        <p class="text-sm text-gray-400 mb-6">A2, B1, B2 levels</p>
+                        <a href="#contact" class="w-full py-3 border border-gray-300 hover:bg-gray-50 transition-colors rounded-lg inline-block text-center">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Students Say</h2>
+                    <p class="text-xl text-gray-600">Real feedback from real learners</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                SM
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">Sarah M.</h4>
+                                <p class="text-gray-600">Marketing Professional</p>
+                </div>
+            </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Hallo Deutsch transformed my German learning journey. The personalized approach and native speakers made all the difference. I went from zero to conversational in just 3 months!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                JD
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">James D.</h4>
+                                <p class="text-gray-600">Software Engineer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "The A1.1 course was perfect for me as a complete beginner. The materials were comprehensive and the group setting helped me stay motivated."
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                AL
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">Anna L.</h4>
+                                <p class="text-gray-600">University Student</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "The private sessions gave me the confidence to speak German in my studies. Sebastian is an amazing teacher who really cares about your progress!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- About Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">About Hallo Deutsch</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="German Learning Environment" 
+                                 class="w-full h-80 object-cover rounded-lg shadow-lg">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-2xl font-bold text-orange-500 mb-4">Meet Sebastian Gabriel</h3>
+                            <p class="text-gray-700 mb-4">
+                                As a native German speaker with years of teaching experience, I founded Hallo Deutsch with a simple mission: to make German learning accessible, effective, and enjoyable for everyone.
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Having worked with students from all over the world, I understand the challenges of learning a new language. That's why we focus on real-world conversation practice and personalized learning paths.
+                            </p>
+                            <p class="text-gray-700">
+                                Our philosophy is simple: <strong>Every student can succeed with the right approach, the right materials, and the right teacher.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment & Policies Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Payment & Policies</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Payment Methods -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-orange-500 mb-6">Payment Methods</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">💳</span>
+                                    </div>
+                                    <span class="text-gray-700">Credit/Debit Cards (Visa, Mastercard, Amex)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">🏦</span>
+                                    </div>
+                                    <span class="text-gray-700">Bank Transfer (for larger packages)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-white text-sm font-bold">💰</span>
+                                    </div>
+                                    <span class="text-gray-700">PayPal (available upon request)</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-6">
+                                All payments are processed securely through Stripe.
+                            </p>
+                        </div>
+
+                        <!-- Refund Policy -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold text-orange-500 mb-6">Refund Policy</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-orange-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Private Sessions</h4>
+                                    <p class="text-gray-600 text-sm">Full refund if canceled 24+ hours before session. 50% refund for same-day cancellations.</p>
+                                </div>
+                                <div class="border-l-4 border-orange-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Group Courses</h4>
+                                    <p class="text-gray-600 text-sm">Full refund before course starts. Pro-rated refund after first 2 classes if not satisfied.</p>
+                                </div>
+                                <div class="border-l-4 border-orange-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Package Deals</h4>
+                                    <p class="text-gray-600 text-sm">Unused sessions can be refunded at the single-session rate.</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-6">
+                                We want you to be completely satisfied with your learning experience. Contact us with any concerns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-12 sm:py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                    <p class="text-lg sm:text-xl text-gray-600">Get answers to common questions about our German courses</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                        <!-- FAQ Column 1 -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">What level should I choose?</h3>
+                                <p class="text-gray-600">We offer a free placement test to determine your exact level. If you're a complete beginner, start with our A1.1 Beginner Course. Our test will place you in the right level based on your current knowledge.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">How long does it take to become fluent?</h3>
+                                <p class="text-gray-600">Fluency depends on your starting level, practice time, and learning goals. Most students see significant improvement within 3-6 months of regular study. Our structured approach helps you progress efficiently.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Do you offer courses for children?</h3>
+                                <p class="text-gray-600">Yes! We have specialized German classes for kids ages 5-17. Our children's courses use interactive, age-appropriate methods that make learning German fun and engaging for young learners.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Are private sessions truly one-on-one?</h3>
+                                <p class="text-gray-600">Absolutely! Private sessions are completely one-on-one with your dedicated teacher. You'll have the teacher's full attention and can customize the lesson to your specific needs and goals.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Column 2 -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">What's included in the course materials?</h3>
+                                <p class="text-gray-600">All digital materials are included at no extra cost: workbooks, exercises, practice materials, and audio files. You don't need to buy any additional textbooks or resources.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Can I reschedule or cancel lessons?</h3>
+                                <p class="text-gray-600">Yes! Private sessions can be rescheduled with 24+ hours notice for a full refund. Group courses have flexible policies. See our detailed <a href="cancellation-policy.html" class="text-orange-500 hover:underline">Cancellation Policy</a> for complete terms.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Do I need special software for online lessons?</h3>
+                                <p class="text-gray-600">No special software needed! We use standard video conferencing tools that work in your browser. Just need a stable internet connection, webcam, and microphone. We'll provide setup instructions.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">What's the difference between group and private classes?</h3>
+                                <p class="text-gray-600">Group classes (max 12 students) offer peer interaction and are more affordable. Private classes give you personalized attention and flexible scheduling. Both include all materials and native German teachers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional FAQ Row -->
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">How do I pay for courses?</h3>
+                            <p class="text-gray-600">We accept credit/debit cards, bank transfers, and PayPal. All payments are processed securely through Stripe. No hidden fees!</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Can I try before I buy?</h3>
+                            <p class="text-gray-600">Yes! We offer a free placement test and trial options. Contact us to discuss the best way to experience our teaching before committing to a full course.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">What if I'm not satisfied?</h3>
+                            <p class="text-gray-600">We offer satisfaction guarantees on our courses. If you're not happy after the first few lessons, we'll work with you to make it right or provide a refund.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ CTA -->
+                    <div class="text-center mt-12">
+                        <p class="text-lg text-gray-600 mb-6">Still have questions? We're here to help!</p>
+                        <a href="#contact" class="cta-button px-8 py-4 rounded-lg font-semibold inline-block text-center text-white">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Ready to Start Learning German?</h2>
+                <p class="text-xl max-w-2xl mx-auto text-gray-600">
+                    Let's find the perfect plan for you. Send me a message, and I'll get back to you as soon as possible.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" onsubmit="sendContactForm(event)">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <div class="flex flex-col sm:flex-row">
+                            <select id="countryCode" name="countryCode" 
+                                    class="w-full sm:w-32 px-3 py-3 border border-gray-300 rounded-t-lg sm:rounded-l-lg sm:rounded-r-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 bg-gray-50 mb-2 sm:mb-0">
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+351">🇵🇹 +351</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+420">🇨🇿 +420</option>
+                                    <option value="+421">🇸🇰 +421</option>
+                                    <option value="+386">🇸🇮 +386</option>
+                                    <option value="+385">🇭🇷 +385</option>
+                                    <option value="+40">🇷🇴 +40</option>
+                                    <option value="+359">🇧🇬 +359</option>
+                                    <option value="+30">🇬🇷 +30</option>
+                                    <option value="+7">🇷🇺 +7</option>
+                                    <option value="+380">🇺🇦 +380</option>
+                                    <option value="+90">🇹🇷 +90</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+886">🇹🇼 +886</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+92">🇵🇰 +92</option>
+                                    <option value="+880">🇧🇩 +880</option>
+                                    <option value="+94">🇱🇰 +94</option>
+                                    <option value="+977">🇳🇵 +977</option>
+                                    <option value="+20">🇪🇬 +20</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+234">🇳🇬 +234</option>
+                                    <option value="+254">🇰🇪 +254</option>
+                                    <option value="+212">🇲🇦 +212</option>
+                                    <option value="+213">🇩🇿 +213</option>
+                                    <option value="+216">🇹🇳 +216</option>
+                                    <option value="+218">🇱🇾 +218</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+58">🇻🇪 +58</option>
+                                    <option value="+593">🇪🇨 +593</option>
+                                    <option value="+51">🇵🇪 +51</option>
+                                    <option value="+598">🇺🇾 +598</option>
+                                    <option value="+595">🇵🇾 +595</option>
+                                    <option value="+591">🇧🇴 +591</option>
+                                    <option value="+507">🇵🇦 +507</option>
+                                    <option value="+506">🇨🇷 +506</option>
+                                    <option value="+504">🇭🇳 +504</option>
+                                    <option value="+503">🇸🇻 +503</option>
+                                    <option value="+502">🇬🇹 +502</option>
+                                    <option value="+501">🇧🇿 +501</option>
+                                    <option value="+505">🇳🇮 +505</option>
+                                    <option value="+1-242">🇧🇸 +1-242</option>
+                                    <option value="+1-246">🇧🇧 +1-246</option>
+                                    <option value="+1-264">🇦🇮 +1-264</option>
+                                    <option value="+1-268">🇦🇬 +1-268</option>
+                                    <option value="+1-284">🇻🇬 +1-284</option>
+                                    <option value="+1-345">🇰🇾 +1-345</option>
+                                    <option value="+1-441">🇧🇲 +1-441</option>
+                                    <option value="+1-473">🇬🇩 +1-473</option>
+                                    <option value="+1-649">🇹🇨 +1-649</option>
+                                    <option value="+1-664">🇲🇸 +1-664</option>
+                                    <option value="+1-670">🇲🇵 +1-670</option>
+                                    <option value="+1-671">🇬🇺 +1-671</option>
+                                    <option value="+1-684">🇦🇸 +1-684</option>
+                                    <option value="+1-721">🇸🇽 +1-721</option>
+                                    <option value="+1-758">🇱🇨 +1-758</option>
+                                    <option value="+1-767">🇩🇲 +1-767</option>
+                                    <option value="+1-784">🇻🇨 +1-784</option>
+                                    <option value="+1-787">🇵🇷 +1-787</option>
+                                    <option value="+1-809">🇩🇴 +1-809</option>
+                                    <option value="+1-829">🇩🇴 +1-829</option>
+                                    <option value="+1-849">🇩🇴 +1-849</option>
+                                    <option value="+1-868">🇹🇹 +1-868</option>
+                                    <option value="+1-869">🇰🇳 +1-869</option>
+                                    <option value="+1-876">🇯🇲 +1-876</option>
+                                    <option value="+1-939">🇵🇷 +1-939</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone number"
+                                       class="flex-1 px-4 py-3 border border-gray-300 rounded-b-lg sm:rounded-r-lg sm:rounded-l-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                </div>
+            </div>
+        </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="nativeLanguage" class="block text-sm font-medium text-gray-700 mb-2">Native Language *</label>
+                            <select id="nativeLanguage" name="nativeLanguage" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your native language</option>
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="French">French</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Dutch">Dutch</option>
+                                <option value="Swedish">Swedish</option>
+                                <option value="Norwegian">Norwegian</option>
+                                <option value="Danish">Danish</option>
+                                <option value="Polish">Polish</option>
+                                <option value="Turkish">Turkish</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="currentLevel" class="block text-sm font-medium text-gray-700 mb-2">Current German Level</label>
+                            <select id="currentLevel" name="currentLevel" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your current level</option>
+                                <option value="Complete Beginner">Complete Beginner (A0)</option>
+                                <option value="A1">A1 - Beginner</option>
+                                <option value="A2">A2 - Elementary</option>
+                                <option value="B1">B1 - Intermediate</option>
+                                <option value="B2">B2 - Upper Intermediate</option>
+                                <option value="C1">C1 - Advanced</option>
+                                <option value="C2">C2 - Proficient</option>
+                                <option value="Not sure">Not sure - Need assessment</option>
+                            </select>
+                </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="interest" class="block text-sm font-medium text-gray-700 mb-2">What interests you most? *</label>
+                        <select id="interest" name="interest" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            <option value="">Select what interests you</option>
+                            <option value="Free Placement Test">Free Placement Test</option>
+                            <option value="A1.1 Beginner Course">A1.1 Beginner Course ($375)</option>
+                            <option value="Private Sessions">Private Sessions</option>
+                            <option value="Group Courses">Group Courses</option>
+                            <option value="General Information">General Information</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="4" required 
+                                  placeholder="Tell us about your German learning goals, preferred schedule, or any questions you have..."
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+                        Send Message
+                    </button>
+                    
+                    <p class="text-sm text-gray-500 mt-4 text-center">
+                        * Required fields. We'll get back to you within 24 hours.
+                    </p>
+                </form>
+        </div>
+    </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#courses" class="hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="#pricing" class="hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="hover:text-orange-500 transition-colors">Kids Classes</a></li>
+                        <li><a href="teachers.html" class="hover:text-orange-500 transition-colors">Our Teachers</a></li>
+                        <li><a href="blog.html" class="hover:text-orange-500 transition-colors">Learning Blog</a></li>
                     </ul>
-                    <div class="course-price">From €20/hour</div>
-                    <a href="kids-classes.html" class="course-button">Start Learning</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Trial Section -->
-    <section class="trial" id="trial">
-        <div class="container">
-            <div class="trial-content">
-                <h2>Ready to Start Learning?</h2>
-                <p>Book your free 30-minute trial lesson and experience our teaching quality</p>
-                <div class="trial-features">
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Meet your teacher</span>
-                    </div>
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Level assessment</span>
-                    </div>
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Personalized plan</span>
-                    </div>
-                </div>
-                <a href="mailto:contact@sebgabriel.com" class="cta-button primary large">Book Free Trial</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contact@sebgabriel.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Monday-Friday, 9AM-6PM CET</span>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form action="mailto:contact@sebgabriel.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>DEUTSCH</h3>
-                    <p>Learn German with native speakers</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="#courses">All Levels</a></li>
-                            <li><a href="#courses">Beginner (A1-A2)</a></li>
-                            <li><a href="#courses">Intermediate (B1-B2)</a></li>
-                            <li><a href="#courses">Advanced (C1-C2)</a></li>
+                <!-- Packages -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Private Sessions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="trial-class.html" class="hover:text-orange-500 transition-colors">Single Session</a></li>
+                        <li><a href="5-class-package.html" class="hover:text-orange-500 transition-colors">5-Class Package</a></li>
+                        <li><a href="10-class-package.html" class="hover:text-orange-500 transition-colors">10-Class Package</a></li>
+                        <li><a href="50-class-package.html" class="hover:text-orange-500 transition-colors">50-Class Package</a></li>
                         </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
                     </div>
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#trial">Free Trial</a></li>
-                            <li><a href="mailto:contact@sebgabriel.com">Help</a></li>
-                        </ul>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">Follow Us</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">f</span>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">t</span>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">i</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DEUTSCH - Learn German. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function sendContactForm(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Create email body
+            const firstName = formData.get('firstName');
+            const lastName = formData.get('lastName');
+            const email = formData.get('email');
+            const countryCode = formData.get('countryCode');
+            const phone = formData.get('phone');
+            const nativeLanguage = formData.get('nativeLanguage');
+            const currentLevel = formData.get('currentLevel');
+            const interest = formData.get('interest');
+            const message = formData.get('message');
+            
+            const emailBody = `New Contact Form Submission
+
+Personal Information:
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone ? `${countryCode} ${phone}` : 'Not provided'}
+
+Language Information:
+Native Language: ${nativeLanguage}
+Current German Level: ${currentLevel || 'Not specified'}
+
+Interest: ${interest}
+
+Message:
+${message}
+
+---
+This message was sent from the DEUTSCH contact form.`;
+            
+            // Create mailto link
+            const subject = `New Contact Form - ${interest}`;
+            const mailtoLink = `mailto:contact@sebgabriel.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your message! Your email client should open automatically. If not, please send your message to contact@sebgabriel.com');
+        }
+    </script>
+
+    <!-- Newsletter Popup -->
+    <div id="newsletter-overlay" class="newsletter-overlay"></div>
+    <div id="newsletter-popup" class="newsletter-popup">
+        <button class="close-btn" onclick="closeNewsletter()">&times;</button>
+        <div class="p-6">
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Get German Learning Tips!</h3>
+                <p class="text-sm text-gray-600">Weekly insights, grammar tips, and cultural notes delivered to your inbox.</p>
+            </div>
+            
+            <form id="newsletter-form" class="space-y-3">
+                <input type="email" 
+                       id="newsletter-email" 
+                       placeholder="Enter your email address" 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
+                       required>
+                <button type="submit" 
+                        class="w-full cta-button py-2 rounded-lg font-semibold text-white text-sm">
+                    Subscribe Free
+                </button>
+            </form>
+            
+            <p class="text-xs text-gray-500 text-center mt-3">
+                No spam, unsubscribe anytime. We respect your privacy.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on links
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // Newsletter Popup
+        let newsletterShown = localStorage.getItem('newsletterShown');
+        
+        // Show newsletter popup after 5 seconds if not shown before
+        setTimeout(() => {
+            if (!newsletterShown) {
+                showNewsletter();
+            }
+        }, 5000);
+        
+        function showNewsletter() {
+            document.getElementById('newsletter-overlay').classList.add('show');
+            document.getElementById('newsletter-popup').classList.add('show');
+        }
+        
+        function closeNewsletter() {
+            document.getElementById('newsletter-overlay').classList.remove('show');
+            document.getElementById('newsletter-popup').classList.remove('show');
+            localStorage.setItem('newsletterShown', 'true');
+        }
+        
+        // Close newsletter when clicking overlay
+        document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletter);
+        
+        // Newsletter form submission with Brevo API
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            // Brevo API integration
+            const brevoData = {
+                email: email,
+                listIds: [2, 7], // Replace with your actual list IDs
+                updateEnabled: true
+            };
+            
+            fetch('https://api.brevo.com/v3/contacts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': 'YOUR_API_V3_KEY' // Replace with your actual API key
+                },
+                body: JSON.stringify(brevoData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Subscription failed');
+                }
+            })
+            .then(data => {
+                alert('Thank you for subscribing! You\'ll receive German learning tips every week.');
+                closeNewsletter();
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Sorry, there was an error subscribing. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = 'Subscribe Free';
+                submitButton.disabled = false;
+            });
+        });
+    </script>
+
 </body>
 </html>

@@ -1,367 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cancellation Policy - SebGabriel.com</title>
-    <link rel="stylesheet" href="style.css?v=2024">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="newsletter-popup.js?v=2024"></script>
+    <title>Cancellation Policy - Hallo Deutsch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        .hero-image {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">LEARN GERMAN</div>
+<body class="bg-gray-50">
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
+                <a href="index.html" class="text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
+            </div>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-orange-500 mb-4">Cancellation Policy</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We understand that plans change. Our flexible cancellation policy is designed to be fair to both you and us, while ensuring you get the most value from your German learning investment.
+                </p>
+            </div>
+        </section>
+
+        <!-- Policy Details -->
+        <section class="py-12">
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- Private Sessions -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">1</span>
+                        Private Sessions
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">24+ Hours Notice</h3>
+                            <p class="text-gray-700 mb-2"><strong>Full Refund</strong> - No questions asked</p>
+                            <p class="text-gray-600">Cancel or reschedule your private session with at least 24 hours notice and receive a full refund or reschedule at no cost.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-yellow-500 pl-6">
+                            <h3 class="text-xl font-semibold text-yellow-600 mb-2">Same Day Cancellation</h3>
+                            <p class="text-gray-700 mb-2"><strong>50% Refund</strong> - Partial refund</p>
+                            <p class="text-gray-600">If you cancel on the same day as your scheduled session, you'll receive a 50% refund. This helps us compensate our teachers for reserved time.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-red-500 pl-6">
+                            <h3 class="text-xl font-semibold text-red-600 mb-2">No Show</h3>
+                            <p class="text-gray-700 mb-2"><strong>No Refund</strong> - Session forfeited</p>
+                            <p class="text-gray-600">If you don't show up without any notice, the session is forfeited and no refund will be provided.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Courses -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">2</span>
+                        Group Courses (A1.1 Beginner Course)
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">Before Course Starts</h3>
+                            <p class="text-gray-700 mb-2"><strong>Full Refund</strong> - 100% money back</p>
+                            <p class="text-gray-600">Cancel before the course begins and receive a full refund. We need at least 48 hours notice to fill your spot.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">After First 2 Classes</h3>
+                            <p class="text-gray-700 mb-2"><strong>Pro-rated Refund</strong> - Fair calculation</p>
+                            <p class="text-gray-600">If you're not satisfied after the first 2 classes, we'll refund the remaining classes at the full course rate. This gives you time to evaluate the course quality.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-gray-500 pl-6">
+                            <h3 class="text-xl font-semibold text-gray-600 mb-2">After 2 Classes</h3>
+                            <p class="text-gray-700 mb-2"><strong>No Refund</strong> - Commitment expected</p>
+                            <p class="text-gray-600">After completing more than 2 classes, no refunds are available. You're committed to the full course.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Deals -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">3</span>
+                        Package Deals (5-Class, 10-Class, 50-Class)
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">Unused Sessions</h3>
+                            <p class="text-gray-700 mb-2"><strong>Pro-rated Refund</strong> - At single session rate</p>
+                            <p class="text-gray-600">Unused sessions can be refunded at the single session rate ($50 per session). This ensures you get value for unused sessions while maintaining the package discount for completed sessions.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Package Expiry</h3>
+                            <p class="text-gray-700 mb-2"><strong>12 Months</strong> - Generous timeline</p>
+                            <p class="text-gray-600">All packages expire 12 months from purchase date. This gives you plenty of time to use all your sessions.</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-orange-800 mb-2">💡 Package Tip</h4>
+                            <p class="text-orange-700">Remember: Package deals offer significant savings. The more sessions you complete, the better the value becomes!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Circumstances -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">4</span>
+                        Special Circumstances
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="text-xl font-semibold text-purple-600 mb-2">Medical Emergencies</h3>
+                            <p class="text-gray-700 mb-2"><strong>Flexible Arrangements</strong></p>
+                            <p class="text-gray-600">We understand medical emergencies happen. Contact us immediately and we'll work with you to reschedule or provide appropriate refunds.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="text-xl font-semibold text-purple-600 mb-2">Technical Issues</h3>
+                            <p class="text-gray-700 mb-2"><strong>Full Refund</strong></p>
+                            <p class="text-gray-600">If technical issues on our end prevent your session, you'll receive a full refund and priority rescheduling.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="text-xl font-semibold text-purple-600 mb-2">Teacher Unavailable</h3>
+                            <p class="text-gray-700 mb-2"><strong>Free Reschedule</strong></p>
+                            <p class="text-gray-600">If your teacher becomes unavailable, we'll reschedule at no cost or provide a full refund if you prefer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Cancel -->
+                <div class="bg-orange-50 p-8 rounded-xl mb-8">
+                    <h2 class="text-3xl font-bold text-orange-800 mb-6">How to Cancel</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-700 mb-3">📧 Email (Preferred)</h3>
+                            <p class="text-gray-700 mb-2">Send an email to:</p>
+                            <a href="mailto:contact@sebgabriel.com" class="text-orange-600 font-semibold hover:text-orange-800">contact@sebgabriel.com</a>
+                            <p class="text-gray-600 mt-2">Include your name, session date/time, and reason for cancellation.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-700 mb-3">⏰ Timing</h3>
+                            <p class="text-gray-700 mb-2">For fastest processing:</p>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Email during business hours (9 AM - 6 PM CET)</li>
+                                <li>• Include all booking details</li>
+                                <li>• Specify if you want refund or reschedule</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refund Processing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Refund Processing</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">⏱️</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Processing Time</h3>
+                            <p class="text-gray-600">3-5 business days for refund processing</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">💳</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Refund Method</h3>
+                            <p class="text-gray-600">Refunds processed to original payment method</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">📧</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Confirmation</h3>
+                            <p class="text-gray-600">Email confirmation sent when refund is processed</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-20 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Questions About Our Policy?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    We're here to help! If you have any questions about our cancellation policy or need to discuss special circumstances, don't hesitate to reach out.
+                </p>
+                <a href="index.html#contact" class="cta-button px-8 py-4 rounded-lg font-semibold inline-block text-center text-white">
+                    Contact Us
                 </a>
             </div>
-            <div class="nav-menu">
-                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
-                <a href="group-courses.html" class="nav-link">Group Courses</a>
-                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
-                    <i class="fas fa-calendar"></i>
-                    30-Minuten-Probelektion
-                </a>
-            </div>
-        </div>
-    </nav>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <a href="index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i>
-                Back to Home
-            </a>
-            <h1>Cancellation Policy</h1>
-            <p>Our flexible cancellation policy ensures you can learn German with confidence and peace of mind.</p>
-        </div>
-    </section>
-
-    <!-- Cancellation Policy -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Our Cancellation Policy</h2>
-                <p>At SebGabriel.com, we understand that life can be unpredictable. That's why we've designed a flexible cancellation policy that puts your needs first while ensuring our teachers can maintain their schedules.</p>
-                <p>We believe in transparency and fairness, so all cancellation terms are clearly outlined below. If you have any questions about our policy, please don't hesitate to contact us.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Individual Lessons -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Individual Lessons</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>24+ Hours Notice</h3>
-                    <p>Cancel or reschedule your lesson with 24 hours or more notice at no charge. We'll work with you to find a new time that works.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Less than 24 Hours</h3>
-                    <p>If you cancel with less than 24 hours notice, you'll be charged 50% of the lesson fee. This helps compensate our teachers for the lost time.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <h3>No-Show</h3>
-                    <p>If you don't show up for your lesson without prior notice, you'll be charged the full lesson fee. Please contact us if you have an emergency.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Emergency Exceptions</h3>
-                    <p>We understand emergencies happen. Contact us immediately for illness, family emergencies, or technical issues, and we'll work with you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Group Courses -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Group Courses</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <h3>Before Course Starts</h3>
-                    <p>Cancel your group course enrollment up to 7 days before the course begins for a full refund, minus any processing fees.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <h3>After Course Starts</h3>
-                    <p>If you need to leave a group course after it starts, you can receive a prorated refund for unused classes, minus a $25 processing fee.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <h3>Missed Classes</h3>
-                    <p>Individual missed group classes cannot be refunded, but you can access class recordings and materials to catch up.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Package Courses -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Package Courses</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-week"></i>
-                    </div>
-                    <h3>5-Lesson Package</h3>
-                    <p>Cancel within 7 days of purchase for a full refund. After that, receive a prorated refund for unused lessons, minus a $25 processing fee.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>10-Lesson Package</h3>
-                    <p>Cancel within 14 days of purchase for a full refund. After that, receive a prorated refund for unused lessons, minus a $25 processing fee.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-infinity"></i>
-                    </div>
-                    <h3>Monthly Plans</h3>
-                    <p>Cancel your monthly plan at any time. You'll continue to have access until the end of your current billing period.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-pause"></i>
-                    </div>
-                    <h3>Pausing Packages</h3>
-                    <p>You can pause your package for up to 30 days without losing your lessons. Contact us to arrange a pause.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kids Classes -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Kids Classes</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">👶</div>
-                    <h3>Private Kids Lessons</h3>
-                    <p>Same cancellation policy as individual lessons. We understand kids can get sick suddenly, so we're flexible with family emergencies.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">👥</div>
-                    <h3>Kids Group Classes</h3>
-                    <p>Cancel enrollment up to 7 days before the course starts for a full refund. After that, prorated refunds are available.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">👨‍👩‍👧‍👦</div>
-                    <h3>Family Classes</h3>
-                    <p>Family classes follow the same policy as group classes, with extra flexibility for family emergencies and scheduling conflicts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business Training -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Business Training</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Individual Business Training</h3>
-                    <p>Same cancellation policy as individual lessons. We understand business schedules can change quickly.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Team Training</h3>
-                    <p>Corporate team training cancellations are handled on a case-by-case basis. We work with companies to find solutions that work for everyone.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Corporate Packages</h3>
-                    <p>Large corporate packages have custom cancellation terms outlined in the specific contract. Contact us for details.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Refund Process -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Refund Process</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <h3>Contact Us</h3>
-                    <p>Email us at contact@sebgabriel.com or use our contact form to request a cancellation or refund.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <h3>Review Request</h3>
-                    <p>We'll review your request within 24 hours and confirm the refund amount based on our policy.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <h3>Process Refund</h3>
-                    <p>Refunds are processed within 5-7 business days and will appear on your original payment method.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Circumstances -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Special Circumstances</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Medical Emergencies</h3>
-                    <p>We understand medical emergencies happen. Contact us immediately with documentation, and we'll work with you on a case-by-case basis.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Family Emergencies</h3>
-                    <p>Family emergencies are always handled with compassion. We'll work with you to find the best solution for your situation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3>Technical Issues</h3>
-                    <p>If technical issues prevent you from attending a lesson, contact us immediately. We'll reschedule at no charge.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Teacher Issues</h3>
-                    <p>If your teacher cancels or has technical issues, we'll reschedule at no charge or provide a substitute teacher.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="newsletter-signup-section">
-        <div class="container">
-            <div class="newsletter-signup-content">
-                <h2>Questions About Cancellations?</h2>
-                <p>If you have any questions about our cancellation policy or need to cancel a lesson, please contact us.</p>
-                <div style="margin-top: 30px;">
-                    <a href="index.html#contact" class="cta-button primary">
-                        <i class="fas fa-envelope"></i>
-                        Contact Us
-                    </a>
-                </div>
-                <p style="margin-top: 20px; opacity: 0.9;">We typically respond within 24 hours • Emergency contact available</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SebGabriel.com</h3>
-                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#tutors">Tutors</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#courses" class="hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="hover:text-orange-500 transition-colors">Kids Classes</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Packages -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Private Sessions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="trial-class.html" class="hover:text-orange-500 transition-colors">Single Session</a></li>
+                        <li><a href="5-class-package.html" class="hover:text-orange-500 transition-colors">5-Class Package</a></li>
+                        <li><a href="10-class-package.html" class="hover:text-orange-500 transition-colors">10-Class Package</a></li>
+                        <li><a href="50-class-package.html" class="hover:text-orange-500 transition-colors">50-Class Package</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Function to open Stripe payment in popup
-        function openStripePopup(url) {
-            const width = 600;
-            const height = 700;
-            const left = (screen.width - width) / 2;
-            const top = (screen.height - height) / 2;
-            
-            const popup = window.open(
-                url,
-                'stripe-payment',
-                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-            );
-            
-            if (popup) {
-                popup.focus();
-            }
-        }
-
-        // Initialize newsletter popup
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof NewsletterPopup !== 'undefined') {
-                const newsletterPopup = new NewsletterPopup();
-                newsletterPopup.init();
-            }
-        });
-    </script>
 </body>
 </html>

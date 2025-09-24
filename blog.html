@@ -1,240 +1,517 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Learning Blog - SebGabriel.com</title>
-    <link rel="stylesheet" href="style.css?v=2024">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="newsletter-popup.js?v=2024"></script>
-    <script src="blog-posts.js?v=2024"></script>
+    <title>German Learning Blog - Tips, Resources & Articles | Hallo Deutsch</title>
+    <meta name="description" content="Expert German learning tips, resources, and articles from native speakers. Improve your German with our free guides, common mistakes to avoid, and cultural insights.">
+    <meta name="keywords" content="German learning tips, German grammar, German vocabulary, German culture, German language blog, learn German online, German study tips, German resources">
+    <meta name="author" content="Sebastian Gabriel - Hallo Deutsch">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        /* Newsletter Popup Styles */
+        .newsletter-popup {
+            position: fixed;
+            top: 50%;
+            right: -400px;
+            transform: translateY(-50%);
+            width: 350px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: right 0.4s ease;
+        }
+        
+        .newsletter-popup.show {
+            right: 20px;
+        }
+        
+        .newsletter-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .newsletter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">LEARN GERMAN</div>
-                </a>
+<body class="bg-gray-50">
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
+                <a href="index.html" class="text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
             </div>
-            <div class="nav-menu">
-                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
-                <a href="group-courses.html" class="nav-link">Group Courses</a>
-                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="blog.html" class="nav-link active">Blog</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
-                    <i class="fas fa-calendar"></i>
-                    30-Minuten-Probelektion
-                </a>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="about.html" class="hover:text-gray-800 transition-colors">About</a>
+                <span class="text-gray-300">|</span>
+                <a href="blog.html" class="hover:text-gray-800 transition-colors text-orange-500 font-medium">Blog</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <a href="index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i>
-                Back to Home
-            </a>
-            <h1>German Learning Blog</h1>
-            <p>Expert tips, cultural insights, and practical advice to help you master German faster and more effectively.</p>
-        </div>
-    </section>
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl playful-brand text-orange-500 mb-4">German Learning Blog</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert tips, resources, and insights to help you master German. From grammar guides to cultural insights, we've got everything you need to accelerate your German learning journey.
+                </p>
+            </div>
+        </section>
 
-    <!-- Blog Categories -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Browse by Category</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book"></i>
+        <!-- Featured Article -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Article</h2>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden article-card">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="German Grammar Study" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Grammar</span>
+                                <span class="text-gray-500 text-sm ml-4">5 min read</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">5 Common German Grammar Mistakes English Speakers Make</h3>
+                            <p class="text-gray-600 mb-6">
+                                Avoid these frequent pitfalls that trip up English speakers learning German. From case endings to word order, learn how to speak German more naturally and avoid embarrassing mistakes.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">By Sebastian Gabriel</span>
+                                <a href="#" class="text-orange-500 hover:text-orange-600 font-medium">Read More →</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Grammar</h3>
-                    <p>Master German grammar with clear explanations, examples, and practice exercises.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Culture</h3>
-                    <p>Discover German culture, traditions, and customs to enhance your language learning.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Business</h3>
-                    <p>Professional German communication, business etiquette, and workplace vocabulary.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <h3>Pronunciation</h3>
-                    <p>Improve your German pronunciation with tips, exercises, and audio guides.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Tips</h3>
-                    <p>Practical learning strategies and tips to accelerate your German learning progress.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bookmark"></i>
-                    </div>
-                    <h3>Vocabulary</h3>
-                    <p>Expand your German vocabulary with themed word lists and memory techniques.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- All Blog Posts -->
-    <section class="blog-preview">
-        <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
-            <div class="blog-grid" id="all-blog-posts">
-                <!-- Blog posts will be loaded dynamically -->
+        <!-- Blog Categories -->
+        <section class="py-12 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Browse by Category</h2>
+                
+                <div class="grid md:grid-cols-4 gap-6 mb-12">
+                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-orange-50 transition-colors cursor-pointer">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">📚</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Grammar</h3>
+                        <p class="text-sm text-gray-600">Master German grammar rules and structures</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-orange-50 transition-colors cursor-pointer">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🎬</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Culture</h3>
+                        <p class="text-sm text-gray-600">German culture, traditions, and lifestyle</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-orange-50 transition-colors cursor-pointer">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">💡</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Study Tips</h3>
+                        <p class="text-sm text-gray-600">Effective learning strategies and techniques</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-orange-50 transition-colors cursor-pointer">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🗣️</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Conversation</h3>
+                        <p class="text-sm text-gray-600">Speaking practice and pronunciation</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Newsletter Signup -->
-    <section class="newsletter-signup-section">
-        <div class="container">
-            <div class="newsletter-signup-content">
-                <h2>📧 Stay Updated!</h2>
-                <p>Get weekly German learning tips, cultural insights, and course updates delivered to your inbox.</p>
-                <form class="newsletter-signup-form" onsubmit="handleNewsletterSignup(event)">
-                    <div class="newsletter-signup-input-group">
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="newsletter-signup-submit">
-                            <i class="fas fa-envelope"></i>
+        <!-- Latest Articles -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Latest Articles</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German TV Shows" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">Culture</span>
+                                <span class="text-gray-500 text-xs ml-3">3 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">The Best German TV Shows to Improve Your Listening</h3>
+                            <p class="text-gray-600 text-sm mb-4">Discover engaging German series that will boost your listening skills while entertaining you. From comedies to dramas, find your perfect German show.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 2 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Vocabulary" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium">Vocabulary</span>
+                                <span class="text-gray-500 text-xs ml-3">4 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">50 Essential German Words Every Beginner Should Know</h3>
+                            <p class="text-gray-600 text-sm mb-4">Build your German vocabulary foundation with these essential words that will help you in everyday conversations and situations.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Pronunciation Guide" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-medium">Pronunciation</span>
+                                <span class="text-gray-500 text-xs ml-3">6 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Master German Pronunciation: The Complete Guide</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn the secrets to perfect German pronunciation, including tricky sounds like "ü", "ö", and "ß" that often challenge learners.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Study Methods" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">Study Tips</span>
+                                <span class="text-gray-500 text-xs ml-3">5 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">How to Create an Effective German Study Routine</h3>
+                            <p class="text-gray-600 text-sm mb-4">Discover proven strategies to build a consistent German study routine that fits your schedule and maximizes your learning progress.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 5 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Business Language" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-medium">Business</span>
+                                <span class="text-gray-500 text-xs ml-3">7 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">German for Business: Professional Communication Tips</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn essential German business vocabulary, email etiquette, and communication skills for professional environments.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 6 -->
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden article-card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Idioms" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium">Idioms</span>
+                                <span class="text-gray-500 text-xs ml-3">4 min read</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Fun German Idioms That Will Make You Sound Native</h3>
+                            <p class="text-gray-600 text-sm mb-4">Impress native speakers with these colorful German idioms and expressions that add personality to your conversations.</p>
+                            <a href="#" class="text-orange-500 hover:text-orange-600 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="px-8 py-3 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold">
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Stay Updated with German Learning Tips</h2>
+                <p class="text-xl text-gray-600 mb-8">Get weekly German learning tips, grammar guides, and cultural insights delivered to your inbox.</p>
+                
+                <div class="max-w-md mx-auto">
+                    <div class="flex">
+                        <input type="email" 
+                               placeholder="Enter your email address" 
+                               class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        <button class="cta-button px-6 py-3 rounded-r-lg font-semibold text-white">
                             Subscribe
                         </button>
                     </div>
-                    <div class="newsletter-signup-privacy">
-                        <small>We respect your privacy. Unsubscribe at any time.</small>
-                    </div>
-                </form>
+                    <p class="text-sm text-gray-500 mt-3">No spam, unsubscribe anytime.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SebGabriel.com</h3>
-                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
+        <!-- CTA Section -->
+        <section class="py-20 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Put These Tips into Practice?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Reading about German is great, but practicing with a native speaker is even better. Start your German learning journey today!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="cta-button px-8 py-4 rounded-lg font-semibold inline-block text-center text-white">
+                        Start Learning Today
+                    </a>
+                    <a href="placement-test.html" class="px-8 py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center">
+                        Take Free Placement Test
+                    </a>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#tutors">Tutors</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#courses" class="hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="hover:text-orange-500 transition-colors">Kids Classes</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-orange-500 transition-colors">Learning Blog</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                        <li><a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Newsletter Popup -->
+    <div id="newsletter-overlay" class="newsletter-overlay"></div>
+    <div id="newsletter-popup" class="newsletter-popup">
+        <button class="close-btn" onclick="closeNewsletter()">&times;</button>
+        <div class="p-6">
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Get German Learning Tips!</h3>
+                <p class="text-sm text-gray-600">Weekly insights, grammar tips, and cultural notes delivered to your inbox.</p>
+            </div>
+            
+            <form id="newsletter-form" class="space-y-3">
+                <input type="email" 
+                       id="newsletter-email" 
+                       placeholder="Enter your email address" 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
+                       required>
+                <button type="submit" 
+                        class="w-full cta-button py-2 rounded-lg font-semibold text-white text-sm">
+                    Subscribe Free
+                </button>
+            </form>
+            
+            <p class="text-xs text-gray-500 text-center mt-3">
+                No spam, unsubscribe anytime. We respect your privacy.
+            </p>
+        </div>
+    </div>
+
     <script>
-        // Function to open Stripe payment in popup
-        function openStripePopup(url) {
-            const width = 600;
-            const height = 700;
-            const left = (screen.width - width) / 2;
-            const top = (screen.height - height) / 2;
-            
-            const popup = window.open(
-                url,
-                'stripe-payment',
-                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-            );
-            
-            if (popup) {
-                popup.focus();
+        // Newsletter Popup
+        let newsletterShown = localStorage.getItem('newsletterShown');
+        
+        // Show newsletter popup after 3 seconds on blog page (faster than main page)
+        setTimeout(() => {
+            if (!newsletterShown) {
+                showNewsletter();
             }
+        }, 3000);
+        
+        function showNewsletter() {
+            document.getElementById('newsletter-overlay').classList.add('show');
+            document.getElementById('newsletter-popup').classList.add('show');
         }
-
-        // Load all blog posts
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof blogPosts !== 'undefined') {
-                const blogGrid = document.getElementById('all-blog-posts');
-                
-                blogPosts.forEach(post => {
-                    const postElement = document.createElement('div');
-                    postElement.className = 'blog-post-preview';
-                    postElement.innerHTML = `
-                        <div class="blog-post-image">
-                            <img src="${post.image}" alt="${post.title}">
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta">
-                                <span class="blog-post-category">${post.category}</span>
-                                <span class="blog-post-date">${post.date}</span>
-                            </div>
-                            <h3 class="blog-post-title">${post.title}</h3>
-                            <p class="blog-post-excerpt">${post.excerpt}</p>
-                            <div class="blog-post-author">
-                                <i class="fas fa-user"></i>
-                                <span>By ${post.author}</span>
-                            </div>
-                            <a href="#" class="blog-post-link" onclick="openBlogModal('${post.id}')">Read More</a>
-                        </div>
-                    `;
-                    blogGrid.appendChild(postElement);
-                });
-            }
-        });
-
-        // Initialize newsletter popup
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof NewsletterPopup !== 'undefined') {
-                const newsletterPopup = new NewsletterPopup();
-                newsletterPopup.init();
-            }
+        
+        function closeNewsletter() {
+            document.getElementById('newsletter-overlay').classList.remove('show');
+            document.getElementById('newsletter-popup').classList.remove('show');
+            localStorage.setItem('newsletterShown', 'true');
+        }
+        
+        // Close newsletter when clicking overlay
+        document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletter);
+        
+        // Newsletter form submission with Brevo API
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
+            
+            // Brevo API integration
+            const brevoData = {
+                email: email,
+                listIds: [2, 7], // Replace with your actual list IDs
+                updateEnabled: true
+            };
+            
+            fetch('https://api.brevo.com/v3/contacts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': 'YOUR_API_V3_KEY' // Replace with your actual API key
+                },
+                body: JSON.stringify(brevoData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Subscription failed');
+                }
+            })
+            .then(data => {
+                alert('Thank you for subscribing! You\'ll receive German learning tips every week.');
+                closeNewsletter();
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Sorry, there was an error subscribing. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = 'Subscribe';
+                submitButton.disabled = false;
+            });
         });
     </script>
 </body>

@@ -1,419 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - SebGabriel.com</title>
-    <link rel="stylesheet" href="style.css?v=2024">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="newsletter-popup.js?v=2024"></script>
+    <title>Terms of Service - Hallo Deutsch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">LEARN GERMAN</div>
-                </a>
+<body class="bg-gray-50">
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
+                <a href="index.html" class="text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
             </div>
-            <div class="nav-menu">
-                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
-                <a href="group-courses.html" class="nav-link">Group Courses</a>
-                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
-                    <i class="fas fa-calendar"></i>
-                    30-Minuten-Probelektion
-                </a>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <a href="index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i>
-                Back to Home
-            </a>
-            <h1>Terms & Conditions</h1>
-            <p>Please read these terms and conditions carefully before using our German language learning services.</p>
-        </div>
-    </section>
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-orange-500 mb-4">Terms of Service</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    These terms and conditions govern your use of Start Deutsch's German language learning services. Please read them carefully before enrolling in any course.
+                </p>
+                <p class="text-sm text-gray-500 mt-4">Last updated: January 2025</p>
+            </div>
+        </section>
 
-    <!-- Terms Overview -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Terms of Service</h2>
-                <p>These Terms and Conditions ("Terms") govern your use of SebGabriel.com ("we," "our," or "us") and our German language learning services. By accessing or using our services, you agree to be bound by these Terms.</p>
-                <p>If you do not agree to these Terms, please do not use our services. We reserve the right to modify these Terms at any time, and your continued use of our services constitutes acceptance of any changes.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Terms Content -->
+        <section class="py-12">
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- Agreement -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Agreement to Terms</h2>
+                    
+                    <div class="space-y-4">
+                        <p class="text-gray-700">By enrolling in any Start Deutsch course or service, you agree to be bound by these Terms of Service and our Privacy Policy.</p>
+                        <p class="text-gray-700">If you do not agree to these terms, please do not use our services.</p>
+                        <p class="text-gray-700">We reserve the right to modify these terms at any time. Continued use of our services constitutes acceptance of any changes.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mt-6">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Digital Agreement (Clickwrap)</h3>
+                            <p class="text-blue-700">Before completing any payment, you must check the agreement box confirming you have read and agree to our Terms of Service and Privacy Policy. This creates a legally binding agreement without requiring a physical signature.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Service Description -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Service Description</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                <!-- Services -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">German Language Education</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Private one-on-one German lessons</li>
+                                <li>• Group German courses (A1.1 and advanced levels)</li>
+                                <li>• Online placement tests and assessments</li>
+                                <li>• Learning materials and resources</li>
+                                <li>• Progress tracking and feedback</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Service Quality</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Native German-speaking instructors</li>
+                                <li>• Structured curriculum and lesson plans</li>
+                                <li>• Interactive and engaging teaching methods</li>
+                                <li>• Regular progress assessments</li>
+                                <li>• Flexible scheduling options</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>German Language Instruction</h3>
-                    <p>We provide online German language instruction through qualified native German speakers and experienced teachers.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3>Online Platform</h3>
-                    <p>Our services are delivered through our online platform, including video conferencing, digital materials, and communication tools.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Various Course Types</h3>
-                    <p>We offer private lessons, group courses, kids classes, and business German training to meet different learning needs.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>Learning Materials</h3>
-                    <p>We provide digital learning materials, resources, and support to enhance your German learning experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- User Responsibilities -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">User Responsibilities</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">✓</div>
-                    <h3>Accurate Information</h3>
-                    <p>You must provide accurate and complete information when registering for our services and keep this information up to date.</p>
+                <!-- Student Responsibilities -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Student Responsibilities</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Attendance & Punctuality</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Attend all scheduled sessions on time</li>
+                                <li>• Provide 24-hour notice for cancellations</li>
+                                <li>• Arrive prepared with necessary materials</li>
+                                <li>• Maintain a professional learning environment</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">Learning Commitment</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Complete assigned homework and exercises</li>
+                                <li>• Participate actively in lessons</li>
+                                <li>• Practice German outside of class time</li>
+                                <li>• Communicate learning goals and concerns</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h3 class="text-xl font-semibold text-orange-600 mb-2">Payment Obligations</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Pay all fees according to agreed schedule</li>
+                                <li>• Understand cancellation and refund policies</li>
+                                <li>• Notify us of any payment issues promptly</li>
+                                <li>• Complete payment before course begins</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">✓</div>
-                    <h3>Respectful Behavior</h3>
-                    <p>You must treat our teachers and other students with respect and maintain appropriate behavior during all interactions.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">✓</div>
-                    <h3>Technical Requirements</h3>
-                    <p>You are responsible for ensuring you have the necessary equipment and internet connection to participate in our services.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">✓</div>
-                    <h3>Payment Obligations</h3>
-                    <p>You must pay all fees according to the agreed schedule and terms. Late payments may result in service suspension.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Payment Terms -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Payment Terms</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-credit-card"></i>
+                <!-- Payment Terms -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Payment Terms</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Payment Methods</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Credit/debit cards processed through Stripe</li>
+                                <li>• Bank transfers (for larger packages)</li>
+                                <li>• PayPal (available upon request)</li>
+                                <li>• All payments must be completed before service delivery</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Pricing & Fees</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Prices are listed in USD and subject to change</li>
+                                <li>• Package discounts apply when purchasing multiple sessions</li>
+                                <li>• No additional fees beyond stated prices</li>
+                                <li>• Currency conversion fees may apply for international payments</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-800 mb-2">⚠️ Important</h4>
+                            <p class="text-yellow-700">Failure to pay according to agreed terms may result in suspension of services.</p>
+                        </div>
                     </div>
-                    <h3>Payment Methods</h3>
-                    <p>We accept payments through Stripe, including credit cards, debit cards, and other secure payment methods.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar"></i>
-                    </div>
-                    <h3>Billing Schedule</h3>
-                    <p>Payment schedules vary by service type. Single lessons are paid in advance, packages may be paid upfront or in installments.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Late Payments</h3>
-                    <p>Late payments may result in service suspension. We will provide notice before suspending services due to payment issues.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-receipt"></i>
-                    </div>
-                    <h3>Receipts & Invoices</h3>
-                    <p>We provide receipts and invoices for all payments. You can access these through your account or by contacting us.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Cancellation & Refunds -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Cancellation & Refunds</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">📅</div>
-                    <h3>Lesson Cancellations</h3>
-                    <p>Individual lessons can be cancelled with 24+ hours notice at no charge. See our Cancellation Policy for detailed terms.</p>
+                <!-- Refund Policy -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Refund Policy</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">Private Sessions</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• <strong>24+ hours notice:</strong> Full refund</li>
+                                <li>• <strong>Same day cancellation:</strong> 50% refund</li>
+                                <li>• <strong>No show:</strong> No refund</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Group Courses</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• <strong>Before course starts:</strong> Full refund (48+ hours notice)</li>
+                                <li>• <strong>After first 2 classes:</strong> Pro-rated refund if not satisfied</li>
+                                <li>• <strong>After 2 classes:</strong> No refund</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h3 class="text-xl font-semibold text-orange-600 mb-2">Package Deals</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• <strong>Unused sessions:</strong> Pro-rated refund at single session rate</li>
+                                <li>• <strong>Package expiry:</strong> 12 months from purchase date</li>
+                                <li>• <strong>Special circumstances:</strong> Medical emergencies, technical issues</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">📋 Full Details</h4>
+                            <p class="text-blue-700">For complete refund terms and conditions, see our detailed <a href="cancellation-policy.html" class="underline hover:text-blue-900">Cancellation Policy</a>.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">💰</div>
-                    <h3>Refund Policy</h3>
-                    <p>Refunds are available according to our Cancellation Policy. We offer a 100% satisfaction guarantee for trial lessons.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">⏸️</div>
-                    <h3>Service Suspension</h3>
-                    <p>You may suspend your services for up to 30 days without losing your package lessons. Contact us to arrange suspension.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Intellectual Property -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Intellectual Property</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-copyright"></i>
+                <!-- Intellectual Property -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Intellectual Property Rights</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Our Course Materials</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• All course materials, lesson plans, exercises, and resources are proprietary intellectual property of Start Deutsch</li>
+                                <li>• Students may use materials for personal learning only during their enrollment</li>
+                                <li>• No redistribution, sharing, or commercial use permitted</li>
+                                <li>• Copyright notices must be preserved on all materials</li>
+                                <li>• Materials may not be copied, modified, or distributed to non-enrolled students</li>
+                                <li>• Access to materials terminates upon course completion or account termination</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-2">⚠️ Important Notice</h4>
+                            <p class="text-red-700">Violation of intellectual property rights may result in legal action and immediate termination of services without refund.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Student Content Rights</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Students retain ownership of their work and submissions</li>
+                                <li>• We may use anonymized examples for educational purposes only</li>
+                                <li>• Feedback and corrections become part of learning record</li>
+                                <li>• No personal information shared without explicit consent</li>
+                                <li>• Students grant us limited license to provide feedback and assessment</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>Our Content</h3>
-                    <p>All learning materials, content, and resources provided by us are protected by copyright and intellectual property laws.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3>Personal Use Only</h3>
-                    <p>You may use our materials for personal learning only. Sharing, distributing, or commercial use is prohibited.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h3>No Reproduction</h3>
-                    <p>You may not reproduce, modify, or create derivative works from our materials without written permission.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Your Content</h3>
-                    <p>You retain ownership of any content you create or share with us, but grant us license to use it for educational purposes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Privacy & Data -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Privacy & Data Protection</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🔒</div>
-                    <h3>Data Collection</h3>
-                    <p>We collect only necessary information to provide our services, including contact details, learning preferences, and progress data.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🛡️</div>
-                    <h3>Data Security</h3>
-                    <p>We implement appropriate security measures to protect your personal information and maintain confidentiality.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">📋</div>
-                    <h3>Data Usage</h3>
-                    <p>Your data is used only to provide our services, improve our platform, and communicate with you about your learning.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🗑️</div>
-                    <h3>Data Deletion</h3>
-                    <p>You may request deletion of your personal data at any time. We will comply with applicable data protection laws.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Limitation of Liability -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Limitation of Liability</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </div>
-                    <h3>Service Availability</h3>
-                    <p>We strive for 99% uptime but cannot guarantee uninterrupted service. We are not liable for temporary service interruptions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Learning Outcomes</h3>
-                    <p>While we provide quality instruction, learning outcomes depend on individual effort, practice, and commitment.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3>Technical Issues</h3>
-                    <p>We are not responsible for technical issues on your end, including internet connectivity or equipment problems.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Maximum Liability</h3>
-                    <p>Our maximum liability is limited to the amount you have paid for our services in the 12 months preceding the claim.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Termination -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Termination</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🚪</div>
-                    <h3>Your Right to Terminate</h3>
-                    <p>You may terminate your account at any time by contacting us. Refunds will be processed according to our policy.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">⚠️</div>
-                    <h3>Our Right to Terminate</h3>
-                    <p>We may terminate your account for violations of these Terms, non-payment, or inappropriate behavior.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">📧</div>
-                    <h3>Notice of Termination</h3>
-                    <p>We will provide reasonable notice before terminating your account, except in cases of serious violations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Governing Law -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Governing Law</h2>
-                <p>These Terms are governed by the laws of Germany. Any disputes arising from these Terms or our services will be resolved in German courts.</p>
-                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue to be valid and enforceable.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="newsletter-signup-section">
-        <div class="container">
-            <div class="newsletter-signup-content">
-                <h2>Questions About These Terms?</h2>
-                <p>If you have any questions about these Terms and Conditions, please contact us for clarification.</p>
-                <div style="margin-top: 30px;">
-                    <a href="index.html#contact" class="cta-button primary">
-                        <i class="fas fa-envelope"></i>
-                        Contact Us
-                    </a>
-                </div>
-                <p style="margin-top: 20px; opacity: 0.9;">We're here to help clarify any questions you may have</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SebGabriel.com</h3>
-                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#tutors">Tutors</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                <!-- Code of Conduct -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Code of Conduct</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-semibold text-green-600 mb-2">Expected Behavior</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Respectful communication with instructors and staff</li>
+                                <li>• Professional conduct during all sessions</li>
+                                <li>• Constructive participation in group activities</li>
+                                <li>• Honest completion of assessments and homework</li>
+                                <li>• Punctual attendance and proper preparation</li>
+                                <li>• Maintaining a professional learning environment</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-red-500 pl-6">
+                            <h3 class="text-xl font-semibold text-red-600 mb-2">Prohibited Behavior</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Harassment, discrimination, or inappropriate language</li>
+                                <li>• Sharing session recordings without permission</li>
+                                <li>• Disruptive behavior during lessons</li>
+                                <li>• Violation of privacy or confidentiality</li>
+                                <li>• Using inappropriate content or language</li>
+                                <li>• Sharing course materials with non-enrolled students</li>
+                                <li>• Attempting to record sessions without permission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-2">⚠️ Consequences</h4>
+                            <p class="text-red-700">Violation of conduct policies may result in warning, suspension, or termination of services without refund. Repeated violations will result in permanent termination.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Limitation of Liability -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Limitation of Liability</h2>
+                    
+                    <div class="space-y-4">
+                        <p class="text-gray-700">Start Deutsch provides educational services on an "as is" basis. While we strive for excellence, we cannot guarantee specific learning outcomes.</p>
+                        <p class="text-gray-700">Our liability is limited to the amount paid for the specific service in question.</p>
+                        <p class="text-gray-700">We are not responsible for technical issues, internet connectivity problems, or circumstances beyond our control.</p>
+                        <p class="text-gray-700">Students are responsible for their own learning progress and practice outside of scheduled sessions.</p>
+                    </div>
+                </div>
+
+                <!-- Data Processing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Data Processing & Privacy</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">How We Process Student Data</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Personal information collected for course delivery and communication</li>
+                                <li>• Learning progress tracked to provide personalized feedback</li>
+                                <li>• Payment information processed securely through Stripe</li>
+                                <li>• Communication history maintained for customer support</li>
+                                <li>• Analytics used to improve our teaching methods and services</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Data Protection Rights</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Right to access your personal data</li>
+                                <li>• Right to correct inaccurate information</li>
+                                <li>• Right to request deletion of your data</li>
+                                <li>• Right to data portability</li>
+                                <li>• Right to withdraw consent at any time</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">📋 Full Privacy Details</h4>
+                            <p class="text-blue-700">For complete information about how we handle your data, see our detailed <a href="privacy-policy.html" class="underline hover:text-blue-900">Privacy Policy</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Termination -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Termination</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Student Termination</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Students may terminate services with appropriate notice</li>
+                                <li>• Refund policies apply as outlined in Cancellation Policy</li>
+                                <li>• Outstanding payments remain due</li>
+                                <li>• Access to materials may be revoked</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-600 mb-3">Our Right to Terminate</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Violation of terms or conduct policies</li>
+                                <li>• Non-payment of fees</li>
+                                <li>• Disruptive or inappropriate behavior</li>
+                                <li>• Circumstances beyond our control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="bg-orange-50 p-8 rounded-xl">
+                    <h2 class="text-3xl font-bold text-orange-800 mb-6">Questions About Terms?</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-700 mb-3">Contact Us</h3>
+                            <p class="text-gray-700 mb-2">For questions about these terms:</p>
+                            <a href="mailto:contact@sebgabriel.com" class="text-orange-600 font-semibold hover:text-orange-800">contact@sebgabriel.com</a>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-orange-700 mb-3">Legal Notice</h3>
+                            <p class="text-gray-700">These terms are governed by applicable law. Any disputes will be resolved through appropriate legal channels.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
-            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">Copyright &copy; 2025 Hallo Deutsch. All rights reserved.</p>
+            <p class="mt-2 text-xs">deutsch.sebgabriel.com</p>
         </div>
     </footer>
-
-    <script>
-        // Function to open Stripe payment in popup
-        function openStripePopup(url) {
-            const width = 600;
-            const height = 700;
-            const left = (screen.width - width) / 2;
-            const top = (screen.height - height) / 2;
-            
-            const popup = window.open(
-                url,
-                'stripe-payment',
-                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-            );
-            
-            if (popup) {
-                popup.focus();
-            }
-        }
-
-        // Initialize newsletter popup
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof NewsletterPopup !== 'undefined') {
-                const newsletterPopup = new NewsletterPopup();
-                newsletterPopup.init();
-            }
-        });
-    </script>
 </body>
 </html>

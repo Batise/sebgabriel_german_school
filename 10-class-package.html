@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Class Package - DEUTSCH German Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .package-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 2px solid #ff6b35;
+        }
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        .save-badge {
+            background: #ff6b35;
+            color: white;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .popular-badge {
+            background: #ff6b35;
+            color: white;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">D</span>
+                </div>
+                <a href="index.html" class="text-xl font-bold text-green-600">DEUTSCH.COM</a>
+            </div>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-6">
+                    <h1 class="text-5xl font-bold text-blue-400 leading-tight">
+                        10-CLASS<br>PACKAGE
+                    </h1>
+                    
+                    <h2 class="text-2xl font-bold text-gray-700">
+                        Most Popular - Save 30% - $350 Total
+                    </h2>
+                    
+                    <div class="space-y-4 text-gray-600">
+                        <p>
+                            Our most popular package! Get 10 personalized German lessons and save $150 compared to single sessions. Perfect for serious learners who want to make real progress.
+                        </p>
+                        
+                        <ul class="space-y-2">
+                            <li>• 10 hours of personalized German lessons</li>
+                            <li>• Save $150 vs single sessions ($35/hour vs $50/hour)</li>
+                            <li>• Flexible scheduling over 3-4 months</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <p class="text-green-700 font-medium">
+                            🏆 <strong>Most Popular Choice:</strong> Our students' favorite package - perfect balance of value and commitment!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right: Package Card -->
+                <div class="package-card p-8 text-center relative">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="save-badge">SAVE 30%</div>
+                    <h3 class="text-2xl font-bold mb-4">10-Class Package</h3>
+                    <div class="text-5xl font-bold text-orange-500 mb-4">$350</div>
+                    <div class="text-lg text-gray-600 mb-6">$35 per hour (vs $50 single)</div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between py-2 border-b">
+                            <span>10 hours of lessons</span>
+                            <span class="font-medium">$500 value</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b">
+                            <span>Your savings</span>
+                            <span class="font-medium text-green-600">-$150</span>
+                        </div>
+                        <div class="flex justify-between py-2 font-bold text-lg">
+                            <span>You pay</span>
+                            <span class="text-orange-500">$350</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="openPaymentPopup('10-class')" class="cta-button px-8 py-4 rounded-lg font-semibold w-full">
+                        Buy 10-Class Package
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Package Benefits -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why the 10-Class Package is Most Popular</h2>
+                <p class="text-xl text-gray-600">Perfect balance of value, commitment, and learning progress</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card p-8 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Save $150</h3>
+                    <p class="text-gray-600">Pay only $350 instead of $500 for 10 single sessions. That's $15 off per lesson!</p>
+                </div>
+                
+                <div class="benefit-card p-8 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Real Progress</h3>
+                    <p class="text-gray-600">10 lessons provide enough time to see significant improvement in your German skills.</p>
+                </div>
+                
+                <div class="benefit-card p-8 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Student Favorite</h3>
+                    <p class="text-gray-600">Chosen by 65% of our students - the perfect balance of commitment and value.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Progress Timeline -->
+        <section class="py-20 bg-white">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Your 10-Class Learning Journey</h2>
+                <p class="text-xl text-gray-600">See how much you'll progress with 10 focused lessons</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">1-2</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Foundation Building</h3>
+                            <p class="text-gray-600">Level assessment, goal setting, and establishing your learning rhythm.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">3-5</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Skill Development</h3>
+                            <p class="text-gray-600">Core grammar, vocabulary expansion, and conversational confidence building.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">6-8</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Practical Application</h3>
+                            <p class="text-gray-600">Real-world scenarios, complex conversations, and fluency development.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">9-10</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Mastery & Next Steps</h3>
+                            <p class="text-gray-600">Advanced topics, progress review, and planning your continued learning journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What's Included in Your 10-Class Package?</h2>
+                <p class="text-xl text-gray-600">Comprehensive learning experience with premium features</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Complete Level Assessment</h3>
+                                <p class="text-gray-600">Detailed evaluation of your current German skills and personalized learning plan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Customized Curriculum</h3>
+                                <p class="text-gray-600">Tailored lesson plans based on your goals, interests, and learning style.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Native German Teachers</h3>
+                                <p class="text-gray-600">Learn from experienced, certified German native speakers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Progress Tracking</h3>
+                                <p class="text-gray-600">Regular assessments and detailed feedback after each lesson.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Premium Learning Materials</h3>
+                                <p class="text-gray-600">Access to exclusive digital resources, exercises, and practice materials.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Flexible Scheduling</h3>
+                                <p class="text-gray-600">Book lessons at times that work for you - 24/7 availability.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Certificate of Completion</h3>
+                                <p class="text-gray-600">Official certificate upon completion of your 10-class package.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">✓</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Priority Support</h3>
+                                <p class="text-gray-600">Fast response times and dedicated support for package students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upgrade Options -->
+        <section class="py-20 bg-white">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Want Maximum Value?</h2>
+                <p class="text-xl text-gray-600">Check out our largest package for the best savings</p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <div class="benefit-card p-8 text-center">
+                    <div class="save-badge">SAVE 40%</div>
+                    <h3 class="text-xl font-bold mb-4">50-Class Package</h3>
+                    <div class="text-3xl font-bold text-orange-500 mb-4">$1500</div>
+                    <p class="text-gray-600 mb-6">$30 per hour • Save $1000 total</p>
+                    <a href="50-class-package.html" class="w-full py-3 border border-gray-300 hover:bg-gray-50 transition-colors rounded-lg inline-block">View Package</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Everything about the 10-Class Package</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-3">Why is the 10-Class Package the most popular?</h3>
+                    <p class="text-gray-600">It offers the perfect balance of commitment and value. Students see real progress while saving significantly compared to single sessions.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-3">How long do I have to complete my 10 classes?</h3>
+                    <p class="text-gray-600">You have 4 months from purchase to complete all 10 classes. This gives you flexibility while maintaining learning momentum.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-3">Can I pause my package if I need a break?</h3>
+                    <p class="text-gray-600">Yes! You can pause your package for up to 30 days if needed. Just let us know in advance.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-3">What level will I reach after 10 classes?</h3>
+                    <p class="text-gray-600">Progress depends on your starting level and commitment, but most students advance one full CEFR level (e.g., A1 to A2) with consistent study.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-3">Can I upgrade to the 50-Class Package later?</h3>
+                    <p class="text-gray-600">Absolutely! We'll credit any unused classes towards the larger package. You'll get the full 40% discount on the remaining classes.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 text-sm">
+        <div class="container mx-auto px-6">
+            <p>Copyright &copy; 2025 DEUTSCH. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span>|</span>
+                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openPaymentPopup(packageType) {
+            // Stripe payment links for each package
+            const paymentUrls = {
+                'single': 'https://buy.stripe.com/7sYcN68G76Is7IYaz62Ji05', // Single session $50
+                '5-class': 'https://buy.stripe.com/bJebJ24pReaU8N236E2Ji06', // 5-Class Package $200
+                '10-class': 'https://buy.stripe.com/00w5kE3lN1o86EU9v22Ji07', // 10-Class Package $350
+                '50-class': 'https://buy.stripe.com/bJeaEYcWnfeY1kAdLi2Ji08' // 50-Class Package $1500
+            };
+            
+            const paymentUrl = paymentUrls[packageType] || paymentUrls['10-class'];
+            const popup = window.open(
+                paymentUrl,
+                'stripe-payment',
+                'width=600,height=700,scrollbars=yes,resizable=yes,top=100,left=' + (window.innerWidth/2 - 300)
+            );
+            
+            if (popup) {
+                popup.focus();
+            }
+        }
+    </script>
+
+</body>
+</html>

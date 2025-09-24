@@ -1,372 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - SebGabriel.com</title>
-    <link rel="stylesheet" href="style.css?v=2024">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="newsletter-popup.js?v=2024"></script>
+    <title>About Us - Hallo Deutsch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .hero-image {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">LEARN GERMAN</div>
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="private-lessons.html" class="nav-link">Private Lessons</a>
-                <a href="group-courses.html" class="nav-link">Group Courses</a>
-                <a href="kids-classes.html" class="nav-link">Kids Classes</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="https://buy.stripe.com/test_trial" class="nav-cta-button" onclick="openStripePopup(this.href); return false;">
-                    <i class="fas fa-calendar"></i>
-                    30-Minuten-Probelektion
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <a href="index.html" class="back-to-home">
-                <i class="fas fa-arrow-left"></i>
-                Back to Home
-            </a>
-            <h1>About SebGabriel.com</h1>
-            <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
-        </div>
-    </section>
-
-    <!-- Our Story -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Our Story</h2>
-                <p>SebGabriel.com was founded by Sebastian Gabriel, a native German speaker with a passion for teaching and a vision to make German language learning accessible, effective, and enjoyable for students worldwide.</p>
-                <p>Growing up in Germany, Sebastian developed a deep appreciation for the German language and culture. After moving abroad and experiencing the challenges of learning new languages, he recognized the need for personalized, flexible learning solutions that could adapt to individual learning styles and goals.</p>
-                <p>What started as a personal mission to help friends and colleagues learn German has grown into a comprehensive platform that connects students with qualified native German teachers, providing high-quality education for learners of all ages and levels.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Mission -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Our Mission</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-target"></i>
-                    </div>
-                    <h3>Personalized Learning</h3>
-                    <p>Every student is unique. We create customized learning experiences that adapt to individual needs, goals, and learning styles.</p>
+<body class="bg-gray-50">
+    <header class="p-6 bg-white">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">SG</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <a href="index.html" class="text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
+            </div>
+            <div class="space-x-6 font-light text-gray-600 hidden sm:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#teachers" class="hover:text-gray-800 transition-colors">Teachers</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#testimonials" class="hover:text-gray-800 transition-colors">Reviews</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl playful-brand text-orange-500 mb-4">About Hallo Deutsch</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Your trusted partner in German language learning. We're passionate about making German accessible, enjoyable, and effective for students of all ages and backgrounds.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Learning Environment" 
+                             class="w-full h-80 object-cover rounded-lg shadow-lg">
                     </div>
-                    <h3>Quality Education</h3>
-                    <p>We maintain the highest standards of German language education with native speakers and experienced teachers.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+                        <p class="text-gray-700 mb-4">
+                            Hallo Deutsch was born from a simple yet powerful belief: learning German should be fun, engaging, and accessible to everyone. Founded by Sebastian Gabriel, a native German speaker with years of teaching experience, our school has grown from a passion project into a trusted learning destination.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            What started as one-on-one tutoring sessions has evolved into a comprehensive German learning platform, offering everything from beginner courses to advanced conversation practice. We've helped hundreds of students achieve their German language goals.
+                        </p>
+                        <p class="text-gray-700">
+                            Today, we continue to innovate and improve our teaching methods, always keeping our students' success and enjoyment at the heart of everything we do.
+                        </p>
                     </div>
-                    <h3>Cultural Understanding</h3>
-                    <p>Language learning goes beyond grammar and vocabulary. We help students understand German culture and context.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Student Success</h3>
-                    <p>Your success is our priority. We're committed to helping every student achieve their German learning goals.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Meet Sebastian -->
-    <section class="tutors">
-        <div class="container">
-            <h2 class="section-title">Meet Sebastian Gabriel</h2>
-            <div class="tutors-grid">
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Sebastian Gabriel">
+        <!-- Our Mission -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Our Mission</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Make German Accessible</h3>
+                        <p class="text-gray-600">We believe everyone deserves the opportunity to learn German, regardless of their background or previous experience.</p>
                     </div>
-                    <h3>Sebastian Gabriel</h3>
-                    <p class="tutor-title">Founder & Lead Teacher</p>
-                    <p class="tutor-bio">Native German speaker from Munich with over 8 years of experience in language education. Sebastian holds a Master's degree in German Literature and has taught German to students from over 30 countries. He specializes in making German learning fun and accessible for learners of all ages.</p>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🌟</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Create Engaging Learning</h3>
+                        <p class="text-gray-600">Our interactive approach makes learning German enjoyable and memorable for students of all ages.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🚀</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Ensure Real Results</h3>
+                        <p class="text-gray-600">We focus on practical communication skills that students can use in real-world situations immediately.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Teachers -->
-    <section class="tutors">
-        <div class="container">
-            <h2 class="section-title">Our Teaching Team</h2>
-            <div class="tutors-grid">
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Tobias">
+        <!-- Meet Sebastian Gabriel -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Meet Sebastian Gabriel</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Sebastian Gabriel - Founder" 
+                             class="w-full h-80 object-cover rounded-lg shadow-lg">
                     </div>
-                    <h3>Tobias Weber</h3>
-                    <p class="tutor-title">Kids Specialist</p>
-                    <p class="tutor-bio">Specialized in teaching German to children with engaging, age-appropriate methods. Tobias has a background in early childhood education and uses games, songs, and interactive activities to make German learning fun for kids.</p>
-                </div>
-                <div class="tutor-card">
-                    <div class="tutor-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Anna">
+                    <div>
+                        <h3 class="text-2xl font-bold text-orange-500 mb-4">Founder & Lead Teacher</h3>
+                        <p class="text-gray-700 mb-4">
+                            Sebastian Gabriel is a native German speaker with over 8 years of experience in language education. Born and raised in Germany, Sebastian brings authentic German culture and language expertise to every lesson.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            With a background in education and a passion for helping others succeed, Sebastian has developed innovative teaching methods that make German learning both effective and enjoyable. His approach combines traditional language fundamentals with modern, interactive techniques.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Sebastian has worked with students from over 30 countries, helping them achieve their German language goals for personal, academic, and professional purposes.
+                        </p>
+                        
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-orange-800 mb-2">Fun Fact</h4>
+                            <p class="text-orange-700">Sebastian loves incorporating German culture, history, and everyday life into his lessons, making learning not just about language, but about understanding the German way of life!</p>
+                        </div>
                     </div>
-                    <h3>Anna Müller</h3>
-                    <p class="tutor-title">Adult Specialist</p>
-                    <p class="tutor-bio">Experienced in helping adult learners achieve conversational fluency and professional German skills. Anna has worked with business professionals and students preparing for German language exams.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Approach -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Our Teaching Approach</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🎯</div>
-                    <h3>Goal-Oriented</h3>
-                    <p>We start by understanding your specific goals, whether it's travel, work, academic study, or personal interest.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">📚</div>
-                    <h3>Structured Learning</h3>
-                    <p>Our curriculum follows proven language learning methodologies while remaining flexible to individual needs.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">💬</div>
-                    <h3>Communication Focus</h3>
-                    <p>We prioritize practical communication skills, ensuring you can use German in real-world situations.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🌍</div>
-                    <h3>Cultural Integration</h3>
-                    <p>Language learning includes cultural understanding, helping you connect with German-speaking communities.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">📈</div>
-                    <h3>Progress Tracking</h3>
-                    <p>Regular assessments and feedback ensure you're making steady progress toward your goals.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🎉</div>
-                    <h3>Fun & Engaging</h3>
-                    <p>Learning should be enjoyable! We use interactive methods and relevant content to keep you motivated.</p>
+        <!-- Our Approach -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Our Teaching Approach</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">1</span>
+                            Communication First
+                        </h3>
+                        <p class="text-gray-700">We prioritize real-world communication skills. From day one, students practice speaking and listening in practical situations they'll actually encounter.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">2</span>
+                            Personalized Learning
+                        </h3>
+                        <p class="text-gray-700">Every student learns differently. We adapt our teaching methods to match your learning style, pace, and goals.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">3</span>
+                            Cultural Integration
+                        </h3>
+                        <p class="text-gray-700">Language and culture go hand in hand. We integrate German culture, traditions, and social norms into our lessons naturally.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">4</span>
+                            Progress Tracking
+                        </h3>
+                        <p class="text-gray-700">We monitor your progress closely and provide regular feedback to ensure you're always moving forward toward your goals.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose SebGabriel.com?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-check"></i>
+        <!-- Why Choose Hallo Deutsch -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Why Choose Hallo Deutsch?</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">👨‍🏫</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Native Speakers</h3>
+                        <p class="text-gray-600">Learn from native German speakers who understand the nuances and cultural context of the language.</p>
                     </div>
-                    <h3>Native German Teachers</h3>
-                    <p>All our teachers are native German speakers with professional teaching qualifications and experience.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">💻</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Flexible Online Learning</h3>
+                        <p class="text-gray-600">Study from anywhere in the world with our convenient online platform and flexible scheduling.</p>
                     </div>
-                    <h3>Flexible Scheduling</h3>
-                    <p>Learn at your own pace with flexible scheduling that fits your lifestyle and commitments.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop"></i>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">📚</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Comprehensive Materials</h3>
+                        <p class="text-gray-600">All course materials, exercises, and resources are included - no additional purchases required.</p>
                     </div>
-                    <h3>Online Convenience</h3>
-                    <p>High-quality German lessons from anywhere in the world with our state-of-the-art online platform.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-dollar-sign"></i>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🤝</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Small Class Sizes</h3>
+                        <p class="text-gray-600">Maximum 12 students per group class ensures personalized attention and active participation.</p>
                     </div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Quality German education at competitive prices with flexible payment options for every budget.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Proven Results</h3>
+                        <p class="text-gray-600">Our students consistently achieve their language goals, from basic conversation to advanced fluency.</p>
                     </div>
-                    <h3>Satisfaction Guarantee</h3>
-                    <p>100% satisfaction guarantee on your first lesson. We're committed to your success.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                    
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">💯</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Satisfaction Guarantee</h3>
+                        <p class="text-gray-600">We're confident in our teaching methods. Try our courses with our satisfaction guarantee.</p>
                     </div>
-                    <h3>Ongoing Support</h3>
-                    <p>Continuous support between lessons with email assistance and additional learning resources.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Student Success -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Student Success Stories</h2>
-                <p>Over the years, we've helped hundreds of students achieve their German learning goals. From complete beginners to advanced learners, our students have gone on to:</p>
-                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <li>Successfully relocate to Germany for work or study</li>
-                    <li>Communicate confidently with German-speaking colleagues and clients</li>
-                    <li>Pass German language exams (Goethe, TestDaF, DSH)</li>
-                    <li>Travel confidently in German-speaking countries</li>
-                    <li>Advance their careers with German language skills</li>
-                    <li>Connect with German culture and heritage</li>
-                </ul>
-                <p style="margin-top: 30px;">Your success story could be next! Join our community of successful German learners today.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Values -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">🤝</div>
-                    <h3>Respect</h3>
-                    <p>We respect every student's unique background, learning style, and goals. Everyone deserves quality education.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🎓</div>
-                    <h3>Excellence</h3>
-                    <p>We maintain the highest standards in teaching quality, curriculum design, and student support.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">💡</div>
-                    <h3>Innovation</h3>
-                    <p>We continuously improve our teaching methods and embrace new technologies to enhance learning.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">🌱</div>
-                    <h3>Growth</h3>
-                    <p>We believe in lifelong learning and support both our students' and teachers' continuous development.</p>
+        <!-- Our Students -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Who We Teach</h2>
+                <p class="text-xl text-gray-600 mb-12">We welcome students from all walks of life and backgrounds</p>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-xl">👶</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Children (5-12)</h3>
+                        <p class="text-sm text-gray-600">Fun, interactive lessons designed specifically for young learners</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-xl">👦</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Teenagers (13-17)</h3>
+                        <p class="text-sm text-gray-600">Age-appropriate content that keeps teens engaged and motivated</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-xl">👨‍🎓</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">University Students</h3>
+                        <p class="text-sm text-gray-600">Academic German preparation and conversation practice</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-xl">👨‍💼</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Professionals</h3>
+                        <p class="text-sm text-gray-600">Business German and career-focused language skills</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Us -->
-    <section class="newsletter-signup-section">
-        <div class="container">
-            <div class="newsletter-signup-content">
-                <h2>Ready to Start Your German Journey?</h2>
-                <p>Join our community of successful German learners and discover how we can help you achieve your language goals.</p>
-                <div style="margin-top: 30px;">
-                    <a href="https://buy.stripe.com/test_trial" class="cta-button primary" onclick="openStripePopup(this.href); return false;">
-                        <i class="fas fa-play"></i>
-                        Book Your Trial Lesson - $10
+        <!-- Contact CTA -->
+        <section class="py-20 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Start Your German Journey?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Join hundreds of students who have already discovered the joy of learning German with Hallo Deutsch. Let's make your language learning goals a reality!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="cta-button px-8 py-4 rounded-lg font-semibold inline-block text-center text-white">
+                        Get Started Today
+                    </a>
+                    <a href="placement-test.html" class="px-8 py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center">
+                        Take Free Placement Test
                     </a>
                 </div>
-                <p style="margin-top: 20px; opacity: 0.9;">30-minute trial lesson • Meet your teacher • Assess your level • No commitment required</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SebGabriel.com</h3>
-                    <p>Your trusted partner in German language learning. Professional, flexible, and personalized education for every learner.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#tutors">Tutors</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#courses" class="hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="hover:text-orange-500 transition-colors">Kids Classes</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Packages -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Private Sessions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="trial-class.html" class="hover:text-orange-500 transition-colors">Single Session</a></li>
+                        <li><a href="5-class-package.html" class="hover:text-orange-500 transition-colors">5-Class Package</a></li>
+                        <li><a href="10-class-package.html" class="hover:text-orange-500 transition-colors">10-Class Package</a></li>
+                        <li><a href="50-class-package.html" class="hover:text-orange-500 transition-colors">50-Class Package</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">Follow Us</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">f</span>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">t</span>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                                <span class="text-xs">i</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SebGabriel.com. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Function to open Stripe payment in popup
-        function openStripePopup(url) {
-            const width = 600;
-            const height = 700;
-            const left = (screen.width - width) / 2;
-            const top = (screen.height - height) / 2;
-            
-            const popup = window.open(
-                url,
-                'stripe-payment',
-                `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-            );
-            
-            if (popup) {
-                popup.focus();
-            }
-        }
-
-        // Initialize newsletter popup
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof NewsletterPopup !== 'undefined') {
-                const newsletterPopup = new NewsletterPopup();
-                newsletterPopup.init();
-            }
-        });
-    </script>
 </body>
 </html>

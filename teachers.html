@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our German Teachers - Hallo Deutsch</title>
+    <meta name="description" content="Meet our experienced native German teachers. Learn from qualified instructors with years of experience teaching German to students worldwide. Start your German journey with the best teachers.">
+    <meta name="keywords" content="German teachers, native German speakers, German instructors, qualified German teachers, German language experts, online German teachers">
+    <meta name="author" content="Sebastian Gabriel - Hallo Deutsch">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .teacher-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .teacher-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .qualification-badge {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .experience-badge {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="p-4 sm:p-6 bg-white shadow-sm">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm sm:text-lg">SG</span>
+                </div>
+                <a href="index.html" class="text-lg sm:text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="space-x-6 font-light text-gray-600 hidden lg:flex">
+                <a href="index.html#courses" class="hover:text-gray-800 transition-colors">Courses</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
+                <span class="text-gray-300">|</span>
+                <a href="teachers.html" class="hover:text-gray-800 transition-colors text-orange-500 font-medium">Teachers</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#testimonials" class="hover:text-gray-800 transition-colors">Reviews</a>
+                <span class="text-gray-300">|</span>
+                <a href="blog.html" class="hover:text-gray-800 transition-colors">Blog</a>
+                <span class="text-gray-300">|</span>
+                <a href="index.html#contact" class="hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="index.html#courses" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Courses</a>
+                <a href="index.html#pricing" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Pricing</a>
+                <a href="teachers.html" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100 text-orange-500">Teachers</a>
+                <a href="index.html#testimonials" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Reviews</a>
+                <a href="blog.html" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors border-b border-gray-100">Blog</a>
+                <a href="index.html#contact" class="block py-2 text-gray-600 hover:text-gray-800 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="py-12 sm:py-20">
+            <div class="text-center mb-12 sm:mb-16">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl playful-brand text-orange-500 mb-4">Meet Our German Teachers</h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Learn from experienced native German speakers who are passionate about teaching and helping you achieve fluency. Our teachers combine professional qualifications with years of teaching experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Teaching Philosophy -->
+        <section class="py-12 bg-white rounded-2xl shadow-lg mb-12">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 text-center">Our Teaching Philosophy</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Student-Centered</h3>
+                        <p class="text-gray-600">Every lesson is tailored to your individual needs, learning style, and goals.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🗣️</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Communication Focus</h3>
+                        <p class="text-gray-600">We prioritize real-world communication skills from day one.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">📈</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Progress Tracking</h3>
+                        <p class="text-gray-600">Regular assessments and feedback to ensure steady progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Teacher -->
+        <section class="py-12 mb-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 text-center">Lead Instructor</h2>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden teacher-card">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Sebastian Gabriel - German Teacher" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-6 sm:p-8">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="qualification-badge">Native German Speaker</span>
+                                <span class="experience-badge">10+ Years Experience</span>
+                                <span class="qualification-badge">University Qualified</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Sebastian Gabriel</h3>
+                            <p class="text-lg text-orange-500 font-medium mb-4">Founder & Lead German Instructor</p>
+                            
+                            <p class="text-gray-600 mb-6">
+                                Sebastian is a native German speaker with over 10 years of teaching experience. He specializes in helping students of all levels achieve fluency through personalized, engaging lessons that focus on practical communication skills.
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Specializations:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Beginner to Advanced German</li>
+                                        <li>• Business German</li>
+                                        <li>• Test Preparation (Goethe, TestDaF)</li>
+                                        <li>• Kids & Teenagers</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Qualifications:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Master's in German Literature</li>
+                                        <li>• Teaching Certification</li>
+                                        <li>• 500+ Students Taught</li>
+                                        <li>• Native Speaker</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="index.html#contact" class="cta-button px-6 py-3 rounded-lg font-semibold inline-block text-center text-white">
+                                    Book Lesson with Sebastian
+                                </a>
+                                <a href="placement-test.html" class="px-6 py-3 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center">
+                                    Take Placement Test
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Team -->
+        <section class="py-12 mb-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 text-center">Our Teaching Team</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                    We're expanding our team of qualified German instructors to serve more students. All our teachers are native speakers with proven teaching experience and professional qualifications.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Teacher 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden teacher-card">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Teacher" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="qualification-badge">Native Speaker</span>
+                                <span class="experience-badge">5+ Years</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Anna Mueller</h3>
+                            <p class="text-orange-500 font-medium mb-3">German Language Specialist</p>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Specializes in conversation practice and cultural immersion. Perfect for intermediate to advanced learners.
+                            </p>
+                            <div class="text-xs text-gray-500">
+                                <strong>Specialties:</strong> Conversation, Culture, Advanced Grammar
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden teacher-card">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Teacher" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="qualification-badge">Native Speaker</span>
+                                <span class="experience-badge">7+ Years</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Michael Weber</h3>
+                            <p class="text-orange-500 font-medium mb-3">Business German Expert</p>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Focuses on professional German for business contexts and career advancement.
+                            </p>
+                            <div class="text-xs text-gray-500">
+                                <strong>Specialties:</strong> Business German, Professional Communication
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden teacher-card">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="German Teacher" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="qualification-badge">Native Speaker</span>
+                                <span class="experience-badge">4+ Years</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Lisa Schmidt</h3>
+                            <p class="text-orange-500 font-medium mb-3">Kids & Teens Specialist</p>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Expert in teaching children and teenagers with fun, interactive methods.
+                            </p>
+                            <div class="text-xs text-gray-500">
+                                <strong>Specialties:</strong> Children, Teenagers, Interactive Learning
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Qualifications -->
+        <section class="py-12 bg-white rounded-2xl shadow-lg mb-12">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 text-center">Why Choose Our Teachers?</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Native German Speakers</h3>
+                                <p class="text-gray-600 text-sm">All our teachers are native German speakers with authentic pronunciation and cultural knowledge.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Professional Qualifications</h3>
+                                <p class="text-gray-600 text-sm">University degrees in German language, literature, or education with teaching certifications.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Proven Experience</h3>
+                                <p class="text-gray-600 text-sm">Years of teaching experience with hundreds of successful students worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Personalized Approach</h3>
+                                <p class="text-gray-600 text-sm">Every teacher adapts their methods to match your learning style and goals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Continuous Training</h3>
+                                <p class="text-gray-600 text-sm">Regular professional development to stay current with teaching methods and technology.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Student Success Focus</h3>
+                                <p class="text-gray-600 text-sm">Track record of helping students achieve their German learning goals efficiently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Learn with Our Expert Teachers?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Book a lesson with one of our qualified German instructors and start your journey to fluency today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="cta-button px-8 py-4 rounded-lg font-semibold inline-block text-center text-white">
+                        Book Your First Lesson
+                    </a>
+                    <a href="placement-test.html" class="px-8 py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center">
+                        Take Free Placement Test
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#courses" class="hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="hover:text-orange-500 transition-colors">Kids Classes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-orange-500 transition-colors">Learning Blog</a></li>
+                        <li><a href="teachers.html" class="hover:text-orange-500 transition-colors">Our Teachers</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on links
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

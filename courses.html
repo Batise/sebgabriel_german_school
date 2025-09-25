@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Courses - Hallo Deutsch</title>
+    <meta name="description" content="Explore our comprehensive German courses: Private sessions, group classes, and kids programs. Flexible scheduling, native teachers, all materials included. Start your German journey today!">
+    <meta name="keywords" content="German courses, German classes, private German lessons, group German courses, German for kids, German online learning, A1 German course, German placement test">
+    <meta name="author" content="Sebastian Gabriel - Hallo Deutsch">
+    <meta property="og:title" content="German Courses - Hallo Deutsch">
+    <meta property="og:description" content="Choose from private sessions, group courses, and kids classes. Native German teachers, flexible scheduling, all materials included.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deutsch.sebgabriel.com/courses">
+    <meta property="og:site_name" content="Hallo Deutsch">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="German Courses - Hallo Deutsch">
+    <meta name="twitter:description" content="Explore our German courses: Private sessions, group classes, and kids programs. Start learning today!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .cta-button {
+            background: #d97706;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #c2410c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .price-highlight {
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+            color: white;
+        }
+        .feature-badge {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">SG</span>
+                    </div>
+                    <span class="playful-brand text-2xl text-gray-800">HALLO DEUTSCH</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="courses.html" class="text-orange-500 font-medium">Courses</a>
+                    <a href="index.html#pricing" class="text-gray-600 hover:text-orange-500 transition-colors">Pricing</a>
+                    <a href="teachers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Teachers</a>
+                    <a href="index.html#testimonials" class="text-gray-600 hover:text-orange-500 transition-colors">Reviews</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-orange-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 mt-4">
+                    <a href="index.html" class="text-gray-600 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="courses.html" class="text-orange-500 font-medium">Courses</a>
+                    <a href="index.html#pricing" class="text-gray-600 hover:text-orange-500 transition-colors">Pricing</a>
+                    <a href="teachers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Teachers</a>
+                    <a href="index.html#testimonials" class="text-gray-600 hover:text-orange-500 transition-colors">Reviews</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl font-bold text-gray-800 mb-6">German Courses</h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Choose from our comprehensive range of German courses designed for every learning style and goal. 
+                    From complete beginners to advanced learners, we have the perfect course for you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="placement-test.html" class="cta-button px-8 py-4 rounded-lg font-semibold text-center">
+                        Take Free Placement Test
+                    </a>
+                    <a href="index.html#contact" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-center transition-all">
+                        Get Personal Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Choose Your Learning Path</h2>
+                <p class="text-xl text-gray-600">Three different approaches to match your learning style and schedule</p>
+            </div>
+
+            <!-- Private Sessions -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Private Sessions</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        One-on-one lessons with personalized attention. Perfect for focused learning, 
+                        specific goals, and flexible scheduling.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Single Session -->
+                    <div class="course-card p-6 text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">👤</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Single Session</h4>
+                        <p class="text-gray-600 mb-4">Perfect for trying out our teaching style</p>
+                        <div class="price-highlight rounded-lg p-4 mb-4">
+                            <div class="text-3xl font-bold">$50</div>
+                            <div class="text-sm opacity-90">per hour</div>
+                        </div>
+                        <a href="trial-class.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Book Session
+                        </a>
+                    </div>
+
+                    <!-- 5-Class Package -->
+                    <div class="course-card p-6 text-center relative">
+                        <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
+                            Save 20%
+                        </div>
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📚</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">5-Class Package</h4>
+                        <p class="text-gray-600 mb-4">Great for consistent weekly learning</p>
+                        <div class="price-highlight rounded-lg p-4 mb-4">
+                            <div class="text-3xl font-bold">$200</div>
+                            <div class="text-sm opacity-90">$40 per hour</div>
+                        </div>
+                        <a href="5-class-package.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Buy Package
+                        </a>
+                    </div>
+
+                    <!-- 10-Class Package -->
+                    <div class="course-card p-6 text-center relative">
+                        <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
+                            Save 30%
+                        </div>
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">10-Class Package</h4>
+                        <p class="text-gray-600 mb-4">Most popular choice for serious learners</p>
+                        <div class="price-highlight rounded-lg p-4 mb-4">
+                            <div class="text-3xl font-bold">$350</div>
+                            <div class="text-sm opacity-90">$35 per hour</div>
+                        </div>
+                        <a href="10-class-package.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Buy Now
+                        </a>
+                    </div>
+
+                    <!-- 50-Class Package -->
+                    <div class="course-card p-6 text-center relative">
+                        <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
+                            Save 40%
+                        </div>
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">50-Class Package</h4>
+                        <p class="text-gray-600 mb-4">Best value for long-term learning</p>
+                        <div class="price-highlight rounded-lg p-4 mb-4">
+                            <div class="text-3xl font-bold">$1500</div>
+                            <div class="text-sm opacity-90">$30 per hour</div>
+                        </div>
+                        <a href="50-class-package.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Buy Package
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group Courses -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Group Courses</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Learn with others in small groups. Great for motivation, peer interaction, 
+                        and structured progression through German levels.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- A1.1 Beginner Course -->
+                    <div class="course-card p-8 text-center">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">🌱</span>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-4">A1.1 Beginner Course</h4>
+                        <p class="text-gray-600 mb-6">Perfect for complete beginners. Learn the fundamentals of German in a supportive group environment.</p>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                            <div class="text-3xl font-bold text-green-600 mb-2">$375</div>
+                            <div class="text-sm text-gray-600">30 hours • All materials included</div>
+                        </div>
+
+                        <div class="space-y-3 mb-6 text-left">
+                            <div class="flex items-center">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Max 12 students per class</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Native German teachers</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">All digital materials included</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-sm">Flexible scheduling</span>
+                            </div>
+                        </div>
+
+                        <a href="beginner-course.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Enroll Now - $375
+                        </a>
+                    </div>
+
+                    <!-- Advanced Group Classes -->
+                    <div class="course-card p-8 text-center border-2 border-dashed border-gray-300">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">🎓</span>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-4">Advanced Group Classes</h4>
+                        <p class="text-gray-600 mb-6">A2, B1, and B2 level courses coming soon. Perfect for intermediate and advanced learners.</p>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                            <div class="text-3xl font-bold text-gray-500 mb-2">TBD</div>
+                            <div class="text-sm text-gray-600">Coming Soon</div>
+                        </div>
+
+                        <div class="space-y-3 mb-6 text-left">
+                            <div class="flex items-center">
+                                <span class="text-blue-500 mr-2">✓</span>
+                                <span class="text-sm">A2 - Elementary level</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-500 mr-2">✓</span>
+                                <span class="text-sm">B1 - Intermediate level</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-500 mr-2">✓</span>
+                                <span class="text-sm">B2 - Upper Intermediate</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-500 mr-2">✓</span>
+                                <span class="text-sm">Small group sizes</span>
+                            </div>
+                        </div>
+
+                        <a href="index.html#contact" class="border-2 border-gray-300 text-gray-500 hover:bg-gray-50 w-full py-3 rounded-lg font-semibold text-center transition-all">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kids Classes -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Kids Classes</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Specialized German courses for children ages 5-17. Interactive, fun, 
+                        and age-appropriate learning methods.
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="course-card p-8 text-center">
+                        <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl">👶</span>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-4">German for Kids & Teens</h4>
+                        <p class="text-gray-600 mb-6">
+                            Interactive German lessons designed specifically for children and teenagers. 
+                            Fun activities, games, and age-appropriate content make learning enjoyable.
+                        </p>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                            <div class="text-2xl font-bold text-purple-600 mb-2">Ages 5-17</div>
+                            <div class="text-sm text-gray-600">Pricing available upon consultation</div>
+                        </div>
+
+                        <div class="space-y-3 mb-6 text-left">
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-sm">Age-appropriate teaching methods</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-sm">Interactive games and activities</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-sm">Small group sizes (max 8 students)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-sm">Flexible scheduling for families</span>
+                            </div>
+                        </div>
+
+                        <a href="kids-classes.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Features -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">What's Included in All Courses</h2>
+                <p class="text-xl text-gray-600">Everything you need to succeed in your German learning journey</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👨‍🏫</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Native German Teachers</h3>
+                    <p class="text-gray-600">Learn from experienced native speakers who understand the nuances of German language and culture.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📚</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">All Materials Included</h3>
+                    <p class="text-gray-600">Workbooks, exercises, audio files, and practice materials - no additional purchases required.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⏰</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Flexible Scheduling</h3>
+                    <p class="text-gray-600">Learn at times that work for you. We accommodate different time zones and busy schedules.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💻</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Online Convenience</h3>
+                    <p class="text-gray-600">Learn from anywhere with our easy-to-use online platform. No special software required.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Progress Tracking</h3>
+                    <p class="text-gray-600">Regular assessments and feedback to help you track your improvement and stay motivated.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🤝</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Personal Support</h3>
+                    <p class="text-gray-600">Get help when you need it. Our teachers and support team are here to assist you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-orange-500 to-amber-500">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Start Your German Journey?</h2>
+            <p class="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                Not sure which course is right for you? Take our free placement test or contact us for a personalized consultation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="placement-test.html" class="bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all">
+                    Take Free Placement Test
+                </a>
+                <a href="index.html#contact" class="border-2 border-white text-white hover:bg-white hover:text-orange-500 px-8 py-4 rounded-lg font-semibold transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="playful-brand text-xl">HALLO DEUTSCH</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-sm text-gray-500">deutsch.sebgabriel.com</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="courses.html" class="text-gray-400 hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-400 hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test.html" class="text-gray-400 hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="text-gray-400 hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="text-gray-400 hover:text-orange-500 transition-colors">Kids Classes</a></li>
+                        <li><a href="teachers.html" class="text-gray-400 hover:text-orange-500 transition-colors">Our Teachers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-orange-500 transition-colors">Learning Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Private Sessions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="trial-class.html" class="text-gray-400 hover:text-orange-500 transition-colors">Single Session</a></li>
+                        <li><a href="5-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">5-Class Package</a></li>
+                        <li><a href="10-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">10-Class Package</a></li>
+                        <li><a href="50-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">50-Class Package</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex items-center">
+                            <span class="mr-2">📧</span>
+                            <span>contact@sebgabriel.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2">🌍</span>
+                            <span>Online Worldwide</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2">⏰</span>
+                            <span>Flexible Scheduling</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold mb-3">Follow Us</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">f</a>
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">t</a>
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">i</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 mb-4">Copyright © 2025 Hallo Deutsch. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                    <a href="terms-conditions.html" class="hover:text-orange-500 transition-colors">Terms of Service</a>
+                    <a href="cancellation-policy.html" class="hover:text-orange-500 transition-colors">Cancellation Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on links
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

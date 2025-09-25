@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -112,6 +113,149 @@
         .newsletter-overlay.show {
             opacity: 1;
             visibility: visible;
+        }
+        
+        /* Placement Test Popup Styles */
+        .placement-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            overflow-y: auto;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .placement-popup.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .placement-popup .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6b7280;
+            z-index: 1002;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .placement-popup .close-btn:hover {
+            background: #f3f4f6;
+            color: #374151;
+            transform: scale(1.1);
+        }
+        
+        .placement-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .placement-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .placement-header {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+            border-radius: 18px 18px 0 0;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .placement-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+        
+        .sg-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sg-logo-text {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        .sg-logo-learning {
+            color: #10b981;
+            margin-left: 8px;
+        }
+        
+        .graduation-cap {
+            font-size: 1.8rem;
+            margin-right: 8px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .placement-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .placement-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
@@ -676,135 +820,39 @@
                 </p>
             </div>
             
-            <div class="max-w-2xl mx-auto">
-                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" action="https://formspree.io/f/xqkgkqkg" method="POST" onsubmit="submitForm(event)">
-                    <input type="hidden" name="_to" value="gabriel.sg.sebastian@gmail.com">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission - Hallo Deutsch">
+            <div class="max-w-4xl mx-auto">
+                <form id="placement-form" action="https://getform.io/f/brogrwza" method="POST" class="space-y-6">
+                    <!-- Honeypot field for spam protection -->
+                    <input type="hidden" name="_gotcha" style="display:none !important">
                     
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    <!-- Personal Information -->
+                    <div class="info-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Personal Information</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
                         </div>
-                        <div>
-                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                        <div class="flex flex-col sm:flex-row">
-                            <select id="countryCode" name="countryCode" 
-                                    class="w-full sm:w-32 px-3 py-3 border border-gray-300 rounded-t-lg sm:rounded-l-lg sm:rounded-r-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 bg-gray-50 mb-2 sm:mb-0">
-                                    <option value="+1">🇺🇸 +1</option>
-                                    <option value="+44">🇬🇧 +44</option>
-                                    <option value="+49">🇩🇪 +49</option>
-                                    <option value="+33">🇫🇷 +33</option>
-                                    <option value="+39">🇮🇹 +39</option>
-                                    <option value="+34">🇪🇸 +34</option>
-                                    <option value="+351">🇵🇹 +351</option>
-                                    <option value="+31">🇳🇱 +31</option>
-                                    <option value="+46">🇸🇪 +46</option>
-                                    <option value="+47">🇳🇴 +47</option>
-                                    <option value="+45">🇩🇰 +45</option>
-                                    <option value="+41">🇨🇭 +41</option>
-                                    <option value="+43">🇦🇹 +43</option>
-                                    <option value="+32">🇧🇪 +32</option>
-                                    <option value="+358">🇫🇮 +358</option>
-                                    <option value="+48">🇵🇱 +48</option>
-                                    <option value="+420">🇨🇿 +420</option>
-                                    <option value="+421">🇸🇰 +421</option>
-                                    <option value="+386">🇸🇮 +386</option>
-                                    <option value="+385">🇭🇷 +385</option>
-                                    <option value="+40">🇷🇴 +40</option>
-                                    <option value="+359">🇧🇬 +359</option>
-                                    <option value="+30">🇬🇷 +30</option>
-                                    <option value="+7">🇷🇺 +7</option>
-                                    <option value="+380">🇺🇦 +380</option>
-                                    <option value="+90">🇹🇷 +90</option>
-                                    <option value="+86">🇨🇳 +86</option>
-                                    <option value="+81">🇯🇵 +81</option>
-                                    <option value="+82">🇰🇷 +82</option>
-                                    <option value="+852">🇭🇰 +852</option>
-                                    <option value="+886">🇹🇼 +886</option>
-                                    <option value="+65">🇸🇬 +65</option>
-                                    <option value="+60">🇲🇾 +60</option>
-                                    <option value="+66">🇹🇭 +66</option>
-                                    <option value="+84">🇻🇳 +84</option>
-                                    <option value="+91">🇮🇳 +91</option>
-                                    <option value="+92">🇵🇰 +92</option>
-                                    <option value="+880">🇧🇩 +880</option>
-                                    <option value="+94">🇱🇰 +94</option>
-                                    <option value="+977">🇳🇵 +977</option>
-                                    <option value="+20">🇪🇬 +20</option>
-                                    <option value="+27">🇿🇦 +27</option>
-                                    <option value="+234">🇳🇬 +234</option>
-                                    <option value="+254">🇰🇪 +254</option>
-                                    <option value="+212">🇲🇦 +212</option>
-                                    <option value="+213">🇩🇿 +213</option>
-                                    <option value="+216">🇹🇳 +216</option>
-                                    <option value="+218">🇱🇾 +218</option>
-                                    <option value="+52">🇲🇽 +52</option>
-                                    <option value="+54">🇦🇷 +54</option>
-                                    <option value="+55">🇧🇷 +55</option>
-                                    <option value="+56">🇨🇱 +56</option>
-                                    <option value="+57">🇨🇴 +57</option>
-                                    <option value="+58">🇻🇪 +58</option>
-                                    <option value="+593">🇪🇨 +593</option>
-                                    <option value="+51">🇵🇪 +51</option>
-                                    <option value="+598">🇺🇾 +598</option>
-                                    <option value="+595">🇵🇾 +595</option>
-                                    <option value="+591">🇧🇴 +591</option>
-                                    <option value="+507">🇵🇦 +507</option>
-                                    <option value="+506">🇨🇷 +506</option>
-                                    <option value="+504">🇭🇳 +504</option>
-                                    <option value="+503">🇸🇻 +503</option>
-                                    <option value="+502">🇬🇹 +502</option>
-                                    <option value="+501">🇧🇿 +501</option>
-                                    <option value="+505">🇳🇮 +505</option>
-                                    <option value="+1-242">🇧🇸 +1-242</option>
-                                    <option value="+1-246">🇧🇧 +1-246</option>
-                                    <option value="+1-264">🇦🇮 +1-264</option>
-                                    <option value="+1-268">🇦🇬 +1-268</option>
-                                    <option value="+1-284">🇻🇬 +1-284</option>
-                                    <option value="+1-345">🇰🇾 +1-345</option>
-                                    <option value="+1-441">🇧🇲 +1-441</option>
-                                    <option value="+1-473">🇬🇩 +1-473</option>
-                                    <option value="+1-649">🇹🇨 +1-649</option>
-                                    <option value="+1-664">🇲🇸 +1-664</option>
-                                    <option value="+1-670">🇲🇵 +1-670</option>
-                                    <option value="+1-671">🇬🇺 +1-671</option>
-                                    <option value="+1-684">🇦🇸 +1-684</option>
-                                    <option value="+1-721">🇸🇽 +1-721</option>
-                                    <option value="+1-758">🇱🇨 +1-758</option>
-                                    <option value="+1-767">🇩🇲 +1-767</option>
-                                    <option value="+1-784">🇻🇨 +1-784</option>
-                                    <option value="+1-787">🇵🇷 +1-787</option>
-                                    <option value="+1-809">🇩🇴 +1-809</option>
-                                    <option value="+1-829">🇩🇴 +1-829</option>
-                                    <option value="+1-849">🇩🇴 +1-849</option>
-                                    <option value="+1-868">🇹🇹 +1-868</option>
-                                    <option value="+1-869">🇰🇳 +1-869</option>
-                                    <option value="+1-876">🇯🇲 +1-876</option>
-                                    <option value="+1-939">🇵🇷 +1-939</option>
-                                </select>
-                                <input type="tel" id="phone" name="phone" placeholder="Phone number"
-                                       class="flex-1 px-4 py-3 border border-gray-300 rounded-b-lg sm:rounded-r-lg sm:rounded-l-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
-                </div>
-            </div>
-        </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
+                        <div class="mt-4">
                             <label for="nativeLanguage" class="block text-sm font-medium text-gray-700 mb-2">Native Language *</label>
                             <select id="nativeLanguage" name="nativeLanguage" required 
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
@@ -821,60 +869,85 @@
                                 <option value="Arabic">Arabic</option>
                                 <option value="Hindi">Hindi</option>
                                 <option value="Dutch">Dutch</option>
-                                <option value="Swedish">Swedish</option>
-                                <option value="Norwegian">Norwegian</option>
-                                <option value="Danish">Danish</option>
-                                <option value="Polish">Polish</option>
-                                <option value="Turkish">Turkish</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div>
-                            <label for="currentLevel" class="block text-sm font-medium text-gray-700 mb-2">Current German Level</label>
-                            <select id="currentLevel" name="currentLevel" 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
-                                <option value="">Select your current level</option>
-                                <option value="Complete Beginner">Complete Beginner (A0)</option>
-                                <option value="A1">A1 - Beginner</option>
-                                <option value="A2">A2 - Elementary</option>
-                                <option value="B1">B1 - Intermediate</option>
-                                <option value="B2">B2 - Upper Intermediate</option>
-                                <option value="C1">C1 - Advanced</option>
-                                <option value="C2">C2 - Proficient</option>
-                                <option value="Not sure">Not sure - Need assessment</option>
-                            </select>
-                </div>
                     </div>
-                    
-                    <div class="mb-6">
-                        <label for="interest" class="block text-sm font-medium text-gray-700 mb-2">What interests you most? *</label>
-                        <select id="interest" name="interest" required 
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
-                            <option value="">Select what interests you</option>
-                            <option value="Free Placement Test">Free Placement Test</option>
-                            <option value="A1.1 Beginner Course">A1.1 Beginner Course ($375)</option>
-                            <option value="Private Sessions">Private Sessions</option>
-                            <option value="Group Courses">Group Courses</option>
-                            <option value="General Information">General Information</option>
-                            <option value="Other">Other</option>
-                        </select>
+
+
+                    <!-- Learning Goals -->
+                    <div class="info-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Your Learning Goals</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="currentLevel" class="block text-sm font-medium text-gray-700 mb-2">What's your current German level?</label>
+                                <select id="currentLevel" name="currentLevel" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your current level</option>
+                                    <option value="Complete Beginner">Complete Beginner (A0) - No German knowledge</option>
+                                    <option value="A1">A1 - Beginner - Know basic words and phrases</option>
+                                    <option value="A2">A2 - Elementary - Can introduce myself and ask simple questions</option>
+                                    <option value="B1">B1 - Intermediate - Can have basic conversations</option>
+                                    <option value="B2">B2 - Upper Intermediate - Can discuss familiar topics</option>
+                                    <option value="C1">C1 - Advanced - Can express ideas fluently</option>
+                                    <option value="C2">C2 - Proficient - Near-native level</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="learningGoals" class="block text-sm font-medium text-gray-700 mb-2">What are your main learning goals?</label>
+                                <select id="learningGoals" name="learningGoals" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your main goal</option>
+                                    <option value="Travel">Travel to German-speaking countries</option>
+                                    <option value="Work">Work in a German-speaking environment</option>
+                                    <option value="Study">Study in Germany/Austria/Switzerland</option>
+                                    <option value="Personal">Personal interest and cultural appreciation</option>
+                                    <option value="Family">Communicate with German-speaking family/friends</option>
+                                    <option value="Business">Business German for professional purposes</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="timeCommitment" class="block text-sm font-medium text-gray-700 mb-2">How much time can you dedicate to learning German per week?</label>
+                                <select id="timeCommitment" name="timeCommitment" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select time commitment</option>
+                                    <option value="1-2 hours">1-2 hours per week</option>
+                                    <option value="3-4 hours">3-4 hours per week</option>
+                                    <option value="5-7 hours">5-7 hours per week</option>
+                                    <option value="8+ hours">8+ hours per week</option>
+                                    <option value="Intensive">Intensive course (multiple hours daily)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="preferredSchedule" class="block text-sm font-medium text-gray-700 mb-2">What's your preferred learning schedule?</label>
+                                <select id="preferredSchedule" name="preferredSchedule" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select preferred schedule</option>
+                                    <option value="Morning">Morning (6 AM - 12 PM)</option>
+                                    <option value="Afternoon">Afternoon (12 PM - 6 PM)</option>
+                                    <option value="Evening">Evening (6 PM - 10 PM)</option>
+                                    <option value="Weekends">Weekends only</option>
+                                    <option value="Flexible">Flexible - I can adapt</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information (optional)</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="4" 
+                                          placeholder="Tell us about any previous German learning experience, specific goals, or questions you have..."
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="mb-6">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                        <textarea id="message" name="message" rows="4" required 
-                                  placeholder="Tell us about your German learning goals, preferred schedule, or any questions you have..."
-                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
-                </div>
-                    
-                    <button type="submit" 
-                            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-                        Send Message
-                    </button>
-                    
-                    <p class="text-sm text-gray-500 mt-4 text-center">
-                        * Required fields. We'll get back to you within 24 hours.
-                    </p>
+
+                    <div class="text-center">
+                        <button type="submit" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg">
+                            Book My Free Consultation
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            After submitting, we'll contact you within 24 hours to schedule your 20-minute consultation call.
+                        </p>
+                    </div>
                 </form>
         </div>
     </section>
@@ -1043,6 +1116,162 @@
         </div>
     </div>
 
+    <!-- Placement Test Popup -->
+    <div id="placement-overlay" class="placement-overlay"></div>
+    <div id="placement-popup" class="placement-popup">
+        <button class="close-btn" onclick="closePlacementPopup()">&times;</button>
+        
+        <!-- Header with SG Learning Logo -->
+        <div class="placement-header">
+            <div class="sg-logo">
+                <span class="graduation-cap">🎓</span>
+                <span class="sg-logo-text">SG</span>
+                <span class="sg-logo-learning">LEARNING</span>
+            </div>
+            <h2 class="placement-title">Find Your Perfect German Class!</h2>
+            <p class="placement-subtitle">We're here to help you discover the ideal course for your learning journey. Take our quick assessment and get personalized recommendations.</p>
+        </div>
+        
+        <div class="p-6">
+            
+            <form id="placement-popup-form" action="https://getform.io/f/brogrwza" method="POST" class="space-y-6">
+                <!-- Honeypot field for spam protection -->
+                <input type="hidden" name="_gotcha" style="display:none !important">
+                
+                <!-- Personal Information -->
+                <div class="info-card p-6" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid #f59e0b;">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">👤</span>
+                        Personal Information
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="popupFirstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="popupFirstName" name="firstName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="popupLastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="popupLastName" name="lastName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <label for="popupEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="popupEmail" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="popupPhone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="popupPhone" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="popupNativeLanguage" class="block text-sm font-medium text-gray-700 mb-2">Native Language *</label>
+                        <select id="popupNativeLanguage" name="nativeLanguage" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            <option value="">Select your native language</option>
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Learning Goals -->
+                <div class="info-card p-6" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 1px solid #10b981;">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">🎯</span>
+                        Your Learning Goals
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="popupCurrentLevel" class="block text-sm font-medium text-gray-700 mb-2">What's your current German level?</label>
+                            <select id="popupCurrentLevel" name="currentLevel" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your current level</option>
+                                <option value="Complete Beginner">Complete Beginner (A0) - No German knowledge</option>
+                                <option value="A1">A1 - Beginner - Know basic words and phrases</option>
+                                <option value="A2">A2 - Elementary - Can introduce myself and ask simple questions</option>
+                                <option value="B1">B1 - Intermediate - Can have basic conversations</option>
+                                <option value="B2">B2 - Upper Intermediate - Can discuss familiar topics</option>
+                                <option value="C1">C1 - Advanced - Can express ideas fluently</option>
+                                <option value="C2">C2 - Proficient - Near-native level</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="popupLearningGoals" class="block text-sm font-medium text-gray-700 mb-2">What are your main learning goals?</label>
+                            <select id="popupLearningGoals" name="learningGoals" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your main goal</option>
+                                <option value="Travel">Travel to German-speaking countries</option>
+                                <option value="Work">Work in a German-speaking environment</option>
+                                <option value="Study">Study in Germany/Austria/Switzerland</option>
+                                <option value="Personal">Personal interest and cultural appreciation</option>
+                                <option value="Family">Communicate with German-speaking family/friends</option>
+                                <option value="Business">Business German for professional purposes</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="popupTimeCommitment" class="block text-sm font-medium text-gray-700 mb-2">How much time can you dedicate to learning German per week?</label>
+                            <select id="popupTimeCommitment" name="timeCommitment" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select time commitment</option>
+                                <option value="1-2 hours">1-2 hours per week</option>
+                                <option value="3-4 hours">3-4 hours per week</option>
+                                <option value="5-7 hours">5-7 hours per week</option>
+                                <option value="8+ hours">8+ hours per week</option>
+                                <option value="Intensive">Intensive course (multiple hours daily)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="popupPreferredSchedule" class="block text-sm font-medium text-gray-700 mb-2">What's your preferred learning schedule?</label>
+                            <select id="popupPreferredSchedule" name="preferredSchedule" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select preferred schedule</option>
+                                <option value="Morning">Morning (6 AM - 12 PM)</option>
+                                <option value="Afternoon">Afternoon (12 PM - 6 PM)</option>
+                                <option value="Evening">Evening (6 PM - 10 PM)</option>
+                                <option value="Weekends">Weekends only</option>
+                                <option value="Flexible">Flexible - I can adapt</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="popupAdditionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information (optional)</label>
+                            <textarea id="popupAdditionalInfo" name="additionalInfo" rows="3" 
+                                      placeholder="Tell us about any previous German learning experience, specific goals, or questions you have..."
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);">
+                        <span class="mr-2">🚀</span>
+                        Book My Free Consultation
+                    </button>
+                    <p class="text-sm text-gray-600 mt-4 bg-blue-50 p-3 rounded-lg border border-blue-200">
+                        <span class="text-blue-600 font-medium">✨ What happens next?</span><br>
+                        After submitting, we'll contact you within 24 hours to schedule your personalized 20-minute consultation call.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1064,13 +1293,32 @@
         
         // Newsletter Popup
         let newsletterShown = localStorage.getItem('newsletterShown');
+        let placementShown = localStorage.getItem('placementShown');
         
-        // Show newsletter popup after 5 seconds if not shown before
+        // Show placement test popup after 5 seconds if not shown before
         setTimeout(() => {
-            if (!newsletterShown) {
-                showNewsletter();
+            if (!placementShown) {
+                showPlacementPopup();
             }
         }, 5000);
+        
+        // Show newsletter popup after 8 seconds if placement popup was shown
+        setTimeout(() => {
+            if (!newsletterShown && placementShown) {
+                showNewsletter();
+            }
+        }, 8000);
+        
+        function showPlacementPopup() {
+            document.getElementById('placement-overlay').classList.add('show');
+            document.getElementById('placement-popup').classList.add('show');
+        }
+        
+        function closePlacementPopup() {
+            document.getElementById('placement-overlay').classList.remove('show');
+            document.getElementById('placement-popup').classList.remove('show');
+            localStorage.setItem('placementShown', 'true');
+        }
         
         function showNewsletter() {
             document.getElementById('newsletter-overlay').classList.add('show');
@@ -1083,8 +1331,52 @@
             localStorage.setItem('newsletterShown', 'true');
         }
         
+        // Close placement popup when clicking overlay
+        document.getElementById('placement-overlay').addEventListener('click', closePlacementPopup);
+        
         // Close newsletter when clicking overlay
         document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletter);
+        
+        // Placement popup form submission
+        document.getElementById('placement-popup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            // Submit to GetForm
+            fetch('https://getform.io/f/brogrwza', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you for your submission! We\'ll contact you within 24 hours to schedule your consultation call.');
+                    closePlacementPopup();
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Thank you for your submission! We\'ll contact you within 24 hours to schedule your consultation call.');
+                closePlacementPopup();
+                form.reset();
+            })
+            .finally(() => {
+                submitButton.textContent = 'Book My Free Consultation';
+                submitButton.disabled = false;
+            });
+        });
         
         // Newsletter form submission - simple simulation
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {

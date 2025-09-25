@@ -33,33 +33,51 @@
             font-weight: 400;
         }
         .cta-button {
-            background: #6b7280;
+            background: #d97706;
             color: white;
             transition: all 0.3s ease;
         }
         .cta-button:hover {
-            background: #4b5563;
+            background: #c2410c;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
         }
         .course-card {
             background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
         }
         .course-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            border-color: #f3a847;
+            box-shadow: 0 4px 12px rgba(243, 168, 71, 0.1);
+        }
+        .course-card.featured {
+            border: 2px solid #f3a847;
+            background: #fffbeb;
+            transform: scale(1.02);
+        }
+        .course-card.featured:hover {
+            transform: scale(1.02) translateY(-2px);
         }
         .price-highlight {
             background: linear-gradient(135deg, #6b7280, #9ca3af);
             color: white;
         }
         .feature-badge {
-            background: #dcfce7;
+            background: #f0fdf4;
             color: #166534;
             border: 1px solid #bbf7d0;
+        }
+        .best-deal-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -82,6 +100,7 @@
                     <a href="teachers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Teachers</a>
                     <a href="index.html#testimonials" class="text-gray-600 hover:text-orange-500 transition-colors">Reviews</a>
                     <a href="blog.html" class="text-gray-600 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Careers</a>
                     <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
                 </div>
                 
@@ -101,6 +120,7 @@
                     <a href="teachers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Teachers</a>
                     <a href="index.html#testimonials" class="text-gray-600 hover:text-orange-500 transition-colors">Reviews</a>
                     <a href="blog.html" class="text-gray-600 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Careers</a>
                     <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
                 </div>
             </div>
@@ -118,7 +138,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="placement-test.html" class="cta-button px-8 py-4 rounded-lg font-semibold text-center">
-                        Take Free Placement Test
+                        Book Free Consultation
                     </a>
                     <a href="index.html#contact" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-center transition-all">
                         Get Personal Consultation
@@ -149,7 +169,7 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Single Session -->
                     <div class="course-card p-6 text-center">
-                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl">👤</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Single Session</h4>
@@ -168,7 +188,7 @@
                         <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
                             Save 20%
                         </div>
-                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl">📚</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">5-Class Package</h4>
@@ -182,12 +202,12 @@
                         </a>
                     </div>
 
-                    <!-- 10-Class Package -->
-                    <div class="course-card p-6 text-center relative">
-                        <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
-                            Save 30%
+                    <!-- 10-Class Package - BEST DEAL -->
+                    <div class="course-card featured p-6 text-center relative">
+                        <div class="best-deal-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-sm font-bold">
+                            🔥 BEST DEAL
                         </div>
-                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl">🎯</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">10-Class Package</h4>
@@ -206,7 +226,7 @@
                         <div class="feature-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-sm font-medium">
                             Save 40%
                         </div>
-                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl">🚀</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">50-Class Package</h4>
@@ -367,6 +387,45 @@
         </div>
     </section>
 
+    <!-- Photos Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Learning German with Hallo Deutsch</h2>
+                <p class="text-lg text-gray-600">See our students in action and the beautiful German learning environment we create</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="German teacher with students in online class" 
+                         class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-semibold text-lg">Interactive Online Learning</span>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="German language learning materials and books" 
+                         class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-semibold text-lg">Comprehensive Materials</span>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Students learning German together" 
+                         class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-semibold text-lg">Fun Group Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Course Features -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
@@ -376,48 +435,48 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">👨‍🏫</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Native German Teachers</h3>
                     <p class="text-gray-600">Learn from experienced native speakers who understand the nuances of German language and culture.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">📚</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">All Materials Included</h3>
                     <p class="text-gray-600">Workbooks, exercises, audio files, and practice materials - no additional purchases required.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">⏰</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Flexible Scheduling</h3>
                     <p class="text-gray-600">Learn at times that work for you. We accommodate different time zones and busy schedules.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">💻</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Online Convenience</h3>
                     <p class="text-gray-600">Learn from anywhere with our easy-to-use online platform. No special software required.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">📊</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Progress Tracking</h3>
                     <p class="text-gray-600">Regular assessments and feedback to help you track your improvement and stay motivated.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🤝</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Personal Support</h3>
@@ -432,11 +491,11 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-white mb-6">Ready to Start Your German Journey?</h2>
             <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Not sure which course is right for you? Take our free placement test or contact us for a personalized consultation.
+                Not sure which course is right for you? Book a free consultation or contact us for personalized guidance.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="placement-test.html" class="bg-white text-gray-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all">
-                    Take Free Placement Test
+                    Book Free Consultation
                 </a>
                 <a href="index.html#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-700 px-8 py-4 rounded-lg font-semibold transition-all">
                     Contact Us
@@ -467,11 +526,12 @@
                     <ul class="space-y-2">
                         <li><a href="courses.html" class="text-gray-400 hover:text-orange-500 transition-colors">Courses</a></li>
                         <li><a href="index.html#pricing" class="text-gray-400 hover:text-orange-500 transition-colors">Pricing</a></li>
-                        <li><a href="placement-test.html" class="text-gray-400 hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="placement-test.html" class="text-gray-400 hover:text-orange-500 transition-colors">Free Consultation</a></li>
                         <li><a href="beginner-course.html" class="text-gray-400 hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
                         <li><a href="kids-classes.html" class="text-gray-400 hover:text-orange-500 transition-colors">Kids Classes</a></li>
                         <li><a href="teachers.html" class="text-gray-400 hover:text-orange-500 transition-colors">Our Teachers</a></li>
                         <li><a href="blog.html" class="text-gray-400 hover:text-orange-500 transition-colors">Learning Blog</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-orange-500 transition-colors">Careers</a></li>
                     </ul>
                 </div>
                 
@@ -490,7 +550,7 @@
                     <div class="space-y-2 text-gray-400">
                         <div class="flex items-center">
                             <span class="mr-2">📧</span>
-                            <span>contact@sebgabriel.com</span>
+                            <span>gabriel.sg.sebastian@gmail.com</span>
                         </div>
                         <div class="flex items-center">
                             <span class="mr-2">🌍</span>

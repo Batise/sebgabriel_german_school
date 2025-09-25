@@ -138,9 +138,17 @@
                         </div>
                     </div>
                     
-                    <button onclick="openPaymentPopup('10-class')" class="cta-button px-8 py-4 rounded-lg font-semibold w-full">
-                        Buy 10-Class Package
-                    </button>
+                    <div class="space-y-4">
+                        <button onclick="openPaymentPopup('10-class')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Buy 10-Class Package - $350
+                        </button>
+                        
+                        <div class="text-center text-gray-500 text-sm">or</div>
+                        
+                        <button onclick="showContactForm()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Need More Information?
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -362,6 +370,143 @@
             </div>
         </section>
 
+        <!-- Contact Form Section (Hidden by default) -->
+        <section id="contact-form-section" class="py-20 bg-gray-50" style="display: none;">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">We'd Love to Help!</h2>
+                <p class="text-lg text-gray-600">Tell us about your German learning goals and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <form id="package10-contact-form" action="https://getform.io/f/brogrwza" method="POST" class="space-y-6">
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    
+                    <!-- Personal Information -->
+                    <div class="package-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Personal Information</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="package10FirstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" id="package10FirstName" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="package10LastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" id="package10LastName" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label for="package10Email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="package10Email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="package10Phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="package10Phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="package10NativeLanguage" class="block text-sm font-medium text-gray-700 mb-2">Native Language *</label>
+                            <select id="package10NativeLanguage" name="nativeLanguage" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your native language</option>
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="French">French</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Dutch">Dutch</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Learning Goals -->
+                    <div class="package-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Your Learning Goals</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="package10CurrentLevel" class="block text-sm font-medium text-gray-700 mb-2">What's your current German level?</label>
+                                <select id="package10CurrentLevel" name="currentLevel" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your current level</option>
+                                    <option value="Complete Beginner">Complete Beginner (A0) - No German knowledge</option>
+                                    <option value="A1">A1 - Beginner - Know basic words and phrases</option>
+                                    <option value="A2">A2 - Elementary - Can introduce myself and ask simple questions</option>
+                                    <option value="B1">B1 - Intermediate - Can have basic conversations</option>
+                                    <option value="B2">B2 - Upper Intermediate - Can discuss familiar topics</option>
+                                    <option value="C1">C1 - Advanced - Can express ideas fluently</option>
+                                    <option value="C2">C2 - Proficient - Near-native level</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="package10LearningGoals" class="block text-sm font-medium text-gray-700 mb-2">What are your main learning goals?</label>
+                                <select id="package10LearningGoals" name="learningGoals" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your main goal</option>
+                                    <option value="Travel">Travel to German-speaking countries</option>
+                                    <option value="Work">Work in a German-speaking environment</option>
+                                    <option value="Study">Study in Germany/Austria/Switzerland</option>
+                                    <option value="Personal">Personal interest and cultural appreciation</option>
+                                    <option value="Family">Communicate with German-speaking family/friends</option>
+                                    <option value="Business">Business German for professional purposes</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="package10TimeCommitment" class="block text-sm font-medium text-gray-700 mb-2">How much time can you dedicate to learning German per week?</label>
+                                <select id="package10TimeCommitment" name="timeCommitment" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select time commitment</option>
+                                    <option value="1-2 hours">1-2 hours per week</option>
+                                    <option value="3-4 hours">3-4 hours per week</option>
+                                    <option value="5-7 hours">5-7 hours per week</option>
+                                    <option value="8+ hours">8+ hours per week</option>
+                                    <option value="Intensive">Intensive course (multiple hours daily)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="package10PreferredSchedule" class="block text-sm font-medium text-gray-700 mb-2">What's your preferred learning schedule?</label>
+                                <select id="package10PreferredSchedule" name="preferredSchedule" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select preferred schedule</option>
+                                    <option value="Morning">Morning (6 AM - 12 PM)</option>
+                                    <option value="Afternoon">Afternoon (12 PM - 6 PM)</option>
+                                    <option value="Evening">Evening (6 PM - 10 PM)</option>
+                                    <option value="Weekends">Weekends only</option>
+                                    <option value="Flexible">Flexible - I can adapt</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="package10AdditionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Questions about the 10-Class Package or Additional Information</label>
+                                <textarea id="package10AdditionalInfo" name="additionalInfo" rows="4" 
+                                          placeholder="Tell us about any questions you have about the 10-Class Package, your previous German learning experience, or specific goals..."
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg">
+                            Send My Questions
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            We'll get back to you within 24 hours to answer your questions about the 10-Class Package.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
     </main>
     
     <footer class="bg-gray-900 text-gray-400 text-center py-8 text-sm">
@@ -396,6 +541,53 @@
                 popup.focus();
             }
         }
+
+        function showContactForm() {
+            const contactSection = document.getElementById('contact-form-section');
+            contactSection.style.display = 'block';
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle form submission
+        document.getElementById('package10-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            fetch('https://getform.io/f/brogrwza', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    submitButton.textContent = '✓ Questions Sent!';
+                    submitButton.classList.remove('cta-button');
+                    submitButton.classList.add('bg-green-600', 'text-white');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Show success message
+                    setTimeout(() => {
+                        alert('Thank you! We\'ll get back to you within 24 hours to answer your questions about the 10-Class Package.');
+                    }, 500);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                submitButton.textContent = 'Try Again';
+                submitButton.disabled = false;
+                alert('Sorry, there was an error sending your questions. Please try again or contact us directly.');
+            });
+        });
     </script>
 
 </body>

@@ -144,9 +144,17 @@
                         </div>
                     </div>
                     
-                    <button onclick="openPaymentPopup('beginner-course')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
-                        Enroll Now - $200
-                    </button>
+                    <div class="space-y-4">
+                        <button onclick="openPaymentPopup('beginner-course')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Enroll Now - $200
+                        </button>
+                        
+                        <div class="text-center text-gray-500 text-sm">or</div>
+                        
+                        <button onclick="showContactForm()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Need More Information?
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -386,10 +394,162 @@
                     <div class="text-3xl font-bold text-orange-500">$375</div>
                     <p class="text-gray-600">One-time payment • 30 hours • All materials included</p>
                 </div>
-                <button onclick="openPaymentPopup('beginner-course')" class="cta-button px-12 py-4 rounded-lg font-semibold text-xl">
-                    Enroll in A1.1 Course
-                </button>
+                <!-- Two Options -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                        <h3 class="text-xl font-bold text-green-800 mb-4">Ready to Enroll?</h3>
+                        <p class="text-green-700 mb-4">Secure your spot in the A1.1 Beginner Course today!</p>
+                        <button onclick="openPaymentPopup('beginner-course')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Enroll Now - $375
+                        </button>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Need More Information?</h3>
+                        <p class="text-blue-700 mb-4">Have questions? We're here to help you decide!</p>
+                        <button onclick="showContactForm()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
                 <p class="text-sm text-gray-500 mt-6">Minimum 6 students required • Full refund guarantee if course doesn't run</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section (Hidden by default) -->
+        <section id="contact-form-section" class="py-20 bg-gray-50" style="display: none;">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">We'd Love to Help!</h2>
+                <p class="text-lg text-gray-600">Tell us about your German learning goals and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <form id="course-contact-form" action="https://getform.io/f/brogrwza" method="POST" class="space-y-6">
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    
+                    <!-- Personal Information -->
+                    <div class="feature-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Personal Information</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="courseFirstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" id="courseFirstName" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="courseLastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" id="courseLastName" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label for="courseEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="courseEmail" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                            <div>
+                                <label for="coursePhone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="coursePhone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="courseNativeLanguage" class="block text-sm font-medium text-gray-700 mb-2">Native Language *</label>
+                            <select id="courseNativeLanguage" name="nativeLanguage" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select your native language</option>
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="French">French</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Dutch">Dutch</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Learning Goals -->
+                    <div class="feature-card p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Your Learning Goals</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="courseCurrentLevel" class="block text-sm font-medium text-gray-700 mb-2">What's your current German level?</label>
+                                <select id="courseCurrentLevel" name="currentLevel" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your current level</option>
+                                    <option value="Complete Beginner">Complete Beginner (A0) - No German knowledge</option>
+                                    <option value="A1">A1 - Beginner - Know basic words and phrases</option>
+                                    <option value="A2">A2 - Elementary - Can introduce myself and ask simple questions</option>
+                                    <option value="B1">B1 - Intermediate - Can have basic conversations</option>
+                                    <option value="B2">B2 - Upper Intermediate - Can discuss familiar topics</option>
+                                    <option value="C1">C1 - Advanced - Can express ideas fluently</option>
+                                    <option value="C2">C2 - Proficient - Near-native level</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="courseLearningGoals" class="block text-sm font-medium text-gray-700 mb-2">What are your main learning goals?</label>
+                                <select id="courseLearningGoals" name="learningGoals" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select your main goal</option>
+                                    <option value="Travel">Travel to German-speaking countries</option>
+                                    <option value="Work">Work in a German-speaking environment</option>
+                                    <option value="Study">Study in Germany/Austria/Switzerland</option>
+                                    <option value="Personal">Personal interest and cultural appreciation</option>
+                                    <option value="Family">Communicate with German-speaking family/friends</option>
+                                    <option value="Business">Business German for professional purposes</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="courseTimeCommitment" class="block text-sm font-medium text-gray-700 mb-2">How much time can you dedicate to learning German per week?</label>
+                                <select id="courseTimeCommitment" name="timeCommitment" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select time commitment</option>
+                                    <option value="1-2 hours">1-2 hours per week</option>
+                                    <option value="3-4 hours">3-4 hours per week</option>
+                                    <option value="5-7 hours">5-7 hours per week</option>
+                                    <option value="8+ hours">8+ hours per week</option>
+                                    <option value="Intensive">Intensive course (multiple hours daily)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="coursePreferredSchedule" class="block text-sm font-medium text-gray-700 mb-2">What's your preferred learning schedule?</label>
+                                <select id="coursePreferredSchedule" name="preferredSchedule" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <option value="">Select preferred schedule</option>
+                                    <option value="Morning">Morning (6 AM - 12 PM)</option>
+                                    <option value="Afternoon">Afternoon (12 PM - 6 PM)</option>
+                                    <option value="Evening">Evening (6 PM - 10 PM)</option>
+                                    <option value="Weekends">Weekends only</option>
+                                    <option value="Flexible">Flexible - I can adapt</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="courseAdditionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Questions about the A1.1 Course or Additional Information</label>
+                                <textarea id="courseAdditionalInfo" name="additionalInfo" rows="4" 
+                                          placeholder="Tell us about any questions you have about the course, your previous German learning experience, or specific goals..."
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg">
+                            Send My Questions
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            We'll get back to you within 24 hours to answer your questions about the A1.1 Beginner Course.
+                        </p>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -425,6 +585,48 @@
                 popup.focus();
             }
         }
+
+        function showContactForm() {
+            document.getElementById('contact-form-section').style.display = 'block';
+            document.getElementById('contact-form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission handler
+        document.getElementById('course-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            fetch('https://getform.io/f/brogrwza', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you for your questions! We\'ll get back to you within 24 hours to answer your questions about the A1.1 Beginner Course.');
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Thank you for your questions! We\'ll get back to you within 24 hours to answer your questions about the A1.1 Beginner Course.');
+                form.reset();
+            })
+            .finally(() => {
+                submitButton.textContent = 'Send My Questions';
+                submitButton.disabled = false;
+            });
+        });
     </script>
 
 </body>

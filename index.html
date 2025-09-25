@@ -668,7 +668,11 @@
             </div>
             
             <div class="max-w-2xl mx-auto">
-                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" onsubmit="sendContactForm(event)">
+                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" action="https://formsubmit.co/contact@sebgabriel.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form - Hallo Deutsch">
+                    <input type="hidden" name="_next" value="https://deutsch.sebgabriel.com/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
@@ -957,55 +961,6 @@
         </div>
     </footer>
 
-    <script>
-        function sendContactForm(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            // Create email body
-            const firstName = formData.get('firstName');
-            const lastName = formData.get('lastName');
-            const email = formData.get('email');
-            const countryCode = formData.get('countryCode');
-            const phone = formData.get('phone');
-            const nativeLanguage = formData.get('nativeLanguage');
-            const currentLevel = formData.get('currentLevel');
-            const interest = formData.get('interest');
-            const message = formData.get('message');
-            
-            const emailBody = `New Contact Form Submission
-
-Personal Information:
-Name: ${firstName} ${lastName}
-Email: ${email}
-Phone: ${phone ? `${countryCode} ${phone}` : 'Not provided'}
-
-Language Information:
-Native Language: ${nativeLanguage}
-Current German Level: ${currentLevel || 'Not specified'}
-
-Interest: ${interest}
-
-Message:
-${message}
-
----
-This message was sent from the Hallo Deutsch contact form.`;
-            
-            // Create mailto link
-            const subject = `New Contact Form - ${interest}`;
-            const mailtoLink = `mailto:contact@sebgabriel.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Thank you for your message! Your email client should open automatically. If not, please send your message to contact@sebgabriel.com');
-        }
-    </script>
 
     <!-- Newsletter Popup -->
     <div id="newsletter-overlay" class="newsletter-overlay"></div>

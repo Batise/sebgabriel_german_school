@@ -677,7 +677,11 @@
             </div>
             
             <div class="max-w-2xl mx-auto">
-                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" onsubmit="submitForm(event)">
+                <form class="bg-white p-8 rounded-lg shadow-lg border border-gray-200" action="https://formsubmit.co/gabriel.sg.sebastian@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Hallo Deutsch">
+                    <input type="hidden" name="_next" value="https://deutsch.sebgabriel.com/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
@@ -968,37 +972,7 @@
     </footer>
 
     <script>
-        function submitForm(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            // Create email body
-            const emailBody = `
-New Contact Form Submission - Hallo Deutsch
-
-Name: ${formData.get('firstName')} ${formData.get('lastName')}
-Email: ${formData.get('email')}
-Phone: ${formData.get('countryCode')} ${formData.get('phone')}
-Native Language: ${formData.get('nativeLanguage')}
-Current German Level: ${formData.get('currentLevel')}
-Interest: ${formData.get('interest')}
-
-Message:
-${formData.get('message')}
-            `.trim();
-            
-            // Create mailto link
-            const mailtoLink = `mailto:gabriel.sg.sebastian@gmail.com?subject=New Contact Form Submission - Hallo Deutsch&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Thank you! Your email client should open with a pre-filled message. Please send it to complete your inquiry.');
-        }
+        // Contact form now uses FormSubmit - no JavaScript needed!
     </script>
 
     <!-- Newsletter Popup -->

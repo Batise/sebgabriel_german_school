@@ -185,8 +185,11 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">$375 Total</h3>
-                    <p class="text-gray-600">One-time payment - no hidden fees or additional costs</p>
+                    <h3 class="text-xl font-bold mb-4">
+                        <div class="text-lg text-gray-400 line-through">$375</div>
+                        <div class="text-green-600">$200 Total</div>
+                    </h3>
+                    <p class="text-gray-600">Early Bird Price - First 50 Students Only</p>
                 </div>
             </div>
         </section>
@@ -398,7 +401,7 @@
         function openPaymentPopup(packageType) {
             // You'll need to create a Stripe link for the beginner course
             const paymentUrls = {
-                'beginner-course': 'https://buy.stripe.com/beginner-course-link' // To be updated with actual Stripe link
+                'beginner-course': 'https://buy.stripe.com/5kQ00kcWn1o8d3ibDa2Ji0a'
             };
             
             const paymentUrl = paymentUrls[packageType] || paymentUrls['beginner-course'];

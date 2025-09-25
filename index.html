@@ -46,12 +46,12 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .cta-button {
-            background: #ff6b35;
+            background: #d97706;
             color: white;
             transition: all 0.3s ease;
         }
         .cta-button:hover {
-            background: #e55a2b;
+            background: #c2410c;
             transform: translateY(-2px);
         }
         
@@ -120,10 +120,10 @@
     <header class="p-4 sm:p-6 bg-white shadow-sm">
         <nav class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center" style="background-color: #d97706;">
                     <span class="text-white font-bold text-sm sm:text-lg">SG</span>
                 </div>
-                <a href="index.html" class="text-lg sm:text-xl playful-brand text-orange-500">HALLO DEUTSCH</a>
+                <a href="index.html" class="text-lg sm:text-xl playful-brand" style="color: #d97706;">HALLO DEUTSCH</a>
             </div>
             
             <!-- Desktop Navigation -->
@@ -174,7 +174,7 @@
                 
                 <!-- Right: Content -->
                 <div class="space-y-4 sm:space-y-6 order-1 lg:order-2">
-                      <h1 class="text-3xl sm:text-4xl lg:text-5xl playful-brand text-orange-500 leading-tight">
+                      <h1 class="text-3xl sm:text-4xl lg:text-5xl playful-brand leading-tight" style="color: #d97706;">
                           HALLO DEUTSCH
                       </h1>
                     
@@ -195,19 +195,119 @@
                     </div>
                     
                     <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                        <span class="text-lg sm:text-xl font-bold text-orange-500">START TODAY!</span>
+                        <span class="text-lg sm:text-xl font-bold" style="color: #d97706;">START TODAY!</span>
                         <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
                             <a href="placement-test.html" class="cta-button px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold inline-block text-center text-sm sm:text-base">
                                 Free Placement Test
                             </a>
-                            <a href="beginner-course.html" class="px-6 sm:px-8 py-3 sm:py-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors rounded-lg font-semibold inline-block text-center text-sm sm:text-base">
+                            <a href="beginner-course.html" class="px-6 sm:px-8 py-3 sm:py-4 border rounded-lg font-semibold inline-block text-center text-sm sm:text-base transition-colors" style="border-color: #d97706; color: #d97706;" onmouseover="this.style.backgroundColor='#d97706'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#d97706';">
                                 A1.1 Course - $375
                             </a>
                         </div>
                     </div>
             </div>
         </div>
-    </section>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-12 sm:py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                        Start your German learning journey in just three simple steps. We've made it easy for you to begin and track your progress.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- Step 1 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative" style="background-color: #d97706;">
+                            <span class="text-white text-3xl">📋</span>
+                            <div class="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-orange-200 transform -translate-y-1/2"></div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Get Your Level</h3>
+                        <p class="text-gray-600 mb-6">
+                            Take our free placement test to determine your exact German level. No pressure, just 10 minutes to understand where you stand.
+                        </p>
+                        <a href="placement-test.html" class="inline-flex items-center font-medium" style="color: #d97706;" onmouseover="this.style.color='#c2410c';" onmouseout="this.style.color='#d97706';">
+                            Take Free Test <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 relative" style="background-color: #d97706;">
+                            <span class="text-white text-3xl">🎓</span>
+                            <div class="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-orange-200 transform -translate-y-1/2"></div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Start Learning</h3>
+                        <p class="text-gray-600 mb-6">
+                            Choose from private sessions, group courses, or kids classes. We match you with the perfect teacher for your goals and schedule.
+                        </p>
+                        <a href="#pricing" class="inline-flex items-center font-medium" style="color: #d97706;" onmouseover="this.style.color='#c2410c';" onmouseout="this.style.color='#d97706';">
+                            View Courses <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #d97706;">
+                            <span class="text-white text-3xl">📊</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Track Your Progress</h3>
+                        <p class="text-gray-600 mb-6">
+                            Achieve fluency with personalized feedback, regular assessments, and clear milestones. See your improvement every step of the way.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center font-medium" style="color: #d97706;" onmouseover="this.style.color='#c2410c';" onmouseout="this.style.color='#d97706';">
+                            Get Started <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Progress Tracker Preview -->
+                <div class="mt-16 bg-white rounded-2xl shadow-lg p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Track Your German Learning Journey</h3>
+                        <p class="text-gray-600">See your progress with clear milestones and achievements</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-green-600 text-2xl">✓</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Beginner</h4>
+                            <p class="text-sm text-gray-600">A1 Level Complete</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-blue-600 text-2xl">🎯</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Intermediate</h4>
+                            <p class="text-sm text-gray-600">A2-B1 Progress</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-purple-600 text-2xl">🚀</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Advanced</h4>
+                            <p class="text-sm text-gray-600">B2-C1 Mastery</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-orange-600 text-2xl">🏆</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Fluency</h4>
+                            <p class="text-sm text-gray-600">C2 Native Level</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Below the Fold Section -->
         <section class="testimonial-section">
@@ -916,8 +1016,8 @@ This message was sent from the DEUTSCH contact form.`;
                 <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span class="text-white font-bold text-lg">SG</span>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Get German Learning Tips!</h3>
-                <p class="text-sm text-gray-600">Weekly insights, grammar tips, and cultural notes delivered to your inbox.</p>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Get Your Free German Guide!</h3>
+                <p class="text-sm text-gray-600">Download "100 Essential German Phrases for Travel" + weekly learning tips delivered to your inbox.</p>
             </div>
             
             <form id="newsletter-form" class="space-y-3">
@@ -928,7 +1028,7 @@ This message was sent from the DEUTSCH contact form.`;
                        required>
                 <button type="submit" 
                         class="w-full cta-button py-2 rounded-lg font-semibold text-white text-sm">
-                    Subscribe Free
+                    Get Free Guide
                 </button>
             </form>
             
@@ -991,11 +1091,16 @@ This message was sent from the DEUTSCH contact form.`;
             submitButton.textContent = 'Subscribing...';
             submitButton.disabled = true;
             
-            // Brevo API integration
+            // Brevo API integration - Add contact to list
             const brevoData = {
                 email: email,
                 listIds: [2, 7], // Replace with your actual list IDs
-                updateEnabled: true
+                updateEnabled: true,
+                attributes: {
+                    FIRSTNAME: "",
+                    LASTNAME: "",
+                    SMS: ""
+                }
             };
             
             fetch('https://api.brevo.com/v3/contacts', {
@@ -1014,7 +1119,7 @@ This message was sent from the DEUTSCH contact form.`;
                 }
             })
             .then(data => {
-                alert('Thank you for subscribing! You\'ll receive German learning tips every week.');
+                alert('Thank you! Check your email for the "100 Essential German Phrases for Travel" guide and weekly learning tips.');
                 closeNewsletter();
                 this.reset();
             })
@@ -1024,7 +1129,7 @@ This message was sent from the DEUTSCH contact form.`;
             })
             .finally(() => {
                 // Reset button state
-                submitButton.textContent = 'Subscribe Free';
+                submitButton.textContent = 'Get Free Guide';
                 submitButton.disabled = false;
             });
         });

@@ -925,7 +925,7 @@
                     <h3 class="text-white font-semibold mb-4">Contact</h3>
                     <div class="space-y-2">
                         <p class="text-sm">
-                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                            <span class="text-orange-500">📧</span> gabriel.sg.sebastian@gmail.com
                         </p>
                         <p class="text-sm">
                             <span class="text-orange-500">🌍</span> Online Worldwide
@@ -1075,8 +1075,8 @@ ${formData.get('message')}
         // Close newsletter when clicking overlay
         document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletter);
         
-        // Newsletter form submission with Omnisend
-        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
+        // Newsletter form submission - simple simulation
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('newsletter-email').value;
             const submitButton = this.querySelector('button[type="submit"]');
@@ -1085,38 +1085,14 @@ ${formData.get('message')}
             submitButton.textContent = 'Subscribing...';
             submitButton.disabled = true;
             
-            try {
-                // Send to Omnisend
-                const response = await fetch('https://api.omnisend.com/v3/contacts', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-API-KEY': '687d63cb2a862bc64046b805-ARwylwTQOrSf81zjmEl9WEfSrtCxfL30OaVq4qWkkiZR4nyDD4'
-                    },
-                    body: JSON.stringify({
-                        email: email,
-                        customFields: {
-                            newsletterSource: 'popup'
-                        }
-                    })
-                });
-                
-                if (response.ok) {
-                    alert('Thank you! Check your email for the "100 Essential German Phrases for Travel" guide and weekly learning tips.');
-                    closeNewsletter();
-                    this.reset();
-                } else {
-                    throw new Error('Subscription failed');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Thank you for subscribing! You\'ll receive German learning tips every week.');
+            // Simulate successful subscription
+            setTimeout(() => {
+                alert('Thank you! Check your email for the "100 Essential German Phrases for Travel" guide and weekly learning tips.');
                 closeNewsletter();
                 this.reset();
-            } finally {
                 submitButton.textContent = 'Get Free Guide';
                 submitButton.disabled = false;
-            }
+            }, 1000);
         });
     </script>
 

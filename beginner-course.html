@@ -111,14 +111,20 @@
                 <!-- Right: Course Card -->
                 <div class="course-card p-8 text-center relative">
                     <div class="course-badge">A1.1 COURSE</div>
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Early Bird - First 50 Students
+                    </div>
                     <h3 class="text-2xl font-bold mb-4">Beginner German Course</h3>
-                    <div class="text-5xl font-bold text-orange-500 mb-4">$375</div>
-                    <div class="text-lg text-gray-600 mb-6">One-time payment • All materials included</div>
+                    <div class="mb-4">
+                        <div class="text-3xl font-bold text-gray-400 line-through">$375</div>
+                        <div class="text-5xl font-bold text-green-600">$200</div>
+                    </div>
+                    <div class="text-lg text-gray-600 mb-6">Early Bird Price • All materials included</div>
                     
                     <div class="space-y-4 mb-8">
                         <div class="flex justify-between py-2 border-b">
                             <span>30 hours of live instruction</span>
-                            <span class="font-medium">$375</span>
+                            <span class="font-medium line-through text-gray-400">$375</span>
                         </div>
                         <div class="flex justify-between py-2 border-b">
                             <span>All digital materials</span>
@@ -130,12 +136,16 @@
                         </div>
                         <div class="flex justify-between py-2 font-bold text-lg">
                             <span>Total Value</span>
-                            <span class="text-orange-500">$375</span>
+                            <span class="text-gray-400 line-through">$375</span>
+                        </div>
+                        <div class="flex justify-between py-2 font-bold text-lg bg-green-50 p-3 rounded-lg">
+                            <span>Early Bird Price</span>
+                            <span class="text-green-600">$200</span>
                         </div>
                     </div>
                     
-                    <button onclick="openPaymentPopup('beginner-course')" class="cta-button px-8 py-4 rounded-lg font-semibold w-full">
-                        Enroll in A1.1 Course
+                    <button onclick="openPaymentPopup('beginner-course')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold w-full transition-all">
+                        Enroll Now - $200
                     </button>
                 </div>
             </div>

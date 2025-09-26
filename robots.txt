@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://deutsch.sebgabriel.com/sitemap.xml
+
+# Important pages
+Allow: /courses.html
+Allow: /pricing.html
+Allow: /teachers.html
+Allow: /why-us.html
+Allow: /beginner-course.html
+Allow: /trial-class.html
+Allow: /5-class-package.html
+Allow: /10-class-package.html
+Allow: /50-class-package.html
+Allow: /kids-classes.html
+Allow: /blog.html
+Allow: /careers.html
+Allow: /placement-test-signup.html
+Allow: /german-language-classes-online.html
+Allow: /private-lessons-funnel.html
+
+# Blog posts
+Allow: /blog-post-1.html
+Allow: /blog-post-2.html
+Allow: /blog-post-3.html
+Allow: /blog-post-4.html
+Allow: /blog-post-5.html
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/

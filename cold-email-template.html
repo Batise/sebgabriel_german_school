@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn German Online - Hallo Deutsch</title>
+    
+    <!-- EMAIL SUBJECT LINE OPTIONS -->
+    <!-- 
+    OPTION 1 - Direct & Personalized:
+    Subject: "Your German Journey: Take the Free Placement Test at Hallo Deutsch"
+    
+    OPTION 2 - Benefit-Focused:
+    Subject: "Unlock New Doors: Learn German with Native Speakers + 50% Off"
+    
+    OPTION 3 - Urgent & Value-Driven:
+    Subject: "Ready to Start German? Get 50% Off Your First Package (Free Test Inside)"
+    
+    RECOMMENDATION: Use Option 1 for personalized outreach, Option 2 for general campaigns, Option 3 for time-sensitive offers.
+    -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333333;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .logo {
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #374151;
+            margin: 0;
+        }
+        .logo-subtitle {
+            font-size: 14px;
+            color: #666666;
+            margin: 5px 0 0 0;
+        }
+        .header-title {
+            color: #374151;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .main-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+        .highlight-box {
+            background-color: #fef3c7;
+            border-left: 4px solid #d97706;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d97706;
+            margin: 0 0 10px 0;
+        }
+        .highlight-text {
+            font-size: 16px;
+            color: #333333;
+            margin: 0;
+        }
+        .benefits-list {
+            background-color: #f9fafb;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        .benefits-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555555;
+        }
+        .benefit-icon {
+            color: #d97706;
+            margin-right: 12px;
+            font-size: 18px;
+            width: 20px;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #d97706;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #c2410c;
+        }
+        .secondary-button {
+            background-color: #ffffff;
+            color: #d97706;
+            border: 2px solid #d97706;
+        }
+        .secondary-button:hover {
+            background-color: #d97706;
+            color: #ffffff;
+        }
+        .testimonial {
+            background-color: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        .testimonial-text {
+            font-size: 16px;
+            color: #333333;
+            margin: 0 0 10px 0;
+        }
+        .testimonial-author {
+            font-size: 14px;
+            color: #666666;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer-text {
+            font-size: 14px;
+            color: #666666;
+            margin: 0 0 15px 0;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #888888;
+            margin: 5px 0;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #d97706;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .unsubscribe {
+            font-size: 12px;
+            color: #999999;
+            margin-top: 20px;
+        }
+        .unsubscribe a {
+            color: #999999;
+            text-decoration: none;
+        }
+        
+        /* Mobile Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                box-shadow: none;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            .header {
+                padding: 20px 15px;
+            }
+            .header-title {
+                font-size: 24px;
+            }
+            .cta-button {
+                display: block;
+                margin: 10px 0;
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">SG</div>
+                <div class="logo-subtitle">HALLO DEUTSCH</div>
+            </div>
+            <h1 class="header-title">Learn German Online with Native Speakers</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="greeting">
+                Hi [First Name],
+            </div>
+
+            <div class="main-text">
+                I hope this email finds you well! I'm Sebastian Gabriel, founder of <strong>Hallo Deutsch</strong>, and I'm reaching out because I noticed you might be interested in learning German.
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">🎯 Why German?</div>
+                <div class="highlight-text">
+                    Whether it's for career advancement, university studies, immigration, or personal growth - mastering German opens doors to incredible opportunities in Europe's largest economy.
+                </div>
+            </div>
+
+            <div class="main-text">
+                At Hallo Deutsch, we specialize in helping students like you achieve their German language goals through personalized online lessons with certified native speakers.
+            </div>
+
+            <div class="benefits-list">
+                <div class="benefits-title">What Makes Us Different?</div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">👨‍🏫</span>
+                    <span><strong>Native German Teachers:</strong> Learn from certified native speakers with years of experience</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">⏰</span>
+                    <span><strong>Flexible Scheduling:</strong> Learn at times that work for your busy schedule</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">💻</span>
+                    <span><strong>Online Convenience:</strong> Study from anywhere with our easy-to-use platform</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">📚</span>
+                    <span><strong>All Materials Included:</strong> No extra costs - everything you need is provided</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎯</span>
+                    <span><strong>Personalized Learning:</strong> Customized lessons based on your goals and level</span>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "I went from A1 to B1 in just 6 months with Hallo Deutsch. The teachers are amazing and the flexible schedule made it possible to fit lessons into my busy work life."
+                </div>
+                <div class="testimonial-author">- Sarah M., Marketing Manager (Relocated to Germany)</div>
+            </div>
+
+            <div class="main-text">
+                <strong>Ready to start your German journey?</strong> We offer everything from single trial sessions to comprehensive packages, plus specialized courses for kids and business German.
+            </div>
+
+            <div class="cta-section">
+                <a href="https://deutsch.sebgabriel.com/placement-test-signup.html" class="cta-button" target="_blank" rel="noopener">
+                    🆓 Take Free Placement Test
+                </a>
+                <a href="https://deutsch.sebgabriel.com/courses.html" class="cta-button secondary-button" target="_blank" rel="noopener">
+                    View All Courses
+                </a>
+            </div>
+
+            <div class="main-text">
+                <strong>Special Offer:</strong> New students get 50% off their first package when they book within 24 hours of taking our free placement test.
+            </div>
+
+            <div class="main-text">
+                If you have any questions or would like to discuss your German learning goals, I'd be happy to chat with you personally. Just reply to this email or book a free consultation call.
+            </div>
+
+            <div class="main-text">
+                Best regards,<br>
+                <strong>Sebastian Gabriel</strong><br>
+                Founder & Learning Coordinator<br>
+                Hallo Deutsch by SG Learning
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text">
+                <strong>Hallo Deutsch by SG Learning</strong><br>
+                Your German Journey Begins Here
+            </div>
+            
+            <div class="contact-info">
+                📧 contact@sebgabriel.com<br>
+                🌍 Online Worldwide<br>
+                ⏰ Flexible Scheduling
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link" target="_blank" rel="noopener">Facebook</a>
+                <a href="#" class="social-link" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <div class="unsubscribe">
+                <a href="#" target="_blank" rel="noopener">Unsubscribe</a> | <a href="#" target="_blank" rel="noopener">Update Preferences</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

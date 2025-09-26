@@ -33,14 +33,15 @@
             font-weight: 400;
         }
         .cta-button {
-            background: #d97706;
-            color: white;
+            background: white;
+            color: #1a1a1a;
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
         }
         .cta-button:hover {
-            background: #c2410c;
+            background: #f9fafb;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .course-card {
             background: white;
@@ -54,30 +55,31 @@
             box-shadow: 0 4px 12px rgba(243, 168, 71, 0.1);
         }
         .course-card.featured {
-            border: 2px solid #f3a847;
-            background: #fffbeb;
+            border: 2px solid #d97706;
+            background: white;
             transform: scale(1.02);
         }
         .course-card.featured:hover {
             transform: scale(1.02) translateY(-2px);
         }
-        .price-highlight {
-            background: linear-gradient(135deg, #6b7280, #9ca3af);
+        .cta-button.featured {
+            background: #d97706;
             color: white;
+            border: 1px solid #d97706;
+        }
+        .cta-button.featured:hover {
+            background: #c2410c;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        .price-highlight {
+            background: white;
+            color: #1a1a1a;
+            border: 1px solid #e5e7eb;
         }
         .feature-badge {
             background: #f0fdf4;
             color: #166534;
             border: 1px solid #bbf7d0;
-        }
-        .best-deal-badge {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -202,21 +204,18 @@
                         </a>
                     </div>
 
-                    <!-- 10-Class Package - BEST DEAL -->
-                    <div class="course-card featured p-6 text-center relative">
-                        <div class="best-deal-badge absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-sm font-bold">
-                            🔥 BEST DEAL
-                        </div>
-                        <div class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <!-- 10-Class Package -->
+                    <div class="course-card featured p-6 text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl">🎯</span>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">10-Class Package</h4>
-                        <p class="text-gray-600 mb-4">Most popular choice for serious learners</p>
+                        <p class="text-gray-600 mb-4">Save 30%</p>
                         <div class="price-highlight rounded-lg p-4 mb-4">
                             <div class="text-3xl font-bold">$350</div>
                             <div class="text-sm opacity-90">$35 per hour</div>
                         </div>
-                        <a href="10-class-package.html" class="cta-button w-full py-3 rounded-lg font-semibold text-center">
+                        <a href="10-class-package.html" class="cta-button featured w-full py-3 rounded-lg font-semibold text-center">
                             Buy Now
                         </a>
                     </div>

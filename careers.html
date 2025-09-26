@@ -1,234 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Join Our Team | DEUTSCH</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Careers - Join Our Team | Hallo Deutsch</title>
+    <meta name="description" content="Join our team as a German teacher. Work remotely, flexible hours, competitive pay. Apply now!">
+    <meta name="keywords" content="German teacher jobs, online teaching, remote work, German language instructor">
+    <meta name="author" content="Sebastian Gabriel - Hallo Deutsch">
+    <meta property="og:title" content="Careers - Join Our Team | Hallo Deutsch">
+    <meta property="og:description" content="Join our team as a German teacher. Work remotely, flexible hours, competitive pay.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deutsch.sebgabriel.com/careers">
+    <meta property="og:site_name" content="Hallo Deutsch">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Careers - Join Our Team | Hallo Deutsch">
+    <meta name="twitter:description" content="Join our team as a German teacher. Work remotely, flexible hours, competitive pay.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+        .cta-button {
+            background: #d97706;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #c2410c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <div class="logo-text">DEUTSCH</div>
-                    <div class="logo-subtitle">Learn German</div>
-                </a>
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <div>
+                            <div class="playful-brand text-xl text-gray-900">HALLO DEUTSCH</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="courses.html" class="text-gray-600 hover:text-orange-500 transition-colors">Courses</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-orange-500 transition-colors">Pricing</a>
+                    <a href="teachers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Teachers</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-orange-500 font-medium">Careers</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
+                    <a href="placement-test-signup.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">Free Placement Test</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-orange-500">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="nav-menu">
-                <a href="index.html#courses" class="nav-link">Courses</a>
-                <a href="index.html#teachers" class="nav-link">Teachers</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="careers.html" class="nav-link active">Careers</a>
-                <a href="index.html#trial" class="nav-cta-button">Free Trial</a>
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="space-y-2">
+                    <a href="index.html" class="block text-gray-600 hover:text-orange-500 py-2">Home</a>
+                    <a href="courses.html" class="block text-gray-600 hover:text-orange-500 py-2">Courses</a>
+                    <a href="pricing.html" class="block text-gray-600 hover:text-orange-500 py-2">Pricing</a>
+                    <a href="teachers.html" class="block text-gray-600 hover:text-orange-500 py-2">Teachers</a>
+                    <a href="blog.html" class="block text-gray-600 hover:text-orange-500 py-2">Blog</a>
+                    <a href="careers.html" class="block text-orange-500 font-medium py-2">Careers</a>
+                    <a href="index.html#contact" class="block text-gray-600 hover:text-orange-500 py-2">Contact</a>
+                    <a href="placement-test-signup.html" class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-center mt-2">Free Placement Test</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Join Our Teaching Team</h1>
-                    <p>Help students around the world master German while building your career with flexible, remote teaching opportunities. Join native German speakers who are passionate about sharing their language and culture.</p>
-                    <div class="hero-buttons">
-                        <a href="#positions" class="cta-button primary">View Open Positions</a>
-                        <a href="#apply" class="cta-button secondary">Apply Now</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="German Teaching Career">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Why Teach with DEUTSCH?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Work from Anywhere</h3>
-                    <p>Teach German online from the comfort of your home. Set your own schedule and work with students worldwide.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-euro-sign"></i>
-                    </div>
-                    <h3>Competitive Rates</h3>
-                    <p>Earn €25-40 per hour based on experience and qualifications. Bonuses available for top-performing teachers.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Supportive Community</h3>
-                    <p>Join a community of passionate German teachers. Regular training sessions and peer support available.</p>
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    Join Our Teaching Team
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Are you teaching German and want to work with us? Join our team of passionate German teachers and help students worldwide learn German online.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#apply" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg">
+                        Apply Now
+                    </a>
+                    <a href="#position" class="bg-white border border-gray-300 text-gray-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors">
+                        View Position Details
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section class="courses" id="positions">
-        <div class="container">
-            <h2 class="section-title">Open Positions</h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-level">Full-time</div>
-                    <h3>Senior German Teacher</h3>
-                    <p>Lead German instruction for adult learners across all levels (A1-C2). Perfect for experienced teachers looking to make a significant impact.</p>
-                    <ul>
-                        <li>5+ years teaching experience</li>
-                        <li>Native German speaker</li>
-                        <li>Bachelor's degree or teaching certificate</li>
-                        <li>Experience with online teaching platforms</li>
-                        <li>Strong communication skills in English</li>
-                    </ul>
-                    <div class="course-price">€35-40/hour</div>
-                    <a href="#apply" class="course-button">Apply Now</a>
+    <!-- Position Details -->
+    <section id="position" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">German Teacher Position</h2>
+                    <div class="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        Remote • Flexible Hours • Competitive Pay
+                    </div>
                 </div>
-                
-                <div class="course-card featured">
-                    <div class="course-level">Part-time</div>
-                    <h3>German Teacher for Kids</h3>
-                    <p>Specialize in teaching German to children and teenagers (ages 6-16). Create engaging, age-appropriate lessons that make learning fun.</p>
-                    <ul>
-                        <li>2+ years teaching experience with children</li>
-                        <li>Native or near-native German proficiency</li>
-                        <li>Experience with kids' learning methods</li>
-                        <li>Patient and energetic personality</li>
-                        <li>Flexible evening and weekend availability</li>
-                    </ul>
-                    <div class="course-price">€25-30/hour</div>
-                    <a href="#apply" class="course-button">Apply Now</a>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">What We Offer</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Work from anywhere in the world</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Flexible schedule - choose your own hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Competitive pay: $20-30 per hour</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Supportive team and training</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">All teaching materials provided</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Requirements</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-orange-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Native German speaker or near-native proficiency</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-orange-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Teaching experience preferred but not required</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-orange-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Good English communication skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-orange-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Reliable internet connection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-orange-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Passion for teaching German</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="course-card">
-                    <div class="course-level">Flexible</div>
-                    <h3>Conversation Practice Teacher</h3>
-                    <p>Focus on speaking practice and conversation skills for intermediate to advanced students. Help learners gain confidence in real-world German.</p>
-                    <ul>
-                        <li>Native German speaker</li>
-                        <li>Excellent conversational skills</li>
-                        <li>Cultural knowledge of German-speaking countries</li>
-                        <li>Previous teaching or tutoring experience preferred</li>
-                        <li>Available for evening sessions (CET time)</li>
-                    </ul>
-                    <div class="course-price">€20-25/hour</div>
-                    <a href="#apply" class="course-button">Apply Now</a>
+
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">What You'll Do</h3>
+                    <p class="text-gray-700 mb-4">
+                        Teach German to students of all levels (A1-C2) through our online platform. You'll conduct one-on-one lessons, help students improve their German skills, and provide personalized feedback. We provide all the teaching materials and support you need to succeed.
+                    </p>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-600 mb-2">$20-30 per hour</div>
+                        <div class="text-sm text-gray-600">Paid in USD • Weekly payments</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trial Section -->
-    <section class="trial" id="apply">
-        <div class="container">
-            <div class="trial-content">
-                <h2>Ready to Join Our Team?</h2>
-                <p>Send us your application and let's discuss how you can help students learn German</p>
-                <div class="trial-features">
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Flexible schedule</span>
-                    </div>
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Competitive rates</span>
-                    </div>
-                    <div class="trial-feature">
-                        <i class="fas fa-check"></i>
-                        <span>Supportive team</span>
-                    </div>
-                </div>
-                <a href="mailto:gabriel.sg.sebastian@gmail.com?subject=Teaching Position Application" class="cta-button primary large">Apply Now</a>
+    <!-- Application Section -->
+    <section id="apply" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Apply?</h2>
+                <p class="text-xl text-gray-600">Send us your application and let's discuss how you can help students learn German</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">Questions About Teaching?</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Have questions about teaching opportunities? We're here to help!</p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>gabriel.sg.sebastian@gmail.com</span>
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <form action="https://getform.io/f/brogrwza" method="POST" class="space-y-6">
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    <input type="hidden" name="Source_Page" value="Careers_Application">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" id="name" name="Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="Email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Monday-Friday, 9AM-6PM CET</span>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="Phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="experience" class="block text-sm font-medium text-gray-700 mb-2">Teaching Experience</label>
+                            <select id="experience" name="Experience" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option value="">Select experience level</option>
+                                <option value="No experience">No teaching experience</option>
+                                <option value="1-2 years">1-2 years</option>
+                                <option value="3-5 years">3-5 years</option>
+                                <option value="5+ years">5+ years</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form action="mailto:gabriel.sg.sebastian@gmail.com?subject=Teaching Position Inquiry" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="experience" placeholder="Years of Teaching Experience">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Tell us about your teaching experience and why you want to join our team" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Application
+
+                    <div>
+                        <label for="availability" class="block text-sm font-medium text-gray-700 mb-2">Availability (hours per week)</label>
+                        <select id="availability" name="Availability" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                            <option value="">Select availability</option>
+                            <option value="5-10 hours">5-10 hours per week</option>
+                            <option value="10-20 hours">10-20 hours per week</option>
+                            <option value="20-30 hours">20-30 hours per week</option>
+                            <option value="30+ hours">30+ hours per week</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell us about yourself *</label>
+                        <textarea id="message" name="Message" rows="5" required placeholder="Why do you want to teach German? What makes you a great teacher? Any relevant experience or qualifications?" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="cta-button px-8 py-4 rounded-lg font-semibold text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Submit Application
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>DEUTSCH</h3>
-                    <p>Learn German with native speakers</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="index.html#courses">All Levels</a></li>
-                            <li><a href="index.html#courses">Beginner (A1-A2)</a></li>
-                            <li><a href="index.html#courses">Intermediate (B1-B2)</a></li>
-                            <li><a href="index.html#courses">Advanced (C1-C2)</a></li>
-                        </ul>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <div>
+                            <div class="playful-brand text-xl text-white">HALLO DEUTSCH</div>
+                            <div class="text-sm text-gray-400">by SG Learning</div>
+                        </div>
                     </div>
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="index.html#contact">Contact</a></li>
-                            <li><a href="index.html#trial">Free Trial</a></li>
-                            <li><a href="mailto:gabriel.sg.sebastian@gmail.com">Help</a></li>
-                        </ul>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Your German Journey Begins Here. Learn German with native speakers through personalized lessons and proven methods.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="courses.html" class="text-gray-400 hover:text-orange-500 transition-colors">Courses</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-orange-500 transition-colors">Pricing</a></li>
+                        <li><a href="placement-test-signup.html" class="text-gray-400 hover:text-orange-500 transition-colors">Free Placement Test</a></li>
+                        <li><a href="beginner-course.html" class="text-gray-400 hover:text-orange-500 transition-colors">A1.1 Beginner Course</a></li>
+                        <li><a href="kids-classes.html" class="text-gray-400 hover:text-orange-500 transition-colors">Kids Classes</a></li>
+                        <li><a href="teachers.html" class="text-gray-400 hover:text-orange-500 transition-colors">Our Teachers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-orange-500 transition-colors">Learning Blog</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-orange-500 transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Private Sessions -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Private Sessions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="trial-class.html" class="text-gray-400 hover:text-orange-500 transition-colors">Single Session</a></li>
+                        <li><a href="5-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">5-Class Package</a></li>
+                        <li><a href="10-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">10-Class Package</a></li>
+                        <li><a href="50-class-package.html" class="text-gray-400 hover:text-orange-500 transition-colors">50-Class Package</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2">
+                        <p class="text-sm text-gray-400">
+                            <span class="text-orange-500">📧</span> contact@sebgabriel.com
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-orange-500">🌍</span> Online Worldwide
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-orange-500">⏰</span> Flexible Scheduling
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DEUTSCH - Learn German. All rights reserved.</p>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        Copyright © 2025 SG Learning. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="privacy-policy.html" class="text-gray-400 hover:text-orange-500 transition-colors text-sm">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="text-gray-400 hover:text-orange-500 transition-colors text-sm">Terms of Service</a>
+                        <a href="cancellation-policy.html" class="text-gray-400 hover:text-orange-500 transition-colors text-sm">Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>

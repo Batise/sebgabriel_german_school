@@ -23,11 +23,29 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8;
+            background-color: #fefcf8;
             color: #1a1a1a;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
+        }
+        .organic-shape {
+            position: absolute;
+            border-radius: 50% 30% 70% 40%;
+            background: linear-gradient(135deg, #ffb366 0%, #ff8c42 100%);
+            opacity: 0.1;
+        }
+        .organic-shape-1 {
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+        }
+        .organic-shape-2 {
+            bottom: -150px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
         }
         .hero-image {
             background: linear-gradient(135deg, #e3f2fd, #bbdefb);
@@ -264,30 +282,34 @@
 </head>
 <body class="antialiased">
 
-    <header class="p-4 sm:p-6 bg-white shadow-sm">
+    <header class="p-6 bg-transparent relative">
         <nav class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center" style="background-color: #d97706;">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
                     <span class="text-white font-bold text-sm sm:text-lg">SG</span>
                 </div>
-                <a href="index.html" class="text-lg sm:text-xl playful-brand" style="color: #d97706;">HALLO DEUTSCH</a>
+                <a href="index.html" class="text-xl playful-brand" style="color: #d97706;">HALLO DEUTSCH</a>
             </div>
             
             <!-- Desktop Navigation -->
-            <div class="space-x-6 font-light text-gray-600 hidden lg:flex">
-                <a href="courses.html" class="hover:text-gray-800 transition-colors">Courses</a>
-                <span class="text-gray-300">|</span>
-                <a href="#pricing" class="hover:text-gray-800 transition-colors">Pricing</a>
-                <span class="text-gray-300">|</span>
-                <a href="why-us.html" class="hover:text-gray-800 transition-colors font-semibold" style="color: #d97706;">Why Us?</a>
-                <span class="text-gray-300">|</span>
-                <a href="teachers.html" class="hover:text-gray-800 transition-colors">Teachers</a>
-                <span class="text-gray-300">|</span>
-                <a href="#testimonials" class="hover:text-gray-800 transition-colors">Reviews</a>
-                <span class="text-gray-300">|</span>
-                <a href="blog.html" class="hover:text-gray-800 transition-colors">Blog</a>
-                <span class="text-gray-300">|</span>
-                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-all">Contact</a>
+            <div class="hidden lg:flex bg-white rounded-full px-8 py-3 shadow-lg">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 font-medium relative">
+                        Home
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-orange-400 rounded-full"></div>
+                    </a>
+                    <a href="courses.html" class="text-gray-600 hover:text-gray-800 transition-colors">Courses</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-800 transition-colors">Pricing</a>
+                    <a href="why-us.html" class="text-gray-600 hover:text-gray-800 transition-colors">Why Us?</a>
+                    <a href="teachers.html" class="text-gray-600 hover:text-gray-800 transition-colors">Teachers</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-gray-800 transition-colors">Blog</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-800 transition-colors">About</a>
+                    <button class="text-gray-600 hover:text-gray-800 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -314,51 +336,41 @@
     <main class="container mx-auto px-6">
 
     <!-- Hero Section -->
-        <section class="py-12 sm:py-20">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                <!-- Left: Image -->
-                <div class="hero-image p-4 sm:p-8 order-2 lg:order-1">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="German Learning Online" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+        <section class="py-20 relative overflow-hidden">
+            <!-- Organic Background Shapes -->
+            <div class="organic-shape organic-shape-1"></div>
+            <div class="organic-shape organic-shape-2"></div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <!-- Left: Content -->
+                <div class="space-y-8 order-1 lg:order-1">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+                        The Ultimate Destination For<br>
+                        <span style="color: #d97706;">German Learning</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Supercharge your German today with some of the most trusted native speakers and proven teaching methods.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="placement-test.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all inline-block text-center">
+                            Free Placement Test
+                        </a>
+                        <a href="beginner-course.html" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all inline-block text-center">
+                            A1.1 Course - $200
+                        </a>
+                    </div>
+                    
                 </div>
                 
-                <!-- Right: Content -->
-                <div class="space-y-4 sm:space-y-6 order-1 lg:order-2">
-                      <h1 class="text-3xl sm:text-4xl lg:text-5xl playful-brand leading-tight" style="color: #d97706;">
-                          HALLO DEUTSCH
-                      </h1>
-                    
-                    <h2 class="text-xl sm:text-2xl font-bold text-gray-700">
-                        Your German Journey Begins Here
-                    </h2>
-                    
-                    <div class="space-y-3 sm:space-y-4 text-gray-600">
-                        <p class="text-sm sm:text-base">
-                            Master German with native speakers through personalized one-on-one lessons and small group classes. Achieve fluency faster with our proven teaching methods and flexible scheduling that works with your time zone.
-                        </p>
-                        
-                        <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
-                            <li>• Native German teachers with years of experience</li>
-                            <li>• Flexible scheduling - learn when it suits you</li>
-                            <li>• Real-world conversation practice from day one</li>
-                        </ul>
+                <!-- Right: Image -->
+                <div class="order-2 lg:order-2 relative">
+                    <div class="hero-image p-4 sm:p-8">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="German Learning Online" class="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-xl">
                     </div>
-                    
-                    <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                        <span class="text-lg sm:text-xl font-bold" style="color: #d97706;">START TODAY!</span>
-                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
-                            <a href="placement-test.html" class="cta-button px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold inline-block text-center text-sm sm:text-base">
-                                Free Placement Test
-                            </a>
-                            <a href="beginner-course.html" class="px-6 sm:px-8 py-3 sm:py-4 border rounded-lg font-semibold inline-block text-center text-sm sm:text-base transition-colors relative" style="border-color: #16a34a; color: #16a34a;" onmouseover="this.style.backgroundColor='#16a34a'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#16a34a';">
-                                <div class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                                    Early Bird
-                                </div>
-                                A1.1 Course - $200
-                            </a>
-                        </div>
-                    </div>
+                </div>
             </div>
-        </div>
         </section>
 
         <!-- How It Works Section -->
@@ -964,9 +976,9 @@
                 <!-- Company Info -->
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">SG</span>
-                        </div>
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">SG</span>
+                </div>
                         <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
                     </div>
                     <p class="text-gray-400 mb-4">
@@ -1036,7 +1048,7 @@
             <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-sm text-gray-500 mb-4 md:mb-0">
-                        Copyright &copy; 2025 Hallo Deutsch. All rights reserved.
+                        Copyright &copy; 2025 SG Learning. All rights reserved.
                     </p>
                     <div class="flex space-x-6 text-sm">
                         <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
@@ -1128,10 +1140,13 @@
         
         <!-- Header with SG Learning Logo -->
         <div class="placement-header">
-            <div class="sg-logo">
-                <span class="graduation-cap">🎓</span>
-                <span class="sg-logo-text">SG</span>
-                <span class="sg-logo-learning">LEARNING</span>
+            <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-white font-bold text-2xl">SG</span>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold playful-brand" style="color: #d97706;">HALLO DEUTSCH</div>
+                </div>
             </div>
             <h2 class="placement-title">Find Your Perfect German Class!</h2>
             <p class="placement-subtitle">We're here to help you discover the ideal course for your learning journey. Take our quick assessment and get personalized recommendations.</p>

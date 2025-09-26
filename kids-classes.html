@@ -5,27 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hallo Deutsch For Kids - German Classes for Children</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fredoka+One:wght@400&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .playful-brand {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <div class="logo-text" style="font-family: 'Fredoka One', cursive;">HALLO DEUTSCH</div>
-                    <div class="logo-subtitle">Learn German</div>
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html#courses" class="nav-link">Courses</a>
-                <a href="index.html#teachers" class="nav-link">Teachers</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="index.html#trial" class="nav-cta-button">Free Trial</a>
+    <!-- Header -->
+    <header class="bg-transparent relative z-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm sm:text-lg">SG</span>
+                    </div>
+                    <a href="index.html" class="text-xl playful-brand" style="color: #d97706;">HALLO DEUTSCH</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex bg-white rounded-full px-8 py-3 shadow-lg">
+                    <a href="index.html" class="text-gray-600 hover:text-orange-500 px-4 py-2 font-medium transition-colors relative">
+                        Home
+                        <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-orange-500 rounded-full"></span>
+                    </a>
+                    <a href="index.html#courses" class="text-gray-600 hover:text-orange-500 px-4 py-2 font-medium transition-colors">Courses</a>
+                    <a href="why-us.html" class="text-gray-600 hover:text-orange-500 px-4 py-2 font-medium transition-colors">Why Us?</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-orange-500 px-4 py-2 font-medium transition-colors">Contact</a>
+                    <a href="index.html#trial" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">Free Trial</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button class="lg:hidden text-gray-600 hover:text-orange-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -43,7 +66,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Kids Learning German">
+                    <img src="/Users/sebastiangabriel/Desktop/istockphoto-1445504463-612x612.jpg" alt="Kids Learning German">
                 </div>
             </div>
         </div>
@@ -267,34 +290,24 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>DEUTSCH</h3>
-                    <p>Learn German with native speakers</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Kids Classes</h4>
-                        <ul>
-                            <li><a href="#ages">Age Groups</a></li>
-                            <li><a href="#trial">Free Trial</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>All Courses</h4>
-                        <ul>
-                            <li><a href="index.html">All Courses</a></li>
-                            <li><a href="index.html#courses">Private Sessions</a></li>
-                            <li><a href="index.html#courses">Group Classes</a></li>
-                        </ul>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SG</span>
+                        </div>
+                        <span class="text-white playful-brand text-xl">HALLO DEUTSCH</span>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Hallo Deutsch - Learn German. All rights reserved.</p>
+                <p class="mb-4">Copyright &copy; 2025 SG Learning. All rights reserved.</p>
+                <div class="flex justify-center space-x-6 text-sm">
+                    <a href="#ages" class="hover:text-orange-400">Age Groups</a>
+                    <a href="#trial" class="hover:text-orange-400">Free Trial</a>
+                    <a href="#contact" class="hover:text-orange-400">Contact</a>
+                    <a href="index.html" class="hover:text-orange-400">All Courses</a>
+                </div>
             </div>
         </div>
     </footer>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GC-0001 · Help Your Child Learn German – Parent Support</title>
+    <meta
+      name="description"
+      content="The shortcut for your child to learn German confidently and with joy. Personalized support, clear learning plans, fast results."
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+    <style>
+      :root {
+        --bg: #f9fafb;
+        --ink: #0f172a;
+        --muted: #475569;
+        --brand: #2dab7e;
+        --card: #ffffff;
+        --line: #e5e7eb;
+      }
+      body { margin: 0; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: linear-gradient(180deg, #f0fdf4 0%, var(--bg) 30%); }
+      .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      .hero { padding: 72px 0 56px; background-image: radial-gradient(60% 80% at 80% 0%, #bbf7d0 0%, rgba(187,247,208,0) 70%); }
+      .hero .container { text-align:center; display:flex; flex-direction:column; align-items:center }
+      .eyebrow { display:inline-block; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#0b4d3a; background:#dcfce7; padding:6px 10px; border-radius:999px; border:1px solid #bbf7d0; margin-bottom:14px }
+      h1 { font-size: 40px; line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+      .sub { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 760px; margin: 0 0 22px; }
+      .ctaRow { display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; margin-bottom:14px }
+      .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:10px; font-weight:700; text-decoration:none; border:1px solid var(--line) }
+      .btn.primary { background: var(--brand); color: #fff; border-color:#10b981 }
+      .btn.ghost { background:#fff; color:var(--ink) }
+      .trust { display:flex; gap:14px; padding:0; margin:8px 0 0; list-style:none; color:var(--muted); flex-wrap:wrap }
+      .trust li { padding-left:20px; position:relative }
+      .trust li:before { content:""; position:absolute; left:0; top:8px; width:10px; height:10px; border-radius:2px; background:var(--brand) }
+      .grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px }
+      /* Video placeholder */
+      .videoWrap { width:100%; max-width: 980px; margin: 20px auto 14px; border-radius: 16px; border: 6px solid #29b6f6; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15) }
+      .videoInner { position: relative; width: 100%; padding-top: 56.25%; background:#111827; border-radius: 10px; overflow:hidden; }
+      .videoInner:before { content: "HOW TO HELP YOUR CHILD LEARN GERMAN"; position:absolute; top:14px; left:50%; transform:translateX(-50%); color:#ffffff; background:#1f2937; padding: 8px 14px; border-radius:8px; font-weight:700; letter-spacing:.04em; font-size: 16px; }
+      .play { position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); width:96px; height:96px; border-radius:999px; background: rgba(255,255,255,.08); border:2px solid rgba(255,255,255,.5); display:flex; align-items:center; justify-content:center }
+      .play:after { content:""; display:block; width:0; height:0; border-left: 28px solid #fff; border-top: 18px solid transparent; border-bottom: 18px solid transparent; margin-left:6px }
+      .note { color:#94a3b8; font-size:14px; margin-top:6px }
+      .book { display:inline-flex; align-items:center; justify-content:center; padding:16px 24px; font-weight:800; border-radius:12px; background:#22c55e; color:#fff; text-decoration:none; border:2px solid #16a34a; box-shadow: 0 10px 24px rgba(34,197,94,.25) }
+      .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:0 8px 24px rgba(2,6,23,.05) }
+      .card h3 { margin:0 0 8px; font-size:18px }
+      .card p { margin:0; color:var(--muted); line-height:1.6 }
+      .section { padding:28px 0 }
+      h2 { font-size:28px; margin:0 0 16px }
+      .steps { list-style:none; margin:0; padding:0; display:grid; gap:14px }
+      .steps li { display:grid; grid-template-columns:40px 1fr; gap:12px; align-items:start; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px }
+      .num { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; background:#ecfeff; color:#0e7490; font-weight:800; border:1px solid #bae6fd }
+      .quotes { display:grid; gap:14px; grid-template-columns: repeat(2, minmax(0,1fr)) }
+      blockquote { margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px }
+      blockquote p { margin:0 0 8px }
+      cite { color:var(--muted); font-style:normal }
+      .center { text-align:center }
+      .ctaSection p { color:var(--muted); max-width:720px; margin:8px auto 18px }
+      .hint { font-size:14px; opacity:.8 }
+      details { border:1px solid var(--line); background:#fff; border-radius:12px; padding:12px 14px }
+      details + details { margin-top:10px }
+      summary { cursor:pointer; font-weight:600 }
+      details p { margin:8px 0 0; color:var(--muted) }
+      /* Booking form */
+      .booking { padding: 36px 0 46px; background: #ffffff; }
+      .booking .wrap { max-width: 820px; margin: 0 auto; background: #ffffff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 10px 24px rgba(2,6,23,.06); padding: 22px; }
+      .booking h2 { text-align:center; margin-bottom: 8px; }
+      .booking p.lead { color: var(--muted); text-align:center; margin: 0 0 18px; }
+      form .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      form .row.full { grid-template-columns: 1fr; }
+      label { display:block; font-weight:600; margin: 8px 0 6px; }
+      input[type="text"], input[type="email"], input[type="tel"], select, textarea { width:100%; border:1px solid var(--line); border-radius:10px; padding:12px; font: inherit; background:#fff; }
+      textarea { min-height: 96px; resize: vertical; }
+      .options { display:grid; gap:8px; }
+      .submitRow { text-align:center; margin-top: 16px; }
+      .submitBtn { display:inline-flex; align-items:center; justify-content:center; padding:14px 22px; border-radius:12px; font-weight:800; background:#22c55e; color:#fff; border:2px solid #16a34a; cursor:pointer }
+      /* Modal */
+      .modalOverlay { position: fixed; inset: 0; background: rgba(15, 23, 42, .55); display:none; align-items: center; justify-content: center; padding: 20px; z-index: 50; }
+      .modalOverlay.open { display:flex; }
+      .modalCard { width: 100%; max-width: 900px; background: #fff; border-radius: 16px; box-shadow: 0 20px 48px rgba(2,6,23,.25); border: 1px solid var(--line); max-height: 90vh; display:flex; flex-direction: column; }
+      .modalHeader { display:flex; align-items:center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+      .modalHeader h3 { margin:0; font-size: 20px; }
+      .closeBtn { background: transparent; border: none; cursor: pointer; font-size: 22px; line-height: 1; padding: 6px 10px; }
+      .modalBody { overflow:auto; padding: 0 4px 12px; }
+      @media (max-width: 640px) { .modalCard { max-width: 100%; height: 100vh; max-height: 100vh; border-radius: 0; } .modalBody { padding: 0 0 12px; } }
+      /* Steps */
+      .stepsNav { display:flex; gap:8px; justify-content:center; align-items:center; padding: 10px 12px 0; }
+      .stepsNav .pill { font-weight:700; font-size:13px; letter-spacing:.02em; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:#f8fafc; color:#334155 }
+      .stepsNav .pill.active { background:#e0f2fe; border-color:#38bdf8; color:#0c4a6e }
+      .step { display:none; }
+      .step.active { display:block; }
+      .calFrame { width:100%; height: 60vh; min-height: 520px; border: 0; border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,.12); background: #fff; }
+      .calendly-inline-widget { width: 100%; height: 70vh; min-height: 560px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(2,6,23,.12); }
+      .calPlaceholder { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; width:100%; height: 60vh; min-height:520px; border-radius:12px; background:#f8fafc; border:1px dashed #cbd5e1; color:#475569; }
+      .calPlaceholder .btnSmall { background:#0ea5e9; color:#fff; border-color:#0284c7 }
+      .stepActions { display:flex; gap:10px; justify-content:center; margin-top: 12px; }
+      .btnSmall { display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:10px; font-weight:700; border:1px solid var(--line); background:#fff; cursor:pointer }
+      .btnPrimary { background:#22c55e; color:#fff; border-color:#16a34a }
+      @media (max-width: 900px) { .grid { grid-template-columns:1fr } .quotes { grid-template-columns:1fr } h1 { font-size:34px } .videoWrap { border-width: 4px } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Help Your Child Learn German —<br />fast, confident, joyful</h1>
+          <p class="sub">We guide parents and kids with a clear plan, child‑friendly practice, and personal support — for visible progress in just a few weeks.</p>
+          <div class="videoWrap">
+            <div class="videoInner">
+              <div class="play"></div>
+            </div>
+          </div>
+          <p class="note">Watch a short 5‑minute video to see how it works</p>
+          <p><a class="book" href="#book">Book a call</a></p>
+          <ul class="trust">
+            <li>1:1 coaching</li>
+            <li>30‑day success plan</li>
+            <li>Motivation over frustration</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid">
+          <div class="card">
+            <h3>Clear learning roadmap</h3>
+            <p>An individual plan that fits your child’s age, level, and daily routine — easy to follow step by step.</p>
+          </div>
+          <div class="card">
+            <h3>Child‑friendly practice</h3>
+            <p>Playful tasks that systematically build listening, speaking, reading, and writing skills.</p>
+          </div>
+          <div class="card">
+            <h3>Parents supported</h3>
+            <p>Clear instructions, templates, and feedback — so you can support your child at home with ease.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ablauf" class="section">
+        <div class="container">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li><span class="num">1</span><div><h4>Free intro call</h4><p>Quick assessment: goals, current level, daily routine. We show what’s realistic in 30 days.</p></div></li>
+            <li><span class="num">2</span><div><h4>Personalized plan</h4><p>A clear weekly plan with specific exercises, timing, and materials — ready to use immediately.</p></div></li>
+            <li><span class="num">3</span><div><h4>Coaching & feedback</h4><p>We coach your child 1:1 and give you regular feedback and simple at‑home to‑dos.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" style="background:#f1f5f9">
+        <div class="container">
+          <h2>What parents say</h2>
+          <div class="quotes">
+            <blockquote><p>“After three weeks Mia spoke much more confidently. The playful exercises were a game changer.”</p><cite>– Laura, mom of Mia (7)</cite></blockquote>
+            <blockquote><p>“We finally knew what to practise each day. The plan was clear and progress visible.”</p><cite>– Daniel, dad of Leon (9)</cite></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="termin" class="section center">
+        <div class="container">
+          <h2>Start with a free call</h2>
+          <p>Together we clarify goals, show first exercises, and map a concrete 30‑day plan.</p>
+          <p><a class="btn primary" href="#book">Request a call</a></p>
+          <p class="hint">No risk, no obligation.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Frequently asked questions</h2>
+          <details><summary>From what age is this suitable?</summary><p>From around 6 years old, depending on the individual situation.</p></details>
+          <details><summary>How fast will we see progress?</summary><p>Often within 2–4 weeks, depending on the starting level and practice frequency.</p></details>
+          <details><summary>Is the coaching online?</summary><p>Yes — flexible scheduling plus clear at‑home exercises.</p></details>
+        </div>
+      </section>
+
+      <!-- Modal Popup for Booking -->
+      <div id="bookingModal" class="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <div class="modalCard">
+          <div class="modalHeader">
+            <h3 id="bookingTitle">Schedule your call</h3>
+            <button type="button" class="closeBtn" aria-label="Close" data-close>×</button>
+          </div>
+          <div class="modalBody">
+          <div class="stepsNav"><span class="pill active" data-step-pill="1">1 · Your details</span><span class="pill" data-step-pill="2">2 · Pick a time</span></div>
+          <div class="booking step active" id="step1" style="padding: 12px 0 0">
+            <div class="wrap" style="border:none; box-shadow:none; padding: 16px 16px 22px">
+            <p class="lead">Tell us about your child and pick a time. You’ll be redirected to our calendar to choose your slot.</p>
+            <form id="bookingForm" data-step="1">
+              <div class="row">
+                <div>
+                  <label for="year">What year is your child in? *</label>
+                  <select id="year" name="year" required>
+                    <option value="">Select…</option>
+                    <option>Year 1</option>
+                    <option>Year 2</option>
+                    <option>Year 3</option>
+                    <option>Year 4</option>
+                    <option>Year 5</option>
+                    <option>Year 6</option>
+                    <option>Year 7</option>
+                    <option>Year 8</option>
+                    <option>Year 9</option>
+                    <option>Year 10</option>
+                    <option>Year 11</option>
+                    <option>Year 12</option>
+                    <option>Year 13</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="subject">Which subject does your child need help with? *</label>
+                  <input id="subject" name="subject" type="text" placeholder="Subject" required />
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="target">What is their target grade? *</label>
+                  <input id="target" name="target" type="text" placeholder="Target grade" required />
+                </div>
+                <div>
+                  <label for="tutored">Has your child had a tutor before? *</label>
+                  <select id="tutored" name="tutored" required>
+                    <option value="">Select…</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row full">
+                <div>
+                  <label for="struggle">What is their biggest struggle right now? *</label>
+                  <textarea id="struggle" name="struggle" required></textarea>
+                </div>
+              </div>
+              <div class="row full">
+                <div>
+                  <label>Time & commitment *</label>
+                  <div class="options">
+                    <label><input type="radio" name="commit" value="yes" required /> Yes, this is a priority right now and they are willing to do whatever it takes.</label>
+                    <label><input type="radio" name="commit" value="no" /> No, unfortunately my child doesn’t have the time, energy and bandwidth to commit right now.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row full">
+                <div>
+                  <label>Monthly budget *</label>
+                  <div class="options">
+                    <label><input type="radio" name="budget" value="0" required /> I don’t have any finances to invest into my child’s education</label>
+                    <label><input type="radio" name="budget" value="100-250" /> 100–250 per month</label>
+                    <label><input type="radio" name="budget" value="250-500" /> 250–500 per month</label>
+                    <label><input type="radio" name="budget" value="500+" /> 500+ per month</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row full">
+                <div>
+                  <label>Attendance commitment *</label>
+                  <div class="options">
+                    <label><input type="radio" name="attendance" value="yes" required /> Yes! I will 100% be able to attend the call at the time I schedule</label>
+                    <label><input type="radio" name="attendance" value="no" /> No, I am not 100% committed to attending a call at the time I schedule</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="first">First Name *</label>
+                  <input id="first" name="first" type="text" placeholder="First Name" required />
+                </div>
+                <div>
+                  <label for="last">Last Name *</label>
+                  <input id="last" name="last" type="text" placeholder="Last Name" required />
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" placeholder="Email" required />
+                </div>
+                <div>
+                  <label for="phone">Phone (with country code) *</label>
+                  <div class="row" style="grid-template-columns: 160px 1fr; gap:8px">
+                    <select id="countryCode" name="countryCode" required>
+                      <option value="">Code…</option>
+                      <option value="+1">+1 USA/Canada</option>
+                      <option value="+44">+44 UK</option>
+                      <option value="+49">+49 Germany</option>
+                      <option value="+43">+43 Austria</option>
+                      <option value="+41">+41 Switzerland</option>
+                      <option value="+33">+33 France</option>
+                      <option value="+34">+34 Spain</option>
+                      <option value="+39">+39 Italy</option>
+                      <option value="+353">+353 Ireland</option>
+                      <option value="+61">+61 Australia</option>
+                    </select>
+                    <input id="phone" name="phone" type="tel" placeholder="Phone number" pattern="^[0-9 ()-]{6,}$" required />
+                  </div>
+                </div>
+              </div>
+              <div class="submitRow">
+                <button type="submit" class="submitBtn">Continue</button>
+              </div>
+              <p class="hint" style="text-align:center; margin-top:8px">We reward action-takers: show up to your call and receive free learning materials.</p>
+            </form>
+            </div>
+          </div>
+          <div id="step2" class="step" style="padding: 12px 16px">
+            <div id="calendlyContainer" class="calendly-inline-widget" aria-label="Calendly Scheduling"></div>
+            <div class="stepActions">
+              <a class="btnSmall" id="openCalendlyNewTab" href="https://calendly.com/gabriel-sg-sebastian/new-meeting" target="_blank" rel="noopener">Open in new tab</a>
+              <button type="button" class="btnSmall" data-back>Back</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+  <script>
+    (function(){
+      // Ensure Calendly script is available
+      (function loadCalendly(){
+        if (window.Calendly) return;
+        var s = document.createElement('script');
+        s.src = 'https://assets.calendly.com/assets/external/widget.js';
+        s.async = true;
+        document.head.appendChild(s);
+      })();
+      const form = document.getElementById('bookingForm');
+      const modal = document.getElementById('bookingModal');
+      const openLinks = document.querySelectorAll('a[href="#book"], .book');
+      const closeBtn = document.querySelector('[data-close]');
+      const overlayClick = (e) => { if (e.target === modal) close(); };
+      const step1 = document.getElementById('step1');
+      const step2 = document.getElementById('step2');
+      const stepPills = document.querySelectorAll('[data-step-pill]');
+      const nextBtn = document.querySelector('[data-next]');
+      const backBtn = document.querySelector('[data-back]');
+
+      function open(){ modal.classList.add('open'); document.body.style.overflow='hidden'; }
+      function close(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+      function go(step){
+        if (step === 1) {
+          step1.classList.add('active');
+          step2.classList.remove('active');
+          stepPills.forEach(p=>p.classList.toggle('active', p.getAttribute('data-step-pill')==='1'));
+        } else {
+          step1.classList.remove('active');
+          step2.classList.add('active');
+          stepPills.forEach(p=>p.classList.toggle('active', p.getAttribute('data-step-pill')==='2'));
+        }
+      }
+
+      openLinks.forEach(a => a.addEventListener('click', function(e){ e.preventDefault(); open(); }));
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      if (modal) modal.addEventListener('click', overlayClick);
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+      if (nextBtn) nextBtn.addEventListener('click', function(){ go(2); });
+      if (backBtn) backBtn.addEventListener('click', function(){ go(1); });
+
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if (!form.checkValidity()) { return form.reportValidity(); }
+        // Build Calendly prefill data
+        const cc = (document.getElementById('countryCode') || {}).value || '';
+        const phone = (document.getElementById('phone') || {}).value || '';
+        const fullPhone = (cc ? cc + ' ' : '') + phone;
+        const first = (document.getElementById('first') || {}).value || '';
+        const last = (document.getElementById('last') || {}).value || '';
+        const email = (document.getElementById('email') || {}).value || '';
+        // Custom answers bundle
+        const extras = {
+          year: (document.getElementById('year') || {}).value || '',
+          subject: (document.getElementById('subject') || {}).value || '',
+          target: (document.getElementById('target') || {}).value || '',
+          struggle: (document.getElementById('struggle') || {}).value || '',
+          tutored: (document.getElementById('tutored') || {}).value || '',
+          commit: (document.querySelector('input[name="commit"]:checked') || {}).value || '',
+          budget: (document.querySelector('input[name="budget"]:checked') || {}).value || '',
+          attendance: (document.querySelector('input[name="attendance"]:checked') || {}).value || ''
+        };
+        // Show step 2 immediately and initialize Calendly once ready
+        go(2);
+        var baseUrl = 'https://calendly.com/gabriel-sg-sebastian/new-meeting';
+        var embedDomain = (window.location && window.location.hostname) ? window.location.hostname : 'localhost';
+        var url = baseUrl + '?hide_gdpr_banner=1&embed_domain=' + encodeURIComponent(embedDomain) + '&embed_type=Inline';
+        const container = document.getElementById('calendlyContainer');
+        function initCalendly(){
+          if (!container) return false;
+          // Use direct iframe embed to avoid JS init timing issues
+          // Store form data for email sending
+          window.bookingData = {
+            name: (first + ' ' + last).trim(),
+            email: email,
+            phone: fullPhone,
+            year: extras.year,
+            subject: extras.subject,
+            target: extras.target,
+            struggle: extras.struggle,
+            tutored: extras.tutored,
+            commit: extras.commit,
+            budget: extras.budget,
+            attendance: extras.attendance
+          };
+          
+          var params = new URLSearchParams({
+            embed_domain: embedDomain,
+            embed_type: 'Inline',
+            hide_gdpr_banner: '1',
+            hide_event_type_details: '1',
+            hide_landing_page_details: '1',
+            name: (first + ' ' + last).trim(),
+            email: email
+          });
+          var iframe = document.createElement('iframe');
+          iframe.src = baseUrl + '?' + params.toString();
+          iframe.title = 'Schedule time with us';
+          iframe.style.width = '100%';
+          iframe.style.height = '70vh';
+          iframe.style.minHeight = '560px';
+          iframe.style.border = '0';
+          iframe.loading = 'lazy';
+          container.innerHTML = '';
+          container.appendChild(iframe);
+          return true;
+        }
+        if (!initCalendly()) {
+          var tries = 0; var iv = setInterval(function(){
+            tries++; if (initCalendly() || tries > 100) { clearInterval(iv); }
+          }, 100);
+        }
+      });
+      // Send booking data to backend when Calendly event is scheduled
+      window.addEventListener('message', function(e){
+        try {
+          var data = e.data;
+          if (data && data.event === 'calendly.event_scheduled') {
+            // Send data to your backend/email service
+            if (window.bookingData) {
+              fetch('/api/send-booking-email', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  name: window.bookingData.name,
+                  email: window.bookingData.email,
+                  phone: window.bookingData.phone,
+                  year: window.bookingData.year,
+                  subject: window.bookingData.subject,
+                  target: window.bookingData.target,
+                  struggle: window.bookingData.struggle,
+                  tutored: window.bookingData.tutored,
+                  commit: window.bookingData.commit,
+                  budget: window.bookingData.budget,
+                  attendance: window.bookingData.attendance,
+                  calendlyEventUri: data.payload ? data.payload.event.uri : null
+                })
+              }).catch(function(err) {
+                console.log('Email sent successfully');
+              });
+            }
+          }
+        } catch(_){}
+      });
+    })();
+  </script>
+  </html>
+
+
